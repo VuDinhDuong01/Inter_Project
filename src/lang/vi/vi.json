@@ -1,0 +1,157 @@
+{
+    "Title":{
+        "home":"CÔNG TY CỔ PHẦN TẬP ĐOÀN CÔNG NGHỆ BATTECH",
+        "contact":"Liên Hệ",
+        "new":"Tin Tức và Sự Kiện",
+        "introduction":"Giới Thiệu",
+        "job":"Cơ hội việc làm hiện tại",
+        "newDetail":"Tin tức chi tiết",
+        "jobDetail":"Cơ hội việc làm chi tiết",
+        "pageNotFound":"Trang không tồn tại"
+    },
+    "Header":{
+        "homePage":"Trang chủ",
+        "aboutUs":"Giới thiệu",
+        "jobOpportunity":"Cơ hội việc làm",
+        "contact":"Liên hệ",
+        "news":"Tin tức"
+
+    },
+    "HomePage":{"contact":"LIÊN HỆ",
+        "titleBanner":"GIẢI PHÁP QUẢN TRỊ NGUỒN LỰC DOANH NGHIỆP",
+        "descriptionBanner":"Hỗ trợ Ban lãnh đạo hoạch định và điều hành toàn bộ nguồn lực của doanh nghiệp bao gồm Hàng hóa - Tài chính - Nhân sự - Truyền thông và kết nối các bộ phận thao tác nghiệp vụ hiệu quả thông qua những quy trình được thiết kế theo quy chuẩn quốc tế.",
+        "buttonBanner":"Đăng ký nhận tư vấn",
+        "aboutBattech":"GIỚI THIỆU VỀ BATTECH",
+        "descriptionBattech":"Với gần 15 năm kinh nghiệm, Công ty cổ phần Quốc tế BATTECH là nhà cung cấp các giải pháp quản trị nguồn lực doanh nghiệp chuyên nghiệp. Hỗ trợ Ban lãnh đạo hoạch định và điều hành toàn bộ nguồn lực của doanh nghiệp bao gồm Hàng hóa - Tài chính - Nhân sự - Truyền thông và kết nối các bộ phận thao tác nghiệp vụ hiệu quả thông qua những quy trình được thiết kế theo quy chuẩn quốc tế.",
+        "feedback":"Phản hồi",
+        "fast":"nhanh",
+        "system":"Hệ thống",
+        "grow":"phát triển",
+        "security":"Bảo mật",
+        "information":"thông tin",
+        "automatic":"Tự động",
+        "chemistry":"hóa",
+        "diffeenceAndPorional":"KHÁC BIỆT VÀ TIÊN PHONG",
+        "ProductDevelopmentMindset":"Tư duy phát triển sản phẩm",
+        "ProductDevelopmentMindsetDetail":"Tạo ra môi trường làm việc trực tuyến cho doanh nghiệp. Tất cả thành viên đều được cung cấp đầy đủ công cụ và tài nguyên số để phục vụ cho công việc.",
+        "IntegrationCapabilitiesAndExpand":"Khả năng tích hợp và mở rộng",
+        "IntegrationCapabilitiesAndExpandDetail":"Cung cấp các giải pháp, mở rộng thêm phần mềm theo yêu cầu của doanh nghiệp.",
+        "CustomizabilityAndAutomatically":"Khả năng tùy biến và tự động",
+        "CustomizabilityAndAutomaticallyDetail":"Battech luôn nghiên cứu đặc thù khác nhau của từng doanh nghiệp để đưa ra lời giải cho bài toán tổng quát.",
+        "ReasonableAndFlexibleCost":"Chi phí hợp lý và linh hoạt",
+        "ReasonableAndFlexibleCostDetail":"Khách hàng chỉ chi trả cho những dịch vụ mình sử dụng. Cam kết không phát sinh thêm cáckhoản phụ thu.",
+
+        "NewsAboutBATTECH":"Tin tức về BATTECH",
+        "NewsAboutBATTECHTitle":"BATTECH phát triển giải pháp chuyển đổi số cho doanh nghiệp",
+        "NewsAboutBATTECHDescription":"Tập đoàn công nghệ BATTECH vừa cho ra mắt phần mềm quản trị doanh nghiệp BATTECH PLATFORM - một nền tảng công nghệ hợp nhất tất cả các nghiệp vụ quản trị như kế toán, bán hàng, nhân sự… trên một nền tảng, ứng dụng công nghệ tiên tiến như AI, Blockchain, linh hoạt kết nối các dịch vụ giúp nâng cao năng suất làm việc, giảm chi phí và tăng lợi nhuận.",
+        "NewsAboutBATTECHButton":"Xem thêm",
+
+        "registerBattechTitle":"Đăng ký nhận thông tin mới nhất từ BATTECH",
+        "registerBattechButton":"Đăng ký nhận thông tin",
+        "differentAndPioneering":"KHÁC BIỆT VÀ TIÊN PHONG",
+        "newsAndEvents":"TIN TỨC & SỰ KIỆN",
+        "servicePack":"GÓI DỊCH VỤ",
+        "Partner":"ĐỐI TÁC",
+
+        "wORKINGRELATIONSHIP":"TÔN CHỈ LÀM VIỆC",
+        "begin":"Bắt đầu"
+
+
+    },
+    "FooterPage":{
+        "footerDescription":"Tại BATTECH, chúng tôi luôn phấn đấu giúp các doanh nghiệp định hình lại phương pháp quản trị doanh nghiệp để vận hành tốt hơn, nâng cao hiệu quả kinh doanh và cải thiện đời sống thông qua việc kết nối con người và công nghệ hiện đại.",
+        "UsefulLinksOnly":"LIÊN KẾT HỮU ÍCH",
+        "aboutBATTECH":"Giới thiệu về BATTECH",
+        "usageAgreement":"Thoả thuận sử dụng",
+        "warrantyPolicy":"Chính sách bảo hành",
+        "partnerProgram":"Chương trình đối tác",
+        "personnelPecruitment":"Tuyển dụng nhân sự",
+        "supportCenter":"Trung tâm hỗ trợ",
+        "onlineMarketingSolution":"Giải pháp marketing online",
+        "con":"LIÊN HỆ"
+    },
+    "banner":{
+        "titleBannerNews":"TIN TỨC - SỰ KIỆN",
+        "descriptionBannerNews":"Cung cấp cập nhật thông tin, sự kiện mới của công ty đến với khách hàng và đối tác",
+        "titleBannerJobOpportunity":"Công việc giấc mơ của bạn là đây",
+        "descriptionBannerJobOpportunity":"BATTECH tin tưởng vào tiềm năng và sự vĩ đại của mỗi người. Chúng tôi coi trọng việc học hỏi, hợp tác và hỗ trợ lẫn nhau. Khám phá bản thân. Hãy cho chúng tôi biết bạn đã có những gì và chúng tôi sẽ liên hệ với bạn nếu có một vai trò nào đó có vẻ phù hợp.",
+        "descriptionBannerContact":"Chúng tôi mang đến cho bạn một giải pháp CNTT hoàn chỉnh trong điều kiện cạnh tranh nhân sự ngày càng khắc nghiệt"
+    },
+    "IntroductionPage":{
+        "aboutBATTECH":"GIỚI THIỆU VỀ BATTECH",
+        "aboutBATTECHDetail1":"BATTECH được thành lập vào đầu năm 2009, trong bối cảnh nền kinh tế nước ta đang gặp nhiều khó khăn, thách thức. Với khát vọng thành công và ý chí mạnh mẽ đội ngũ lãnh đạo trẻ, BATTECH xác định lấy hoạt động đầu tư kinh doanh bất động sản, thi công cơ điện, phòng cháy chữa cháy làm nòng cốt trong giai đoạn đầu.",
+        "aboutBATTECHDetail2":"Sau hơn một thập kỷ xây dựng và trưởng thành, BATTECH đã vươn mình trở thành doanh nghiệp đa lĩnh vực, có tốc độ phát triển thần tốc.",
+        "aboutBATTECHDetail3":"Với số lượng 10 nhân viên từ lúc thành lập đến nay đã tăng lên con số hơn 300 nhân sự chính thức và gần 400 nhân sự thời vụ tại các dự án trong và ngoài nước. Từng bước khẳng định tầm vóc trên thương trường với hàng loạt công trình, dự án lớn tại Việt Nam, Lào, Cam-pu-chia, Trung Quốc, cùng nhiều bạn hàng, đối tác cung ứng thiết bị từ Nhật, Đài Loan, Pháp, Đức, Italy",
+        "VisionAndMission":"TẦM NHÌN VÀ SỨ MỆNH",
+        "VisionAndMissionDescriptions1":"Vì một xã hội không có rào cản",
+        "VisionAndMissionDescriptions2":" Dựa vào công nghệ phát triển, nhu cầu sử dụng của tất cả mọi người. BATTECH mong muốn đem tới mạng lưới thế giới ảo rộng lớn ra thị trường. Để cho tất cả mọi người có thể chia sẻ, tâm sự và gắn kết trong không gian ảo, vượt qua mọi rào cản",
+        "VisionAndMissionDescriptions3":"về vị trí địa lý, dịch bệnh.",
+        "VisionAndMissionDescriptions4":"Mục tiêu năm 2022-2023 công ty sẽ phát triển rộng lớn với quy mô 159 - 200 nhân sự. Ngoài phát triển xây dựng phần mềm phòng họp ảo còn bắt tay vào làm các games 3D như golf, câu cá, đua xe... Đưa công ty trở thành công ty công nghệ",
+        "VisionAndMissionDescriptions5":"thuộc top đầu phát triển metaverse tại Việt Nam.",
+        "CoreValues":"GIÁ TRỊ CỐT LÕI",
+        "AttentiveToCustomers":"Tận tâm với khách hàng",
+        "DedicationToWork":"Tận tụy với công việc",
+        "UnityMakesStrength":"Đoàn kết làm nên sức mạnh",
+        "CoreValuesDescription1":"BATTECH hay còn gọi là Công ty công nghệ BATTECH, là một công ty trực thuộc BATGROUP ra đời trong giá trị cốt lõi của chữ “TÂM”",
+        "CoreValuesDescription2":"Công nghệ ngày càng phát triển, với sự ra đời của thế giới ảo metaverse giúp con người gắn kết gần nhau hơn, BATTECH mong muốn sẽ mở ra không gian trực tuyến tương tác của người dùng đa chiều hơn so với các công nghệ hiện tại, thay vì chỉ xem nội dung kỹ thuật số, người dùng trong Metaverse sẽ có thể đắm mình trong không gian của thế giới kỹ thuật số ảo.",
+        "STAFF":"ĐỘI NGŨ NHÂN SỰ",
+        "StaffDetail":"Đội ngũ nhân sự của BATTECH là những con người giàu kinh nghiệm về công nghệ. Mỗi một thành viên đều có kiến thức và lĩnh vực công nghệ khác nhau, khi phát triển phần mềm đều đưa ra được những ý tưởng, lập luận chặt chẽ. Với tinh thần đoàn kêt, ham học hỏi cùng với sự nhiệt tình, có trách nhiệm trong công việc. Đội ngũ BATTECH luôn lắng nghe ý kiến đóng góp của khách hàng để ngày nâng cao chất lượng của sản phẩm phù hợp với nhu cầu người dùng. Nhân sự BATTECH luôn sẵn lòng phục vụ, lắng nghe, thấu hiểu."
+    },
+    "NewsPage":{
+        "news":"Tin tức mới",
+        "description1":"Chuyển đổi số ngành sản xuất: Làm thế nào để doanh nghiệp tối ưu lợi thế trong thị trường siêu cạnh tranh?",
+        "Blockchain":"Blockchain là gì? Hoạt động và ứng dụng của Blockchain",
+        "Nft":"NFT là gì? và ứng dụng NFT trong đời sống",
+        "SoftwareDevelopment":"Phát triển phần mềm",
+        "notNew":"Không có tin mới bạn cần tìm"
+
+    },
+    "jobOpportunity":{
+        "JobOpportunity":"CƠ HỘI LÀM VIỆC HIỆN TẠI",
+        "all":"Tất cả",
+        "workingGroup":"Nhóm công việc",
+        "workLocation":"Địa điểm làm việc",
+        "typeOfWork":"Loại công việc",
+        "allTheTime":"Toàn thời gian",
+        "partTime":"Bán thời gian",
+        "Intern":"Thực tập sinh",
+        "applyFilter":"Áp dụng bộ lọc",
+        "recruitment":"ỨNG TUYỂN",
+        "agree":"Thỏa thuận",
+        "findAJob":"Tìm việc làm",
+        "comeback":"Quay lại",
+        "notJob":"Không có công việc bạn cần tìm"
+    },
+    "contact":{
+        "contactUs":"LIÊN HỆ VỚI CHÚNG TÔI",
+        "description1":"Hãy gọi cho chúng tôi hoặc ghé qua bất cứ lúc nào, chúng tôi sẽ cố gắng giải đáp mọi thắc mắc trong vòng 24 giờ vào các ngày làm việc. Rất hân hạnh được trả lời câu hỏi của bạn.",
+        "address":"Địa chỉ",
+        "realyToStarted":"SẴN SÀNG ĐỂ BẮT ĐẦU",
+        "description2":"Địa chỉ email của bạn sẽ không được công bố. Các trường bắt buộc đánh dấu *",
+        "username":"Tên",
+        "telephone":"Số điện thoại",
+        "sendMessage":"Gửi tin nhắn",
+        "enterContent":"Nhập nội dung"
+    },
+    "jobDetail":{
+        "JobDescription":{
+            "description1":"Có từ 5 năm kinh nghiệm trở lên phát triển ứng dụng di động (React Native)"
+
+        }
+    },
+    "Input":{
+        "name":"Nhập tên của bạn",
+        "email":"Nhập email của bạn",
+        "job":"Tên công việc",
+        "telephone":"Nhập số điện thoại",
+        "content":"Nhập nội dung",
+        "file":"Đính kèm CV",
+        "fakebook":"Địa chỉ Facebook/Skype/Linked",
+        "address":"Bạn biết đến BATTECH qua đâu?",
+        "note":"Ghi chú...",
+        "applyDirectly":"Ứng tuyển trực tiếp",
+        "throughFriends":"Qua bạn bè...",
+        "similarJob":"Công việc tương tự"
+
+    }
+}

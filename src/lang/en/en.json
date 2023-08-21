@@ -1,0 +1,193 @@
+{
+    "Title":{
+        "home":"BATTECH TECHNOLOGY GROUP JOINT STOCK COMPANY",
+        "contact":"Contact",
+        "new":"News and events",
+        "introduction":"Introduction",
+        "job":"Current job opportunities",
+        "newDetail":"Detailed news",
+        "jobDetail":"Detailed job opportunities",
+        "pageNotFound":"Page does not exist"
+    },
+    "Header":{
+        "homePage":"Home",
+        "aboutUs":"About Us",
+        "jobOpportunity":"Job Opportunity",
+        "contact":"Contact",
+        "news":"News"
+    },
+    "HomePage":{
+        "contact":"CONTACT",
+        "titleBanner":"SOLUTIONS FOR MANAGEMENT OF BUSINESS RESOURCES",
+        "descriptionBanner":"Support the Board of Directors in planning and operating all resources of the business including Goods - Finance - Human Resources - Communication and connecting departments to operate effectively through designed processes. according to international standards.",
+        "buttonBanner":"Sign up for a consultation",
+        "aboutBattech":"ABOUT BATTECH",
+        "descriptionBattech":"With nearly 15 years of experience, BATTECH International Joint Stock Company is a professional provider of enterprise resource management solutions. Support the Board of Directors in planning and operating all resources of the business including Goods - Finance - Human Resources - Communication and connecting departments to operate effectively through designed processes. according to international standards.",
+        "feedback":"feedback",
+        "fast":"fast",
+        "system":"System",
+        "grow":"grow",
+        "security":"Security",
+        "information":"information",
+        "automatic":"Automatic",
+        "chemistry":"chemistry",
+        "diffeenceAndPorional":"DIFFERENCE AND PORIONAL",
+        "ProductDevelopmentMindset":"Product development mindset",
+        "ProductDevelopmentMindsetDetail":"Create an online working environment for businesses. All members are provided with tools and digital resources to serve their work.",
+        "IntegrationCapabilitiesAndExpand":"Integration and extensibility",
+        "IntegrationCapabilitiesAndExpandDetail":"Provide solutions, expand more software according to the requirements of businesses.",
+        "CustomizabilityAndAutomatically":"Customization and automation",
+        "CustomizabilityAndAutomaticallyDetail":"Battech always researches the different characteristics of each business to come up with a solution to the general problem.",
+        "ReasonableAndFlexibleCost":"Reasonable and flexible cost",
+        "ReasonableAndFlexibleCostDetail":"Customers only pay for the services they use. Commitment not to incur additional surcharges.",
+
+        "NewsAboutBATTECH":"News about BATTECH",
+        "NewsAboutBATTECHTitle":"BATTECH develops digital transformation solutions for businesses",
+        "NewsAboutBATTECHDescription":"BATTECH Technology Group has just launched BATTECH PLATFORM business management software - a technology platform that unifies all management operations such as accounting, sales, human resources... on one platform, public application. Advanced technologies such as AI, Blockchain, flexible connection of services help improve work productivity, reduce costs and increase profits.",
+        "NewsAboutBATTECHButton":"See more",
+
+        
+        "registerBattechTitle":"Sign up to receive the latest information from BATTECH",
+        "registerBattechButton":"Sign up  information",
+        "Partner":"PARTNER",
+        "differentAndPioneering":"DIFFERENCE AND PORIONAL",
+        "newsAndEvents":"NEWS & EVENTS",
+        "servicePack":"SERVICE PACK",
+
+        "Tư duy phát triển\nsản phẩm":"Growth mindset\nproduct",
+        "Tất cả thành viên đều được cung cấp đầy đủ công cụ và tài nguyên số để phục vụ cho công việc.":"All members are provided with tools and digital resources to serve their work.",
+        
+        "Khả năng tích hợp\nvà mở rộng":"Integration\nand extensibility",
+        "Cung cấp các giải pháp, mở rộng thêm phần mềm theo yêu cầu của doanh nghiệp.":"Provide solutions, expand more software according to the requirements of businesses.",
+
+        "Khả năng tùy biến\nvà tự động":"Customization \nand automation",
+        "Battech luôn nghiên cứu đặc thù khác nhau của từng doanh nghiệp để đưa ra lời giải cho bài toán tổng quát.":"Battech always researches the different characteristics of each business to come up with a solution to the general problem.",
+
+        "Chi phí hợp lý\nvà linh hoạt":"Reasonable cost \nand flexible",
+        "Khách hàng chỉ chi trả cho những dịch vụ mình sử dụng. Cam kết không phát sinh thêm các khoản phụ thu.":"Customers only pay for the services they use. Commitment to not incur additional surcharges.",
+
+        "wORKINGRELATIONSHIP":"WORKING RELATIONSHIP",
+        "Tinh thần đồng đội - mỗi cá nhân nhỏ tập hợp gắn kết, nâng đỡ đoàn kết vì mục tiêu chung xây dựng công ty phát triển vững mạnh.":"Team spirit - each small individual gathers together, supports solidarity for the common goal of building a strong development company.",
+        "Tin cậy - giữ chữ tín, giữ đúng lời hứa.":"Trust - keep credibility, keep promises.",
+        "Sáng tạo, đổi mới - luôn học tập trao đổi cập nhật kiến thức mới để đưa vào ứng dụng trong công việc, luôn cải tiến áp dụng những công nghệ mới nhất để tạo ra sản phẩm tốt nhất.":"Creativity, innovation - always learning, exchanging and updating new knowledge to put into work applications, always improving and applying the latest technologies to create the best products.",
+        "Đạo đức - trung thực khi phục vụ khách hàng, hiểu và tuân thủ các quy định của công ty, trách nhiệm với công việc, bình đẳng và tôn trọng mọi người.":"Ethics - honesty when serving customers, understanding and complying with company regulations, responsibility for work, equality and respect for everyone.",
+        "Khách hàng - đặt khách hàng là trung tâm phát triển, Battech luôn sẵn sàng lắng nghe và thay đổi theo chiều hướng tích cực để đưa ra sản phẩm phù hợp":"Customers - putting customers as the center of development, Battech is always ready to listen and change in a positive direction to come up with suitable products",
+        "Mục tiêu - hoàn thành sản phẩm phòng họp ảo và đưa ra thị trường. Được các doanh nghiệp lớn tin cậy sử dụng rộng rãi.":"The goal - complete the virtual meeting room product and bring it to market. Widely used by large enterprises.",
+
+
+        "Chuyên nghiệp":"Professional",
+    
+        "Tổ chức":"Organization",
+        "Đối với người dùng nhiều hơn":"For more users",
+        "Kế hoạch thử nghiệm cho người mới bắt đầu":"Test plan for beginners",
+        "Giải pháp tốt nhát cho Pro":"Best solution for Pro",
+        "begin":"Begin",
+        "Dữ liệu cá nhân - Không giới hạn":"Personal Data - Unlimited",
+        "Dành cho nhóm nhỏ - 15 người dùng":"For small groups - 15 users",
+        "Hỗ trợ cá nhân":"Personal support",
+        "Dữ liệu cá nhân - 60GB":"Personal data - 60GB",
+        "Dành cho các nhóm lớn - Không giới hạn":"For large groups - unlimited",
+        "Lịch sử dữ liệu":"Data history",
+        "Sự đóng góp của công đồng":"Community Contribution",
+        "Dữ liệu cá nhân - 20 GB":"Personal data - 20 GB",
+        "Người bắt đầu":"Beginners"
+    },
+    "FooterPage":{
+        "footerDescription":"At BATTECH, we always strive to help businesses reshape corporate governance to operate better, improve business efficiency and improve lives through connecting people and modern technology.",
+        "UsefulLinksOnly":"Useful Links Only",
+        "aboutBATTECH":"About BATTECH",
+        "usageAgreement":"Usage Agreement",
+        "warrantyPolicy":"Warranty Policy",
+        "partnerProgram":"Partner Program",
+        "personnelPecruitment":"Personnel Pecruitment",
+        "supportCenter":"Support Center",
+        "onlineMarketingSolution":"Online Marketing Solution",
+        "con":"Contact"
+
+    },
+    "banner":{
+        "titleBannerNews":"NEWS - EVENTS",
+        "descriptionBannerNews":"Provide updated information, new company events to customers and partners",
+        "titleBannerJobOpportunity":"Your dream job is here",
+        "descriptionBannerJobOpportunity":"BATTECH believes in the potential and greatness of each person. We value learning, cooperation and mutual support. Discover yourseft. Let us know what you've got and we'll contact you if a role seems like a good fit.",
+        "descriptionBannerContact":"We bring you a complete IT solution in an increasingly competitive HR environment"
+    },
+    "IntroductionPage":{
+        "aboutBATTECH":"About BATTECH",
+        "aboutBATTECHDetail1":"BATTECH was established in early 2009, in the context of our country's economy facing many difficulties and challenges. With the desire for success and strong will of young leaders, BATTECH determined to take real estate investment, M&E construction, fire protection as the core in the first phase.",
+        "aboutBATTECHDetail2":"After more than a decade of construction and growth, BATTECH has grown to become a multi-field enterprise with rapid growth..",
+        "aboutBATTECHDetail3":"With the number of 10 employees since its establishment, it has increased to more than 300 official employees and nearly 400 seasonal employees in domestic and foreign projects. Step by step affirming its stature in the market with a series of large works and projects in Vietnam, Laos, Cambodia, China, and many customers and equipment suppliers from Japan, Taiwan, France, Germany, Italy",
+        "VisionAndMission":"VISION AND MISSION",
+        "VisionAndMissionDescriptions1":"For a society without barriers",
+        "VisionAndMissionDescriptions2":"Based on developed technology, everyone's use needs. BATTECH wishes to bring a large virtual world network to the market. So that everyone can share, confide and bond in virtual space, overcoming all barriers",
+        "VisionAndMissionDescriptions3":"geographical location, disease.",
+        "VisionAndMissionDescriptions4":"The target in 2022-2023 the company will grow large with a scale of 159 - 200 employees. In addition to developing virtual meeting room software, also embarked on making 3D games such as golf, fishing, racing... Turning the company into a technology company",
+        "VisionAndMissionDescriptions5":"one of the top development metaverse in Vietnam.",
+        "CoreValues":"Core Values",
+        "AttentiveToCustomers":"Attentive To Customers",
+        "DedicationToWork":"Dedication ToWork",
+        "UnityMakesStrength":"Unity Makes Strength",
+        "CoreValuesDescription1":"BATTECH, also known as BATTECH Technology Company, is a company affiliated to BATGROUP born in the core value of the word 'MEMBER'.",
+        "CoreValuesDescription2":"Technology is developing more and more, with the introduction of the metaverse virtual world to help people connect closer together, BATTECH hopes to open up the interactive online space of users with more multi-dimensionality than current technologies. , instead of just viewing digital content, users in Metaverse will be able to immerse themselves in the space of a virtual digital world.",
+        "STAFF":"STAFF",
+        "StaffDetail":"BATTECH's staff is experienced in technology. Each member has different knowledge and technology fields, when developing software, they all come up with ideas and arguments. With the spirit of solidarity, eager to learn along with enthusiasm and responsibility at work. BATTECH team always listens to the feedback of customers to improve the quality of the product to suit the needs of users. BATTECH personnel are always willing to serve, listen and understand."
+    },
+    "NewsPage":{
+        "news":"News",
+        "description1":"Digital transformation of the manufacturing industry: How can businesses optimize their advantages in the hyper-competitive market?",
+        "Blockchain":"What is Blockchain? Blockchain operation and application",
+         "Nft":"What is NFT? and NFT application in life",
+        "SoftwareDevelopment":"Software Development",
+        "notNew":"There's no news you're looking for"
+    },
+    "jobOpportunity":{
+        "JobOpportunity":"CURRENT JOB OPPORTUNITIES",
+        "all":"All",
+        "workingGroup":"Working group",
+        "workLocation":"Work location",
+        "typeOfWork":"Type of work",
+        "allTheTime":"All the time",
+        "partTime":"Part-time",
+        "Intern":"Intern",
+        "applyFilter":"Apply filter",
+        "recruitment":"Recruitment",
+        "agree":"Agree",
+        "findAJob":"Find a job",
+        "comeback":"Come back",
+        "notJob":"There is no job you need to find"
+
+    },
+    "contact":{
+        "contactUs":"CONTACT US",
+        "description1":"Give us a call or drop by anytime, we'll try to answer any questions within 24 hours on business days. Pleased to answer your question.",
+        "address":"Address",
+        "realyToStarted":"READY TO GET STARTED",
+        "description2":"Your email address will not be published. Required fields are marked with *",
+        "username":"username",
+        "telephone":"telephone",
+        "enterContent":"Enter content",
+        "sendMessage":"Send message"
+    },
+    "jobDetail":{
+        "JobDescription":{
+            "description1":"5+ years of experience in developing mobile apps (React Native)"
+            
+        }
+    },
+    "Input":{
+        "name":"Enter your name",
+        "email":"Enter your email",
+        "telephone":"Enter your phone number",
+        "job":"Job name",
+        "content":"Enter content",
+        "file":"Attach your CV",
+        "fakebook":"Facebook/Skype/Linked address",
+        "address":"How did you know about BATTECH?",
+        "note":"Note...",
+        "applyDirectly":"Apply directly",
+        "throughFriends":"Through friends...",
+        "similarJob":"Similar job"
+
+    }
+
+}
