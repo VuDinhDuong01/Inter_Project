@@ -31,11 +31,11 @@ const JobOpportunityItemPage = () => {
         <div>
             <Banner Image1={Images.Image26} Image2={Images.Image24} width1={225} height1={173} height2={285} width2={285} marginTop1={95} marginTop2={32} content={t('banner.titleBannerJobOpportunity')}
                 description={t('banner.descriptionBannerJobOpportunity')} />
-            <div className=' lg:px-[120px] lg:gap-[68px] lg:flex'>
+            <div className=' 2xl:px-[120px] lg:px-[50px] lg:gap-[68px] 2xl:flex'>
                 <JobDescription />
-                <div className='flex-1 lg:w-[379px] w-full lg:px-0 px-[15px]'>
+                <div className='flex-1 2xl:w-[379px] w-full 2xl:px-0 px-[15px] '>
                     <form action="" onSubmit={onSubmit}>
-                        <div className=' lg:mt-[66px] px-[22px] rounded-[10px] border-2 bg-white border-green w-full  '>
+                        <div className=' 2xl:mt-[66px] px-[22px] rounded-[10px] border-2 bg-white border-green w-full  '>
                             <h2 className='text-black mt-[24px] font-FontSan text-[22px] font-[700] mb-[15px]'>{t('Input.applyDirectly')}</h2>
                             <Input
                                 label={t('Input.name')}
@@ -96,9 +96,9 @@ const JobOpportunityItemPage = () => {
                             <Button className='custom-class-button-apply'>Apply</Button>
                         </div>
                     </form>
-                    <div className=' w-full rounded-[10px] border-2 border-green bg-white mt-[26px] lg:mb-[242px] mb-[50px]'>
+                    <div className=' w-full rounded-[10px] border-2 border-green bg-white mt-[26px] xl:mb-[242px] mb-[50px]'>
                         <div className='lg:px-[23px] px-[11px] text-green font-FontSan text-[24px] font-[700] mb-[22px] mt-[27px] '>{t('Input.similarJob')}</div>
-                        <SimilarJob />
+                         <SimilarJob /> 
                     </div>
                 </div>
             </div>

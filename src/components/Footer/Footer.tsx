@@ -56,9 +56,9 @@ export const Footer = () => {
       </div>
       <div className='lg:hidden flex w-full h-[1px] bg-[#ccc] mt-[50px]'></div>
       <div className="col-span-1 text-white mr-[34px]  w-full">
-        <h2 className="text-[24px] font-FontSan font-[700] leading-[28px] lg:mt-[94px] mt-[50px]">
+         <h2 className="text-[20px] sm:text-[24px] font-FontSan font-[700] leading-[28px] lg:mt-[94px] mt-[50px]">
           {t('HomePage.contact')}
-        </h2>
+        </h2> 
         <div className="flex items-center lg:mt-[26px] mt-[22px]">
           <img
             src={Images.Telephone}
@@ -103,9 +103,9 @@ export const Footer = () => {
       </div>
       <div className='lg:hidden flex w-full h-[1px] bg-[#ccc] mt-[50px]'></div>
       <div className="col-span-1 text-white mb-[20px] lg:mb-0">
-        <h2 className="text-[24px] font-FontSan font-[700] leading-[28px] lg:mt-[94px] mt-[50px] ">
+         <h2 className="sm:text-[24px] text-[20px] font-FontSan font-[700] leading-[28px] lg:mt-[94px] mt-[50px] ">
           {t('FooterPage.UsefulLinksOnly')}
-        </h2>
+        </h2> 
         <div className="mt-[26px]">
           <div className="flex items-center">
             <img
@@ -144,10 +144,10 @@ export const Footer = () => {
               alt=""
               className="w-[20px] h-[20px] object-cover"
             />
-            <p className="text-[16px] font-FontSan font-[500] leading-[24px]">
+             <p className="text-[16px] font-FontSan font-[500] leading-[24px]">
               {t('FooterPage.partnerProgram')}
 
-            </p>
+            </p> 
           </div>
           <div className="flex items-center mt-[8px]">
             <img

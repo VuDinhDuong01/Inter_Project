@@ -32,6 +32,7 @@ const JobOpportunity = () => {
   const { jobsData } = useSelector((state: RootState) => state.jobs)
 
   const handleSubmitSearch = (e: React.FormEvent<HTMLFormElement>) => {
+
     e.preventDefault()
     navigate({
       pathname: Path.jobOpportunity,
@@ -58,16 +59,16 @@ const JobOpportunity = () => {
   return (
     <div>
       <Banner Image1={Images.Image26} Image2={Images.Image24} width1={225} height1={173} height2={285} width2={285} marginTop1={95} marginTop2={34} content={t('banner.titleBannerJobOpportunity')} description={t('banner.descriptionBannerJobOpportunity')} />
-      <div className="lg:px-[120px] ">
+      <div className="xl:px-[120px] lg:px-[100px]">
         <div>
-          <h2 className="text-black mb-[40px] flex items-center justify-center font-FontSan lg:text-[24px] text-[22px] font-[700] leading-[28px]">{t('jobOpportunity.JobOpportunity')}</h2>
+          <h2 className="text-black mb-[40px]  flex items-center justify-center font-FontSan xl:text-[24px] text-[22px]  font-[700] leading-[28px]">{t('jobOpportunity.JobOpportunity')}</h2> 
           <div className='relative mb-[53px]'>
             <form action=" " className='' onSubmit={handleSubmitSearch}>
               <input type="text" 
-              placeholder={t('Input.job')} 
+              placeholder={t('Input.job')}
               value={searchJob} 
               onChange={(e) => setSearchJob(e.target.value)} 
-              className=' lg:w-full w-[90%] flex items-center justify-center m-auto pl-[12px] pr-[110px] h-[48px] rounded-[12px] bg-white border border-solid border-web-1 border-green font-FontSan text-[16px] font-[500]  leading-[24px] ' />
+              className=' xl:w-full lg:w-full w-[95%] flex items-center justify-center m-auto pl-[12px] pr-[110px] h-[48px] rounded-[12px] bg-white border border-solid border-web-1 border-green font-FontSan text-[16px] font-[500]  leading-[24px] ' />
               <button className='custom-class-button-findJob'>{t('jobOpportunity.findAJob')}</button>
             </form>
           </div>

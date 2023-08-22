@@ -16,16 +16,16 @@ export const Job = ({ job }: { job: JobType }) => {
         <div className='flex items-center'>
           <div className='flex items-center lg:mr-[18px] mr-[6px]'>
             <Icons.BsCurrencyDollar className='text-grey font-FontSan text-[13px] font-[900] lg:mr-[6px] mr-[1px] ' />
-            <p className='text-grey font-FontSan text-[13px] leading-[28px]'>{t('jobOpportunity.agree')}</p>
+            <p className='text-grey font-FontSan text-[10px] sm:text-[14px] leading-[28px]'>{t('jobOpportunity.agree')}</p>
           </div>
           <div className='flex items-center lg:mr-[18px] mr-[6px]'>
             <Icons.BiMap className='text-grey font-FontSan text-[14px] font-[900] lg:mr-[6px] mr-[1px]' />
-            <p className='text-grey font-FontSan text-[14px] leading-[28px]'>{job.address}</p>
+            <p className='text-grey font-FontSan text-[10px] sm:text-[14px] leading-[28px]'>{job.address}</p>
           </div>
 
           <div className='flex items-center lg:mr-[18px]'>
             <Icons.AiOutlineClockCircle className='text-grey font-FontSan text-[14px] font-[900] lg:mr-[6px] mr-[1px]' />
-            <p className='text-grey font-FontSan text-[14px] leading-[28px]'>24/02/2002</p>
+            <p className='text-grey font-FontSan text-[10px] sm:text-[14px] leading-[28px]'>24/02/2002</p>
           </div>
 
         </div>

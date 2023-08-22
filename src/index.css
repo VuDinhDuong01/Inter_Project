@@ -44,6 +44,6 @@
   @apply hover:bg-[#2F2739] lg:hover:bg-transparent  hover:text-white lg:hover:text-black rounded-md flex items-center lg:pl-0 pl-[15px] w-full h-[40px]
   }
   .custom-class-button-findJob{
-  @apply flex lg:w-[276px] absolute lg:right-0 right-[15px] top-0 h-[48px] px-[10px] py-[12px]  justify-center items-center gap-[8px] rounded-[12px] bg-green text-white font-FontSan lg:text-[24px] font-[600]
+  @apply flex lg:w-[276px] absolute lg:right-0 right-[9px] top-0 h-[48px] px-[10px] py-[12px]  justify-center items-center gap-[8px] rounded-[12px] bg-green text-white font-FontSan lg:text-[24px] font-[600]
   }
 }

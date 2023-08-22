@@ -1,3 +1,5 @@
+
+
 import { JobType } from "../types/Job.type"
 
 export const getPathNewDetail = (title: string, id: string) => {
@@ -25,3 +27,4 @@ export const filterData = (name: string, fakeDataJob: JobType[]) => {
         return fakeDataJob.filter(item => item.location.toLowerCase().includes(name.trim().toLowerCase()))
     }
 }
+
