@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-import { Images } from "../../utils/images/Images"; 
+import { Images } from "~/utils/images/Images"; 
 
 export const Footer = () => {
   const { t } = useTranslation()

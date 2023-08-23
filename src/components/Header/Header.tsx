@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useRef } from 'react';
 
-import { Icons } from '../../contants/Icon'; 
-import { Images } from '../../utils/images/Images'; 
-import { Path }  from '../../contants/Path'
+import { Icons } from '~/contants/Icon'; 
+import { Images } from '~/utils/images/Images';  
+import { Path } from '~/contants/Path'; 
 import { TippyLanguage } from '../tippy/TippyLanguage'; 
 
 export const Header = () => {
