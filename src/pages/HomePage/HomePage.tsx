@@ -3,19 +3,19 @@ import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
 
-import { Partner } from "../../components/Partner/Partner";
-import { RegisterBatTech } from "../../components/RegisterBatTech/RegisterBatTech";
-import { ItemNews } from "../../components/ItemNews/ItemNews";
-import { ServicePack } from "../../components/ServicePack/ServicePack";
-import { RootState, useAppDispatch } from '../../stores/store'
-import { fetchNews } from "../../stores/NewApi"
-import { IntroductionBattech } from "../../components/IntroductionBattech/IntroductionBattech";
-import { DifferentAndPioneering } from "../../components/DifferentAndPioneering/DifferentAndPioneering";
-import { Slick } from "../../components/slick/index";
-import { useQuery } from "../../hook/useQuery";
-import { QueryType } from "../../types/query.type";
-import { NewsType } from "../../types/News.type";
-import { Images } from "../../utils/images/Images";
+import { Partner } from "~/components/Partner/Partner";
+import { RegisterBatTech } from "~/components/RegisterBatTech/RegisterBatTech";
+import { ItemNews } from "~/components/ItemNews/ItemNews";
+import { ServicePack } from "~/components/ServicePack/ServicePack";
+import { RootState, useAppDispatch } from '~/stores/store'
+import { fetchNews } from "~/stores/NewApi";
+import { IntroductionBattech } from "~/components/IntroductionBattech/IntroductionBattech";
+import { DifferentAndPioneering } from "~/components/DifferentAndPioneering/DifferentAndPioneering";
+import { Slick } from "~/components/slick";
+import { useQuery } from "~/hook/useQuery";
+import { QueryType } from "~/types/query.type";
+import { NewsType } from "~/types/News.type";
+import { Images } from "~/utils/images/Images";
 
 const HomePage = () => {
   const query: QueryType = useQuery()
@@ -30,11 +30,12 @@ const HomePage = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className="w-full h-[638px]  relative lg:mb-[98px] ">
-        <img
+         <img
           src={Images.BannerHome}
           alt="banner"
-          className="w-full h-full object-cover "
-        />
+          className="w-full h-full object-cover lg:flex hidden "
+        /> 
+        <img src='https://battech.vn/assets/images/services.png' className='w-full h-full object-cover lg:hidden flex' alt="banner" />
 
         <div className='w-full lg:hidden flex flex-col px-[15px] lg:mr-[134px] z-10 absolute xl:top-[50%] top-[50%]   translate-y-[-50%]'>
           <h2 className="text-[#F57A21] text-[40px] font-[700] font-FontSan mb-[10px]">
@@ -44,15 +45,15 @@ const HomePage = () => {
             {t('HomePage.titleBanner')}
           </h3>
           <div className="w-full ">
-            <p className="text-[#606060] font-FontSan text-[16px] font-[400] leading-[24px]">
+            <p className="lg:text-[#606060] text-white font-FontSan text-[16px] font-[400] leading-[24px]">
               {t('HomePage.descriptionBanner')}
             </p>
           </div>
           <button className="text-white mt-[30px] items-center justify-center font-FontSan text-[24px] font-[600] rounded-[10px] border-2 border-white w-[276px] h-[48px] px-[10px] py-[12px] flex  ">
             {t('HomePage.buttonBanner')}
           </button>
-        </div> 
-         <div className='absolute lg:flex hidden xl:top-[50%]  top-[50%] md:mx-[20px]  lg:left-[50%]  lg:translate-x-[-50%] translate-y-[-50%] items-center justify-center '>
+        </div>
+        <div className='absolute lg:flex hidden xl:top-[50%]  top-[50%] md:mx-[20px]  lg:left-[50%]  lg:translate-x-[-50%] translate-y-[-50%] items-center justify-center '>
           <div className='xl:mr-[134px]'>
             <h2 className="text-[#F57A21] text-[40px] font-[700] font-FontSan mb-[30px]">
               BATTECH ERP
@@ -73,7 +74,7 @@ const HomePage = () => {
           <div className="xl:w-[596px] w-[500px]   max-w-none lg:flex hidden">
             <img src={Images.ImageBanner} alt="" className="w-full h-full object-cover" />
           </div>
-        </div> 
+        </div>
       </div>
 
 

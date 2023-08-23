@@ -3,11 +3,11 @@ import { useSelector } from "react-redux"
 import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 
-import { Icons } from "../../contants/Icon"
-import { RootState } from "../../stores/store"
-import { useAppDispatch } from "../../stores/store"
-import { fetchJobDetail } from "../../stores/JobApi"
-import { getId } from "../../utils/utils"
+import { Icons } from "~/contants/Icon" 
+import { RootState } from "~/stores/store" 
+import { useAppDispatch } from "~/stores/store" 
+import { fetchJobDetail } from "~/stores/JobApi" 
+import { getId } from "~/utils/utils" 
 
 export const JobDescription = () => {
     const dispatch = useAppDispatch()

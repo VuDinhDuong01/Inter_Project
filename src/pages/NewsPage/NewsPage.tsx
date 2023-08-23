@@ -3,19 +3,19 @@ import { useEffect } from 'react'
 import { useTranslation } from "react-i18next";
 import { useNavigate, createSearchParams } from 'react-router-dom';
 
-import { Banner } from '../../components/Banner/Banner'
-import { RootState, useAppDispatch } from '../../stores/store'
-import { fetchNews } from '../../stores/NewApi'
-import { Skeleton } from '../../components/Skeleton/Skeleton'
-import { ItemNews } from '../../components/ItemNews/ItemNews'
-import { News } from '../../components/News/News'
-import { Pagination } from '../../components/pagination/Pagination'
-import { useQuery } from '../../hook/useQuery'
-import { Path } from '../../contants/Path'
-import { QueryType } from '../../types/query.type';
-import { fakeDataFilterNew } from '../../api/Data';
-import { NewsType } from '../../types/News.type';
-import { Images } from '../../utils/images/Images';
+import { Banner } from '~/components/Banner/Banner'; 
+import { RootState,useAppDispatch } from '~/stores/store'; 
+import { fetchNews } from '~/stores/NewApi'; 
+import { Skeleton } from '~/components/Skeleton/Skeleton'; 
+import { ItemNews } from '~/components/ItemNews/ItemNews';
+import { News } from '~/components/News/News'; 
+import { Pagination } from '~/components/pagination/Pagination'; 
+import { useQuery } from '~/hook/useQuery'; 
+import { Path } from '~/contants/Path'; 
+import { QueryType } from '~/types/query.type'; 
+import { fakeDataFilterNew } from '~/api/Data'; 
+import { NewsType } from '~/types/News.type'; 
+import { Images } from '~/utils/images/Images'; 
 
 const NewsPage = () => {
 

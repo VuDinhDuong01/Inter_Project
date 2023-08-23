@@ -11,8 +11,8 @@ const  NewsPage =lazy(()=>import("./pages/NewsPage/NewsPage"))
 const   IntroductionPage =lazy(()=>import("./pages/IntroductionPage/IntroductionPage")) 
 const   JobOpportunityPage =lazy(()=>import("./pages/JobOpportunityPage/JobOpportunityPage")) 
 const   NotFound =lazy(()=>import("./pages/NotFoundPage/NotFoundPage")) 
-const  NewDetailPage =lazy(()=>import( "./pages/NewsPage/NewDetailPage/NewDetailPage"))
-const   JobOpportunityItemPage =lazy(()=>import("./pages/JobOpportunityPage/JobOpportunityItemPage/JobOpportunityItemPage")) 
+const  NewDetailPage =lazy(()=>import( "./pages/NewDetailPage/NewDetailPage"))
+const   JobOpportunityItemPage =lazy(()=>import("./pages/JobOpportunityItemPage/JobOpportunityItemPage")) 
 
 export const Routes = () => {
 

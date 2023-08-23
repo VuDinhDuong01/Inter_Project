@@ -1,7 +1,7 @@
-import { DataWorkingPrinciple } from "../../api/Data"
-import { useTranslation } from "react-i18next";
-
-import { Images } from "../../utils/images/Images";
+ import { useTranslation } from "react-i18next";
+ 
+ import { DataWorkingPrinciple } from "~/api/Data";
+import { Images } from "~/utils/images/Images"; 
 
 export const WorkingPrinciple = () => {
 

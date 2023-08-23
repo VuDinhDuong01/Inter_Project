@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
 
 
-import { RegisterBatTech } from '../../components/RegisterBatTech/RegisterBatTech'
-import { Partner } from '../../components/Partner/Partner'
-import { Banner } from '../../components/Banner/Banner'
-import { WorkingPrinciple } from '../../components/WorkingPrinciple/WorkingPrinciple'
-import { Images } from "../../utils/images/Images";
+import { RegisterBatTech } from "~/components/RegisterBatTech/RegisterBatTech";
+import { Partner } from "~/components/Partner/Partner";
+import { Banner } from "~/components/Banner/Banner";
+import { WorkingPrinciple } from "~/components/WorkingPrinciple/WorkingPrinciple";
+import { Images } from "~/utils/images/Images";
 
 const IntroductionPage = () => {
   const { t } = useTranslation()
@@ -75,7 +75,7 @@ const IntroductionPage = () => {
         </div>
       </div>
       <WorkingPrinciple />
-       <div className='xl:pl-[236px] xl:pr-[124px] xl:gap-[96px] xl:flex xl:mb-[120px]  xl:bg-transparent bg-[#CEFFE8] xl:pb-0 pb-[50px]'>
+      <div className='xl:pl-[236px] xl:pr-[124px] xl:gap-[96px] xl:flex xl:mb-[120px]  xl:bg-transparent bg-[#CEFFE8] xl:pb-0 pb-[50px]'>
         <div className='xl:w-[400px] xl:h-[400px] h-full flex items-center justify-center  ' >
           <img src={Images.Anh9Image} alt="" className='xl:w-[400px]  max-w-none xl:h-[400px]  object-cover' />
         </div>
@@ -83,7 +83,7 @@ const IntroductionPage = () => {
           <h2 className='xl:py-0 py-[40px] text-black xl:text-left text-center mb-[12px]  font-FontSan text-[24px] font-[700] leading-[28px] '>{t('IntroductionPage.STAFF')}</h2>
           <p className='xl:text-[16px]  text-[#444] lg:text-[25px] lg:leading-[40px] font-FontSan font-[500] xl:leading-[24px] leading-[28px]'>{t('IntroductionPage.StaffDetail')}</p>
         </div>
-      </div> 
+      </div>
       <RegisterBatTech />
       <Partner />
     </div>

@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-import { axiosInstance } from '../api/FakeApi' 
-import { NewsType } from '../types/News.type' 
-import { GenerateType } from '../types/General.type'
-import { QueryType } from '../types/query.type'
+import { axiosInstance } from '~/api/FakeApi' 
+import { NewsType } from '~/types/News.type' 
+import { GenerateType } from '~/types/General.type' 
+import { QueryType } from '~/types/query.type' 
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
 export const fetchNews = createAsyncThunk(

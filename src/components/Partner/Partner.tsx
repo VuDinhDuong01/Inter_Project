@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
-import { Slick } from "../../components/slick/index";
-import { PartnerData } from '../../api/Data'
+import { Slick } from "../slick"; 
+import { PartnerData } from "~/api/Data"; 
 
 export const Partner = () => {
 

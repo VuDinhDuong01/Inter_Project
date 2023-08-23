@@ -1,9 +1,9 @@
 import range from 'lodash/range'
 import { Link, createSearchParams, useNavigate } from 'react-router-dom'
 
-import { Images } from '../../utils/images/Images'
-import { QueryType } from '../../types/query.type'
-import { Button } from '../Button/Button'
+import { Images } from '~/utils/images/Images' 
+import { QueryType } from '~/types/query.type' 
+import { Button } from '../Button/Button' 
 
 interface PaginationType {
     page_size: number,

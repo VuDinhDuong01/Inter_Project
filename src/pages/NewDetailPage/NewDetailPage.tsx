@@ -2,10 +2,10 @@ import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 
-import { getId } from '../../../utils/utils'
-import { RootState, useAppDispatch } from '../../../stores/store'
-import { fetchNewsDetail } from '../../../stores/NewApi'
-import { RelatedJobs } from '../../../components/RelatedJobs/RelatedJobs'
+import { getId } from '~/utils/utils' 
+import { RootState,useAppDispatch } from '~/stores/store' 
+import { fetchNewsDetail } from '~/stores/NewApi' 
+import { RelatedJobs } from '~/components/RelatedJobs/RelatedJobs' 
 
 const NewDetailPage = () => {
 
@@ -14,20 +14,21 @@ const NewDetailPage = () => {
     const idNew = getId(id as string)
 
     const { newDataDetail } = useSelector((state: RootState) => state.news)
+    
     useEffect(() => {
         dispatch(fetchNewsDetail(idNew))
     }, [idNew, dispatch])
 
     return (
-        <div className="lg:px-[120px] lg:flex lg:gap-[32px]">
-            <div className="lg:mt-[24px] lg:w-[789px] w-full">
+        <div className="2xl:px-[120px] 2xl:flex 2xl:gap-[32px] lg:px-[30px]">
+            <div className="2xl:mt-[24px] 2xl:w-[789px] w-full ">
                 <div className='items-center mb-[50px] lg:flex hidden'>
                     <p className="text-green  cursor-pointer font-FontSan text-[16px] font-[500] leading-[24px]">Tin tức/</p>
                     <p className='text-green  cursor-pointer font-FontSan text-[16px] font-[500] leading-[24px]'>Phát triển phần mềm/</p>
                     <p className='text-black font-FontSan text-[16px] font-[500] leading-[24px]'>{newDataDetail?.content}</p>
                 </div>
                 
-                <div className='w-full lg:bg-transparent bg-green lg:px-0 px-[20px] lg:text-left text-center lg:h-0 h-[300px] flex items-center m-auto justify-center lg:text-black  text-white text-[32px] font-[700] leading-[36px] lg:mb-[64px]'>
+                <div className='w-full lg:bg-transparent bg-green lg:px-0 px-[20px] 2xl:text-left text-center lg:h-0 h-[300px] flex items-center m-auto 2xl:justify-start justify-center lg:text-black  text-white text-[32px] font-[700] leading-[36px] lg:mb-[64px]'>
                     {newDataDetail?.content}
                 </div>
 
@@ -63,7 +64,6 @@ const NewDetailPage = () => {
                 
                 <RelatedJobs start={2} end={5} />
                 <RelatedJobs start={3} end={5} />
-              
             </div>
         </div>
     )

@@ -5,7 +5,9 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 import { BsCurrencyDollar } from 'react-icons/bs'
 
 
-export const Icons={
-    FiMenu,FaTimes,
-    AiOutlineClockCircle,BiMap,BsCurrencyDollar
+export const Icons = {
+    FiMenu, FaTimes,
+    AiOutlineClockCircle,
+    BiMap,
+    BsCurrencyDollar
 }

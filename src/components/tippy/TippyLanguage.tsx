@@ -2,10 +2,7 @@ import { useState } from 'react'
 import Tippy from '@tippyjs/react/headless';
 import i18n from "i18next";
 
-import { Images } from '../../utils/images/Images';
-
-// import ImgLangEn from '~/assets/image/EN.png'
-// import ImgLang from "~/assets/image/img-lang.png";
+import { Images } from '~/utils/images/Images'; 
 
 export const TippyLanguage = () => {
     const [isShow, setIsShow] = useState<boolean>(false)

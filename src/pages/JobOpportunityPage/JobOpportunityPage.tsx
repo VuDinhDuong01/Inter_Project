@@ -5,18 +5,18 @@ import { createSearchParams, useNavigate } from 'react-router-dom'
 import { useTranslation } from "react-i18next";
 import omit from 'lodash/omit'
 
-import { Banner } from '../../components/Banner/Banner'
-import { Filter } from '../../components/Filter/Filter'
-import { Job } from '../../components/Job/Job'
-import { useAppDispatch } from '../../stores/store'
-import { RootState } from '../../stores/store'
-import { fetchJobs } from '../../stores/JobApi'
-import { Pagination } from '../../components/pagination/Pagination'
-import { useQuery } from '../../hook/useQuery'
-import { Path } from '../../contants/Path'
-import { QueryType } from '../../types/query.type'
-import { JobType } from '../../types/Job.type';
-import { Images } from '../../utils/images/Images';
+import { Banner } from '~/components/Banner/Banner'; 
+import { Filter } from '~/components/Filter/Filter'; 
+import { Job } from '~/components/Job/Job'; 
+import { useAppDispatch } from '~/stores/store'; 
+import { RootState } from '~/stores/store'; 
+import { fetchJobs } from '~/stores/JobApi'; 
+import { Pagination } from '~/components/pagination/Pagination'; 
+import { useQuery } from '~/hook/useQuery';
+import { Path } from '~/contants/Path'
+import { QueryType } from '~/types/query.type'; 
+import { JobType } from '~/types/Job.type'; 
+import { Images } from '~/utils/images/Images'; 
 
 const JobOpportunity = () => {
   const [checkedRadioGroup, setCheckedRadioGroup] = useState<string>('6')

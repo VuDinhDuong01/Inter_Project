@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-import { axiosInstance } from '../api/FakeApi' 
-import { JobType } from '../types/Job.type' 
-import { GenerateType } from '../types/General.type' 
-import { QueryType } from '../types/query.type' 
+import { axiosInstance } from '~/api/FakeApi'  
+import { JobType } from '~/types/Job.type' 
+import { GenerateType } from '~/types/General.type'  
+import { QueryType } from '~/types/query.type'  
 interface UsersState {
     jobsData: GenerateType<JobType[]>,
     jobDetail: JobType

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { DataDifferentAndPioneer } from "../../api/Data"
+import { DataDifferentAndPioneer } from "~/api/Data"; 
 
 export const DifferentAndPioneering = () => {
 

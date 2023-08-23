@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useTranslation } from "react-i18next";
 
-import { getPathNewDetail } from '../../utils/utils'
-import { RootState } from '../../stores/store'
-import { Icons } from '../../contants/Icon';
-import { JobType } from '../../types/Job.type';
+import { getPathNewDetail } from '~/utils/utils'; 
+import { RootState } from '~/stores/store'; 
+import { Icons } from '~/contants/Icon'; 
+import { JobType } from '~/types/Job.type'; 
 
 export const SimilarJob = () => {
     const jobsData = useSelector((state: RootState) => state.jobs.jobsData)

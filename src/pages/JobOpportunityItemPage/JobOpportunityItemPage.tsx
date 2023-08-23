@@ -2,13 +2,13 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useTranslation } from "react-i18next";
 
-import { Banner } from '../../../components/Banner/Banner'
-import { RegisterType, registerSchema } from '../../../utils/schema'
-import { Input } from '../../../components/Input/Input'
-import { JobDescription } from '../../../components/JobDescription/JobDescription'
-import { Button } from '../../../components/Button/Button'
-import { SimilarJob } from '../../../components/SimilarJob/SimilarJob'
-import { Images } from "../../../utils/images/Images";
+import { Banner } from "~/components/Banner/Banner";
+import { RegisterType, registerSchema } from '~/utils/schema'
+import { Input } from "~/components/Input/Input";
+import { JobDescription } from "~/components/JobDescription/JobDescription";
+import { Button } from "~/components/Button/Button";
+import { SimilarJob } from "~/components/SimilarJob/SimilarJob";
+import { Images } from "~/utils/images/Images";
 
 const JobOpportunityItemPage = () => {
     const { t } = useTranslation()
@@ -98,7 +98,7 @@ const JobOpportunityItemPage = () => {
                     </form>
                     <div className=' w-full rounded-[10px] border-2 border-green bg-white mt-[26px] xl:mb-[242px] mb-[50px]'>
                         <div className='lg:px-[23px] px-[11px] text-green font-FontSan text-[24px] font-[700] mb-[22px] mt-[27px] '>{t('Input.similarJob')}</div>
-                         <SimilarJob /> 
+                        <SimilarJob />
                     </div>
                 </div>
             </div>

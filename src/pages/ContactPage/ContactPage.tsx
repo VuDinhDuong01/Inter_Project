@@ -2,11 +2,11 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useTranslation } from "react-i18next";
 
-import { Banner } from '../../components/Banner/Banner'
-import { Input } from '../../components/Input/Input';
-import { RegisterType, registerSchema } from '../../utils/schema'
-import GoogleMapConfig from "../../components/GoogleMap/GoogleMap";
-import { Images } from "../../utils/images/Images";
+import { Banner } from "~/components/Banner/Banner";
+import { Input } from "~/components/Input/Input";
+import { RegisterType, registerSchema } from '~/utils/schema'
+import GoogleMapConfig from "~/components/GoogleMap/GoogleMap";
+import { Images } from "~/utils/images/Images";
 
 const ContactPage = () => {
   const { t } = useTranslation()
@@ -27,7 +27,7 @@ const ContactPage = () => {
 
   return (
     <div>
-     <Banner Image1={Images.Image27} Image2={Images.Image25} width1={256} height1={217} height2={296} width2={255} marginTop1={80} marginTop2={23} content={t('Header.contact')} description={t('banner.descriptionBannerContact')} />
+      <Banner Image1={Images.Image27} Image2={Images.Image25} width1={256} height1={217} height2={296} width2={255} marginTop1={80} marginTop2={23} content={t('Header.contact')} description={t('banner.descriptionBannerContact')} />
       <div className="lg:px-[120px] w-full px-[20px]">
         <div className="w-full grid lg:grid-cols-2  grid-cols-1 lg:gap-[31px]">
           <div className="col-span-1 lg:flex hidden">

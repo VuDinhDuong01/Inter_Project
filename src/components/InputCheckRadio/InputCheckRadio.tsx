@@ -1,4 +1,4 @@
-import { DataType } from "../../types/query.type"
+import { DataType } from "~/types/query.type"
 
 interface InputCheckRadioType {
     item: DataType

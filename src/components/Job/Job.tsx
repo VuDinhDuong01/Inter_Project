@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom'
 
-import { JobType } from '../../types/Job.type'
-import { getPathNewDetail } from '../../utils/utils'
-import { Button } from '../Button/Button'
-import { Icons } from "../../contants/Icon";
+import { JobType } from "~/types/Job.type"; 
+import { getPathNewDetail } from "~/utils/utils"; 
+import { Button } from "../Button/Button"; 
+import { Icons } from "~/contants/Icon"; 
 
 export const Job = ({ job }: { job: JobType }) => {
   const { t } = useTranslation()
