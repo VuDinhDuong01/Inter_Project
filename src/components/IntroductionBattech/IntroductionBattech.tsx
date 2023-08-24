@@ -5,8 +5,8 @@ import { Images } from "~/utils/images/Images";
 export const IntroductionBattech = () => {
   const { t } = useTranslation()
   return (
-    <div className="lg:px-[140px] xl:max-w-[1200px]  xl:m-auto lg:bg-transparent bg-[#CEFFE8] lg:py-0 py-[50px] px-[15px]">
-      <div className="items-center grid lg:grid-cols-2 grid-cols-1  lg:gap-[50px]">
+    <div className="lg:px-[140px] 2xl:px-0 xl:max-w-[1200px]   xl:m-auto lg:bg-transparent bg-[#CEFFE8] lg:py-0 py-[50px] px-[15px]">
+      <div className="items-center grid lg:grid-cols-2 2xl:gap-[57px] grid-cols-1  lg:gap-[50px]">
         <div className="col-span-1">
           <img src={Images.AutoImage} alt="ảnh đồng hồ" className="object-cover flex items-center justify-center w-full h-full" />
         </div>
@@ -17,9 +17,8 @@ export const IntroductionBattech = () => {
           <p className="text-black  text-justify font-FontSan lg:text-[16px] font-[500] leading-[24px] mb-[30px]">
             {t('HomePage.descriptionBattech')}
           </p>
-
-           <div className="w-full grid xl:grid-cols-4  grid-cols-2    xl:gap-[31px] gap-[10px]">
-            <div className="col-span-1 inline-flex items-center gap-[6px] justify-end flex-col pt-[19px]  pb-[7px] rounded-[16px]  shadow-[rgba(0, 0, 0, 0.05)] border-[#008345] border-2 ">
+          <div className="w-full grid xl:grid-cols-4  grid-cols-2    xl:gap-[31px] gap-[10px]">
+            <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="col-span-1 inline-flex items-center gap-[6px] justify-end flex-col pt-[19px] border-green border-2  pb-[7px] rounded-[16px]  ">
               <img
                 src={Images.ClockImage}
                 alt="ảnh đồng hồ"
@@ -34,7 +33,7 @@ export const IntroductionBattech = () => {
                 </p>
               </div>
             </div>
-            <div className="col-span-1 inline-flex items-center gap-[6px] justify-end flex-col pt-[19px]  pb-[7px] rounded-[16px]  shadow-[rgba(0, 0, 0, 0.05)] border-[#008345] border-2 ">
+            <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="col-span-1 inline-flex items-center gap-[6px] justify-end flex-col pt-[19px] border-green border-2  pb-[7px] rounded-[16px]  ">
               <img
                 src={Images.TudongImage}
                 alt="ảnh đồng hồ"
@@ -49,7 +48,7 @@ export const IntroductionBattech = () => {
                 </p>
               </div>
             </div>
-            <div className="col-span-1 inline-flex items-center gap-[6px] justify-end flex-col pt-[19px]  pb-[7px] rounded-[16px]  shadow-[rgba(0, 0, 0, 0.05)] border-[#008345] border-2 ">
+            <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="col-span-1 inline-flex items-center gap-[6px] justify-end flex-col pt-[19px] border-green border-2  pb-[7px] rounded-[16px]  ">
               <img
                 src={Images.SettingImage}
                 alt="ảnh đồng hồ"
@@ -64,7 +63,7 @@ export const IntroductionBattech = () => {
                 </p>
               </div>
             </div>
-            <div className="col-span-1 inline-flex items-center gap-[6px] justify-end flex-col pt-[19px]  pb-[7px] rounded-[16px]  shadow-[rgba(0, 0, 0, 0.05)] border-[#008345] border-2 ">
+            <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="col-span-1 inline-flex items-center gap-[6px] justify-end flex-col pt-[19px] border-green border-2  pb-[7px] rounded-[16px]  ">
               <img
                 src={Images.SecurityImage}
                 alt="ảnh đồng hồ"
@@ -79,7 +78,7 @@ export const IntroductionBattech = () => {
                 </p>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </div>

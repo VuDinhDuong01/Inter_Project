@@ -7,11 +7,11 @@ export const DifferentAndPioneering = () => {
   const { t, i18n } = useTranslation()
 
   return (
-    <div className="2xl:px-[120px] xl:h-[350px] 2xl:max-w-[1200px]  2xl:m-auto items-center  2xl:mt-[116px] lg:mt-[116px] 2xl:mb-[120px] lg:mb-[50px] ">
+    <div className="xl:px-[120px] 2xl:px-0 xl:h-[350px]  2xl:max-w-[1200px]  2xl:m-auto items-center  2xl:mt-[116px] lg:mt-[116px] 2xl:mb-[120px] lg:mb-[50px] ">
        <h2 className="text-[24px] font-[700] leading-[28px] font-FontSan text-black lg:mb-[76px] mb-[80px] lg:pt-0 pt-[80px] flex items-center justify-center">
         {t('HomePage.differentAndPioneering')}
       </h2> 
-      <div className='w-full grid xl:grid-cols-4 grid-cols-1 lg:grid-cols-2 lg:gap-[45px]   xl:gap-[32px]  px-[20px] '>
+      <div className='w-full grid xl:grid-cols-4 grid-cols-1 lg:grid-cols-2 2xl:gap-[32px]'>
         {
           DataDifferentAndPioneer.map((item, index) => {
             return <div key={index} className="shadow-xxl lg:mb-0 mb-[50px]  h-[245px] col-span-1 flex flex-col   items-center  rounded-[16px] bg-white relative ">

@@ -13,7 +13,7 @@ export const News = () => {
         <div className='xl:w-[687px]  2xl:w-[687px] 2xl:h-[563px]  relative xl:h-[563px] xl:mb-0 mb-[20px]  w-full object-cover' >
           <img src={Images.Anh10Image} alt="" className='w-full xl:h-[543px] h-[500px] object-cover rounded-[20px]' />
           <div className='bottom-[24px] absolute xl:left-[24px] left-[10px]  right-[10px]'>
-            <button className='inline-flex mb-[8px] px-[6px] py-[12px] justify-center items-center gap-[8px] rounded-[8px] bg-[#FD4848] text-white text-center font-FontSan xl:text-[20px] font-[700] learning-[28px]'>{t('NewsPage.SoftwareDevelopment')}</button>
+            <button className='inline-flex mb-[8px] py-[6px] px-[12px] justify-center items-center gap-[8px] rounded-[8px] bg-[#FD4848] text-white text-center font-FontSan xl:text-[20px] font-[700] learning-[28px]'>{t('NewsPage.SoftwareDevelopment')}</button>
             <h3 className='text-white xl:w-[639px] mt-[8px] font-FontSan xl:mb-0 mb-[10px] xl:text-[24px] text-[20px] xl:font-[700] font-[600] learning-[28px]'>{t('NewsPage.description1')}</h3>
             <div className="w-full flex xl:mb-[24px]  items-center xl:gap-[75px] justify-between xl:mr-0 mr-[25px]">
               <div className='flex items-center'>
@@ -31,7 +31,7 @@ export const News = () => {
           <div className='relative xl:mb-[31px] mb-[20px]  w-full' >
             <img src={Images.Anh11Image} alt="" className='w-full h-[256px]' />
             <div className='bottom-0 absolute xl:left-[24px] left-[10px] right-[10px]'>
-              <button className='inline-flex mb-[8px] px-[6px] py-[12px] justify-center items-center gap-[8px] rounded-[8px] bg-[#FD4848] text-white text-center font-FontSan xl:text-[20px] font-[700] learning-[28px]'>BLOCKCHAIN</button>
+              <button className='inline-flex mb-[8px] py-[6px] px-[12px] justify-center items-center gap-[8px] rounded-[8px] bg-[#FD4848] text-white text-center font-FontSan xl:text-[20px] font-[700] learning-[28px]'>BLOCKCHAIN</button>
               <h3 className='text-white xl:w-[ 436px] mt-[8px] font-FontSan xl:text-[24px] text-[20px] font-[700] learning-[28px]'>{t('NewsPage.Blockchain')}</h3>
               <div className="w-full flex xl:mb-[24px] mb-[15px] xl:mt-0 mt-[5px] items-center xl:gap-[75px] justify-between  xl:mr-0 pr-[15px]  ">
                 <div className='flex items-center'>
@@ -48,7 +48,7 @@ export const News = () => {
           <div className='relative w-full'>
             <img src={Images.Anh12Image} alt="" className='w-full h-[256px]' />
             <div className='bottom-0 absolute lg:left-[24px] left-[10px] right-[10px]'>
-              <Button className='inline-flex mb-[8px] px-[6px] py-[12px] justify-center items-center gap-[8px rounded-[8px] bg-[#FD4848] text-white text-center font-FontSan lg:text-[20px] font-[700] learning-[28px]'>GAME NFT</Button>
+              <Button className='inline-flex mb-[8px] py-[6px] px-[12px] justify-center items-center gap-[8px rounded-[8px] bg-[#FD4848] text-white text-center font-FontSan lg:text-[20px] font-[700] learning-[28px]'>GAME NFT</Button>
               <h3 className='text-white lg:w-[ 436px] mt-[8px] font-FontSan lg:text-[24px] text-[20px] font-[700] learning-[28px]'>{t('NewsPage.Nft')}</h3>
               <div className="w-full flex lg:mb-[24px] mb-[15px] lg:mt-0 mt-[5px] items-center lg:gap-[75px]   justify-between  lg:mr-0 pr-[15px]  ">
                 <div className='flex items-center '>
