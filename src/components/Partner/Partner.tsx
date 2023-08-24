@@ -1,14 +1,14 @@
 import { useTranslation } from "react-i18next";
 
-import { Slick } from "../slick"; 
-import { PartnerData } from "~/api/Data"; 
+import { Slick } from "../slick";
+import { PartnerData } from "~/api/Data";
 
 export const Partner = () => {
 
    const { t } = useTranslation()
-   
+
    return (
-      <div className="lg:mb-[112px] lg:h-[203px]   lg:px-[108px] lg:bg-transparent bg-green lg:py-0 py-[40px]">
+      <div className="lg:mb-[112px] 2xl:max-w-[1200px] 2xl:m-auto 2xl:my-[40px] lg:h-[203px]   lg:px-[108px] lg:bg-transparent bg-green lg:py-0 py-[40px]">
          <h2 className="lg:text-black text-white flex items-center justify-center font-FontSan text-[24px] font-[700] pb-[26px] leading-[28px]">{t('HomePage.Partner')}</h2>
          <div className='w-full'>
             {

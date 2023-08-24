@@ -59,7 +59,7 @@ const JobOpportunity = () => {
   return (
     <div>
       <Banner Image1={Images.Image26} Image2={Images.Image24} width1={225} height1={173} height2={285} width2={285} marginTop1={95} marginTop2={34} content={t('banner.titleBannerJobOpportunity')} description={t('banner.descriptionBannerJobOpportunity')} />
-      <div className="xl:px-[120px] lg:px-[100px]">
+      <div className="xl:px-[120px] 2xl:max-w-[1200px] 2xl:m-auto lg:px-[100px]">
         <div>
           <h2 className="text-black mb-[40px]  flex items-center justify-center font-FontSan xl:text-[24px] text-[22px]  font-[700] leading-[28px]">{t('jobOpportunity.JobOpportunity')}</h2> 
           <div className='relative mb-[53px]'>

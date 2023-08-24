@@ -4,10 +4,10 @@
 import { Images } from "~/utils/images/Images"; 
 
 export const WorkingPrinciple = () => {
-
     const { t, i18n } = useTranslation()
+    
     return (
-        <div className='xl:px-[120px] xl:mt-[113px] xl:mb-[113px] xl:bg-transparent bg-[#FFF8E8] xl:pb-0  pb-[50px]'>
+        <div className='xl:px-[120px] 2xl:px-0 2xl:max-w-[1200px] 2xl:max-h-[1200px] 2xl:m-auto  xl:mt-[113px] xl:mb-[113px] xl:bg-transparent bg-[#FFF8E8] xl:pb-0  pb-[50px]'>
             <h2 className='text-black xl:pt-0 pt-[50px] first-letter:  xl:mb-[36px] mb-[40px] font-FontSan text-[24px] lg:text-[30px] font-[700] leading-[28px] flex items-center justify-center'>{t('HomePage.wORKINGRELATIONSHIP')}</h2>
             <div className='w-full grid  xl:grid-cols-3 grid-cols-1 xl:gap-[34px]  '>
                 {

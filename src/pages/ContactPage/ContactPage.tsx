@@ -28,8 +28,8 @@ const ContactPage = () => {
   return (
     <div>
       <Banner Image1={Images.Image27} Image2={Images.Image25} width1={256} height1={217} height2={296} width2={255} marginTop1={80} marginTop2={23} content={t('Header.contact')} description={t('banner.descriptionBannerContact')} />
-      <div className="lg:px-[120px] w-full px-[20px]">
-        <div className="w-full grid lg:grid-cols-2  grid-cols-1 lg:gap-[31px]">
+      <div className="lg:px-[120px] w-full px-[20px] ">
+        <div className="w-full grid lg:grid-cols-2 2xl:max-w-[1191px] 2xl:max-h-[444px] 2xl:m-auto  grid-cols-1 lg:gap-[31px]">
           <div className="col-span-1 lg:flex hidden">
             <GoogleMapConfig />
           </div>
@@ -81,7 +81,7 @@ const ContactPage = () => {
           </div>
 
         </div>
-        <div className="lg:mt-[84px] mt-[50px] lg:bg-transparent bg-[#EAFFF5] rounded-[18px]">
+        <div className="lg:mt-[84px] 2xl:max-w-[1200px] 2xl:m-auto 2xl:mt-[84px] mt-[50px] lg:bg-transparent bg-[#EAFFF5] rounded-[18px]">
           <div className='flex flex-col w-full items-center justify-center '>
             <h2 className='text-black mb-[4px] text-center font-FontSan text-[24px] font-[700] leading-[28px] lg:mt-0 mt-[40px]'>{t('contact.realyToStarted')}</h2>
             <p className='text-black text-center font-FontSan text-[16px] font-[500] mb-[17px] leading-[24px] lg:mt-0 lg:px-0 px-[30px] mt-[15px]'>{t('contact.description2')}</p></div>

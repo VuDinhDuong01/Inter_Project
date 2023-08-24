@@ -31,7 +31,7 @@ const JobOpportunityItemPage = () => {
         <div>
             <Banner Image1={Images.Image26} Image2={Images.Image24} width1={225} height1={173} height2={285} width2={285} marginTop1={95} marginTop2={32} content={t('banner.titleBannerJobOpportunity')}
                 description={t('banner.descriptionBannerJobOpportunity')} />
-            <div className=' 2xl:px-[120px] lg:px-[50px] lg:gap-[68px] 2xl:flex'>
+            <div className=' 2xl:px-0 2xl:max-w-[1192px] 2xl:m-auto lg:px-[50px] lg:gap-[68px] 2xl:gap-[68px] 2xl:flex'>
                 <JobDescription />
                 <div className='flex-1 2xl:w-[379px] w-full 2xl:px-0 px-[15px] '>
                     <form action="" onSubmit={onSubmit}>

@@ -47,7 +47,7 @@ export const DataDifferentAndPioneer = [
     {
         img: Images.Image01,
         title: `Tư duy phát triển\nsản phẩm`,
-        description: "Tạo ra môi trường làm việc trực tuyến cho doanh nghiệp. Tất cả thành viên đều được cung cấp đầy đủ công cụ và tài nguyên số để phục vụ cho công việc.",
+        description: "Tất cả thành viên đều được cung cấp đầy đủ công cụ và tài nguyên số để phục vụ cho công việc.",
     },
     {
         img: Images.Image02,

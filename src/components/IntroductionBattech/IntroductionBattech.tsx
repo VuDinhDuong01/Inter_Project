@@ -5,7 +5,7 @@ import { Images } from "~/utils/images/Images";
 export const IntroductionBattech = () => {
   const { t } = useTranslation()
   return (
-    <div className="lg:px-[140px] lg:bg-transparent bg-[#CEFFE8] lg:py-0 py-[50px] px-[15px]">
+    <div className="lg:px-[140px] xl:max-w-[1200px]  xl:m-auto lg:bg-transparent bg-[#CEFFE8] lg:py-0 py-[50px] px-[15px]">
       <div className="items-center grid lg:grid-cols-2 grid-cols-1  lg:gap-[50px]">
         <div className="col-span-1">
           <img src={Images.AutoImage} alt="ảnh đồng hồ" className="object-cover flex items-center justify-center w-full h-full" />

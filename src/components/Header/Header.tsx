@@ -36,8 +36,8 @@ export const Header = () => {
           <Link to={Path.home}>
             <li
              onClick={()=>setToggle(false)}
-              className={classNames(` font-[700] font-FontSan lg:flex lg:mr-[33px] ${toggle ? 'custom-class-li-header-responsive' : ''}`, {
-                "text-green": location.pathname === Path.home,
+              className={classNames(` font-FontSan lg:flex lg:mr-[33px] ${toggle ? 'custom-class-li-header-responsive' : ''}`, {
+                "text-green font-[700]": location.pathname === Path.home,
                 "text-black": location.pathname !== Path.home,
               })}
             >
@@ -52,7 +52,7 @@ export const Header = () => {
                 ${toggle ? 'custom-class-li-header-responsive'
                   : ''} `,
                 {
-                  "text-green": location.pathname === Path.introduction,
+                  "text-green font-[700]": location.pathname === Path.introduction,
                   "text-black": location.pathname !== Path.introduction,
                 }
               )}
@@ -70,7 +70,7 @@ export const Header = () => {
                 ${toggle ? 'custom-class-li-header-responsive'
                   : ''} `,
                 {
-                  "text-green": location.pathname === Path.news,
+                  "text-green font-[700]": location.pathname === Path.news,
                   "text-black": location.pathname !== Path.news,
                 }
               )}
@@ -87,7 +87,7 @@ export const Header = () => {
                 ${toggle ? 'custom-class-li-header-responsive'
                   : ''} `,
                 {
-                  "text-green": location.pathname === Path.jobOpportunity,
+                  "text-green font-[700]": location.pathname === Path.jobOpportunity,
                   "text-black": location.pathname !== Path.jobOpportunity
                 }
               )}
@@ -101,7 +101,7 @@ export const Header = () => {
               className={classNames(`font-FontSan 
               ${toggle ? 'custom-class-li-header-responsive'
                   : ''} `, {
-                "text-green": Path.contact === location.pathname,
+                "text-green font-[700]": Path.contact === location.pathname,
                 "text-black": Path.contact !== location.pathname,
               })}
             >

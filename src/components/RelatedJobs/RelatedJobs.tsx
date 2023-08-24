@@ -5,7 +5,6 @@ import { NewsType } from '~/types/News.type'
 import { Images } from '~/utils/images/Images'
 
 export const RelatedJobs = ({ start, end }: { start: number, end: number }) => {
-
     const { newsData } = useSelector((state: RootState) => state.news)
     return (
         <div className='mb-[48px]'>
@@ -13,10 +12,9 @@ export const RelatedJobs = ({ start, end }: { start: number, end: number }) => {
             {
                 newsData.data.slice(start, end).map((item: NewsType, index: number) => {
                     return <div key={index} style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="flex w-full items-center shadow-sm rounded-[12px] mb-[20px]">
-                        <div className='2xl:w-[191px] h-[90px] rounded-l-[12px] max-w-none'>
-                            <img src={item?.image} alt="" className="2xl:w-[191px] h-[90px] max-w-none object-cover rounded-l-[12px]" />
+                        <div className='w-[140px] 2xl:w-[90px] 2xl:h-[90px] rounded-l-[12px] max-w-none'>
+                            <img src={item?.image} alt="" className="w-[140px] 2xl:w-[90px]  h-[90px] max-w-none object-cover rounded-l-[12px]" />
                         </div>
-
                         <div className="w-full md:justify-center">
                             <p className="px-[12px]  line-clamp-2 font-FontSan text-[16px] font-500 leading-[18px]">{item?.content}</p>
                             <div className="w-full flex items-center justify-between  px-[15px] pt-[6px] ">

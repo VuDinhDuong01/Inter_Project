@@ -82,7 +82,7 @@ const HomePage = () => {
 
       <IntroductionBattech />
       <DifferentAndPioneering />
-      <div className="2xl:flex hidden">
+       <div className="2xl:flex hidden">
         <div className='h-[488px] mb-[120px]  bg-[#E9F9D6] px-[120px] w-full flex justify-between '>
           <div className=' w-[687px]'>
             <p className='text-[#606060] font-FontSan text-[16px] font[500] leading-[24px] mt-[60px] mb-[12px]'>  {t('HomePage.NewsAboutBATTECH')}</p>
@@ -95,9 +95,9 @@ const HomePage = () => {
             <div className='top-[77px] absolute  right-[53px] w-[382px] h-[205px]  '><img src={Images.HomeImage} alt="" className="w-full h-full" /></div>
           </div>
         </div>
-      </div>
+      </div> 
 
-      <div className='lg:px-[104px] lg:h-[488px] lg:mb-[132px]  '>
+      <div className='lg:px-[104px] lg:h-[488px] lg:mb-[132px] 2xl:max-w-[1200px] 2xl:m-auto 2xl:mb-[132px]'>
         <h3 className='text-black  font-FontSan text-[24px] font-[700] leading-[28px] lg:mb-[32px] w-full justify-center items-center flex'>{t('HomePage.newsAndEvents')}</h3>
         <div className="w-full lg:py-[10px] py-[50px]">
           {
