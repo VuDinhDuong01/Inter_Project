@@ -22,17 +22,17 @@ const NewDetailPage = () => {
     return (
         <div className="2xl:flex 2xl:gap-[32px] lg:px-[30px] 2xl:px-0 2xl:max-w-[1200px]  2xl:m-auto">
             <div className="2xl:mt-[24px] 2xl:w-[789px] w-full">
-                <div className='items-center mb-[50px] lg:flex hidden'>
+                <div className='items-center mb-[50px] lg:flex hidden 2xl:mb-[28px]'>
                     <p className="text-green  cursor-pointer font-FontSan text-[16px] font-[500] leading-[24px]">Tin tức/</p>
                     <p className='text-green  cursor-pointer font-FontSan text-[16px] font-[500] leading-[24px]'>Phát triển phần mềm/</p>
                     <p className='text-black font-FontSan text-[16px] font-[500] leading-[24px]'>{newDataDetail?.content}</p>
                 </div>
 
-                <div className='w-full lg:bg-transparent bg-green lg:px-0 px-[20px] 2xl:text-left xl:text-left xl:justify-start  lg:text-left lg:justify-start text-center lg:h-0 h-[300px] flex items-center m-auto 2xl:justify-start justify-center lg:text-black  text-white text-[32px] font-[700] leading-[36px] lg:mb-[64px]'>
+                 <div className='w-full lg:bg-transparent  lg:px-0 px-[20px] 2xl:text-left xl:text-left xl:justify-start  lg:text-left lg:justify-start text-center lg:h-0 h-[300px] flex items-center m-auto 2xl:justify-start  justify-center lg:text-black  text-white text-[32px] font-[700] leading-[36px] lg:mb-[64px]'>
                     {newDataDetail?.content}
-                </div>
+                </div> 
 
-                <p className="text-black font-FontSan lg:px-0 px-[15px] lg:mt-0 mt-[20px] text-[16px] font-[500] leading-[24px] mb-[48px]">{newDataDetail?.description}</p>
+                <p className="text-black font-FontSan lg:px-0 px-[15px] lg:mt-0 mt-[20px] text-[16px] font-[500] leading-[24px] mb-[48px] 2xl:mb-[48px] 2xl:mt-[-27px]">{newDataDetail?.description}</p>
                 <div className='mb-[48px] w-full h-[348px] lg:px-0 px-[15px]'>
                     <img src={newDataDetail?.image} alt="" className=' rounded-[20px] w-full h-full object-cover' />
                 </div>

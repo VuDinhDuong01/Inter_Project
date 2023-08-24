@@ -95,7 +95,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className='lg:px-[104px] 2xl:px-0  lg:h-[488px] lg:mb-[132px] 2xl:max-w-[1232px] 2xl:m-auto 2xl:mb-[132px]'>
+      <div className='lg:px-[104px] 2xl:px-0  lg:h-[488px] lg:mb-[132px]  2xl:max-w-[1232px] 2xl:m-auto 2xl:mb-[76px]'>
         <h3 className='text-black  font-FontSan text-[24px] font-[700] leading-[28px] lg:mb-[32px] w-full justify-center items-center flex'>{t('HomePage.newsAndEvents')}</h3>
         <div className="w-full  lg:py-[10px] py-[50px]  ">
           {

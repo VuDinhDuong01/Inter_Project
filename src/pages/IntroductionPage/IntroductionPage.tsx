@@ -12,7 +12,7 @@ const IntroductionPage = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className="xl:flex hidden"><Banner Image1={Images.SystemImage} width1={272} height1={272} height2={321} width2={321} Image2={Images.OperatingImage} marginTop1={53} img={Images.Img} /></div>
-      <div className=" xl:mb-[120px] 2xl:px-0  bg-green 2xl:max-w-[1200px] 2xl:m-auto xl:bg-transparent xl:px-[120px] w-full grid xl:grid-cols-2 grid-cols-1 xl:gap-x-[33px]">
+       <div className=" xl:mb-[120px] 2xl:px-0 bg-green  2xl:mt-[65px] 2xl:max-w-[1200px] 2xl:m-auto xl:bg-transparent xl:px-[120px] w-full grid xl:grid-cols-2 grid-cols-1 xl:gap-x-[33px]">
         <div className="col-span-1 xl:flex hidden items-center justify-center">
           <img src={Images.AnhImage} alt="" className="w-full h-[406px] rounded-[20px] justify-center items-center object-cover" />
         </div>
@@ -25,9 +25,9 @@ const IntroductionPage = () => {
         <div className="col-span-1 xl:hidden flex xl:my-0 my-[70px] items-center justify-center">
           <img src='https://battech.vn/_next/image?url=%2Fassets%2Fimages%2Fhello.png&w=640&q=75' alt="" className="xl:w-full xl:h-[406px] rounded-[20px] object-cover" />
         </div>
-      </div>
+      </div> 
 
-      <div className='xl:pr-[242px] 2xl:pr-0   2xl:mt-[120px] 2xl:max-w-[1071px]   2xl:max-h-[395px] 2xl:m-auto xl:bg-transparent 2xl:mb-[47px]  xl:h-[395px] 2xl:h-[395px] xl:pl-[127px] 2xl:pl-0 grid w-full xl:grid-cols-2 grid-cols-1 2xl:gap-[99px]'>
+      <div className='xl:pr-[242px] 2xl:pr-0    2xl:mt-[120px] 2xl:max-w-[1071px]   2xl:max-h-[395px] 2xl:m-auto xl:bg-transparent   xl:h-[395px] 2xl:h-[395px] xl:pl-[127px] 2xl:pl-0 grid w-full xl:grid-cols-2 grid-cols-1 2xl:gap-[99px]'>
         <div className='col-span-1 xl:px-0 px-[20px] 2xl:px-0'>
           <h2 className='text-black font-FontSan text-[24px] font-[700] leading-[24px] xl:pt-[82px]  pt-[60px] xl:text-right text-center xl:mb-0 mb-[30px]'>{t('IntroductionPage.VisionAndMission')}</h2>
           <div >
@@ -43,7 +43,7 @@ const IntroductionPage = () => {
         </div>
       </div>
 
-      <div className="xl:px-[120px]  2xl:mt-[110px]  2xl:px-0 2xl:max-w-[1200px] 2xl:max-h-[389px] 2xl:m-auto 2xl:mb-[120px] lg:mb-[50px] w-full ">
+      <div className="xl:px-[120px]  2xl:mt-[120px]  2xl:px-0 2xl:max-w-[1200px] 2xl:max-h-[389px] 2xl:m-auto 2xl:mb-[120px] lg:mb-[50px] w-full ">
         <h2 className="text-black font-FontSan text-[24px] pt-[60px] 2xl:pt-0 font-[700] leading-[28px] flex items-center justify-center 2xl:mb-[36px] mb-[50px]">{t('IntroductionPage.CoreValues')}</h2>
         <div className="lg:grid-cols-2  grid-cols-1 w-full grid ">
           <div className="2xl:col-span-1 w-full ">

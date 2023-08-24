@@ -58,7 +58,7 @@ const NewsPage = () => {
       />
       <News />
 
-      <div className='2xl:max-w-[1200px]  2xl:m-auto 2xl:pt-[120px] w-full xl:flex hidden  items-center justify-between xl:px-[120px] 2xl:px-0 lg:pb-[40px] pb-[20px]'>
+      <div className='2xl:max-w-[1200px]  2xl:m-auto 2xl:pt-[96px] w-full xl:flex hidden  items-center justify-between xl:px-[120px] 2xl:px-0 lg:pb-[40px] 2xl:pb-[34px] pb-[20px]'>
         <ul className='2xl:max-w-[1200px] flex items-center xl:gap-[32px] gap-[25px] flex-wrap xl:px-0  px-[15px] '>
           {
             fakeDataFilterNew.map((item, index) => {
@@ -67,7 +67,8 @@ const NewsPage = () => {
           }
         </ul>
       </div>
-      <div className='2xl:max-w-[1200px] 2xl:m-auto xl:px-[120px] 2xl:px-0 xl:mb-[132px] lg:px-[30px] '>
+
+      <div className='2xl:max-w-[1200px]  2xl:m-auto xl:px-[120px] 2xl:px-0 xl:mb-[132px] lg:px-[30px] '>
         <div className='w-full grid xl:grid-cols-4  lg:gap-x-[32px] lg:grid-cols-3 md:grid-cols-2 md:gap-2 sm:grid-cols-1 lg:px-0 px-[15px]'>
           {
             isLoading ? <Skeleton /> : (newsData.data.map((item: NewsType, index: number) => {

@@ -7,10 +7,10 @@ import { Button } from "../Button/Button";
 export const News = () => {
   const { t } = useTranslation()
   return (
-    <div className="xl:mt-[120px] 2xl:max-w-[1200px] 2xl:m-auto  xl:px-[120px] 2xl:px-0 xl:mb-[120px] px-[16px] lg:px-[32px]">
+    <div className="xl:mt-[120px] 2xl:mt-[174px] 2xl:max-w-[1200px]  2xl:m-auto  xl:px-[120px] 2xl:px-0 xl:mb-[120px] px-[16px] lg:px-[32px]">
       <h4 className="text-[#606060] mb-[25px] font-FontSan xl:text-[20px] text-[25px] font-[700] leading-[28px]">{t('NewsPage.news')}</h4>
-      <div className='xl:gap-[29px] xl:flex xl:h-[563px]'>
-        <div className='xl:w-[687px]  2xl:w-[687px] 2xl:h-[563px]  relative xl:h-[563px] xl:mb-0 mb-[20px]  w-full object-cover' >
+      <div className='xl:gap-[29px]  xl:flex xl:h-[563px]'>
+        <div className='xl:w-[687px] 2xl  2xl:w-[687px] 2xl:h-[563px]  relative xl:h-[563px] xl:mb-0 mb-[20px]  w-full object-cover' >
           <img src={Images.Anh10Image} alt="" className='w-full xl:h-[543px] h-[500px] object-cover rounded-[20px]' />
           <div className='bottom-[24px] absolute xl:left-[24px] left-[10px]  right-[10px]'>
             <button className='inline-flex mb-[8px] py-[6px] px-[12px] justify-center items-center gap-[8px] rounded-[8px] bg-[#FD4848] text-white text-center font-FontSan xl:text-[20px] font-[700] learning-[28px]'>{t('NewsPage.SoftwareDevelopment')}</button>

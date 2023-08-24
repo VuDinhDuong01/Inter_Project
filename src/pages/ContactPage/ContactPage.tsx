@@ -28,7 +28,7 @@ const ContactPage = () => {
   return (
     <div>
       <Banner Image1={Images.Image27} Image2={Images.Image25} width1={256} height1={217} height2={296} width2={255} marginTop1={80} marginTop2={23} content={t('Header.contact')} description={t('banner.descriptionBannerContact')} />
-      <div className="lg:px-[120px] w-full px-[20px] ">
+      <div className="lg:px-[120px] w-full px-[20px] 2xl:mt-[168px]">
         <div className="w-full grid lg:grid-cols-2 2xl:max-w-[1191px] 2xl:max-h-[444px] 2xl:m-auto  grid-cols-1 lg:gap-[31px]">
           <div className="col-span-1 lg:flex hidden">
             <GoogleMapConfig />
@@ -95,7 +95,7 @@ const ContactPage = () => {
             <div className='lg:mx-0 mx-[10px]' >
               <textarea className='w-full h-[238px] rounded-[18px] border-2 text-[#7A7A7A] font-FontSan text-[16px] font-[500] leading-[24px] border-[#C4C4C4] bg-white outline-none pt-[11px] pl-[11px]' placeholder={t('Input.content')} />
             </div>
-            <div className='w-full flex items-center justify-center'><button className='flex w-[276px] h-[48px] px-[10px] py-[12px] justify-center items-center gap-[8px]  rounded-[12px] bg-[#008345] lg:mt-[67px] mt-[40px] text-white text-center font-FontSan text-[24px] font-[500 lg:mb-[83px] mb-[40px]'>{t('contact.sendMessage')}</button></div>
+            <div className='w-full flex items-center justify-center'><button className='flex w-[276px] h-[48px] px-[10px] py-[12px] justify-center items-center gap-[8px]  rounded-[12px] bg-[#008345] lg:mt-[67px] 2xl:mt-[61px] mt-[40px] text-white text-center font-FontSan text-[24px] font-[500 lg:mb-[83px] mb-[40px]'>{t('contact.sendMessage')}</button></div>
           </form>
         </div>
 

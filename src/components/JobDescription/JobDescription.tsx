@@ -21,7 +21,7 @@ export const JobDescription = () => {
     const { jobDetail } = useSelector((state: RootState) => state.jobs)
 
     return (
-        <div className='lg:w-[745px] w-full lg:px-0 px-[15px]'>
+        <div className='lg:w-[745px] 2xl:mt-[-35px]  w-full lg:px-0 px-[15px]'>
             <p className='text-green font-FontSan text-[16px] font-[600] leading-[24px] mb-[13px]'>Cơ hội việc làm / <span className='text-[#444444]'>{jobDetail.title}</span></p>
             <h1 className='text-black font-FontSan text-[24px] font-[700] mb-[7px]'>{jobDetail?.title}</h1>
             <p className='mb-[7px] text-black font-FontSan text-[16px]'>{jobDetail?.description}</p>
