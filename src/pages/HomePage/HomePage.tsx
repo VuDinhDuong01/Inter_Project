@@ -30,11 +30,11 @@ const HomePage = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className="w-full h-[638px]  relative lg:mb-[98px] ">
-         <img
+        <img
           src={Images.BannerHome}
           alt="banner"
           className="w-full h-full object-cover lg:flex hidden "
-        /> 
+        />
         <img src='https://battech.vn/assets/images/services.png' className='w-full h-full object-cover lg:hidden flex' alt="banner" />
 
         <div className='w-full lg:hidden flex flex-col px-[15px] lg:mr-[134px] z-10 absolute xl:top-[50%] top-[50%]   translate-y-[-50%]'>
@@ -77,25 +77,23 @@ const HomePage = () => {
         </div>
       </div>
 
-
-
-
       <IntroductionBattech />
       <DifferentAndPioneering />
-       <div className="2xl:flex hidden">
-        <div className='h-[488px] mb-[120px]  bg-[#E9F9D6] px-[120px] w-full flex justify-between '>
-          <div className=' w-[687px]'>
+
+      <div className="2xl:flex hidden bg-[#E9F9D6] 2xl:mb-[120px]">
+        <div className='  2xl:max-w-[1200px] 2xl:m-auto h-[488px] mb-[120px] 2xl:px-0  px-[120px] w-full flex justify-between '>
+          <div className=' 2xl:w-[687px] '>
             <p className='text-[#606060] font-FontSan text-[16px] font[500] leading-[24px] mt-[60px] mb-[12px]'>  {t('HomePage.NewsAboutBATTECH')}</p>
             <h4 className='text-black mb-[8px] font-FontSan text-[24px] font-[700] leading-[28px]'>{t('HomePage.NewsAboutBATTECHTitle')}</h4>
             <p className='text-[#606060] mb-[80px] font-FontSan text-[16px] font-[500] leading-[24px]  w-[687px] h-[105px]'> {t('HomePage.NewsAboutBATTECHDescription')}</p>
             <button className='flex w-[276px] bg-green h-[48px] px-[10px] py-[12px] justify-center items-center gap-[8px] rounded-[12px]  text-white text-[24px] font-[600] font-FontSan  whitespace-pre-line text-center    leading-[24px]  ring-1 ring-black ring-opacity-5'>{t('HomePage.NewsAboutBATTECHButton')}</button>
           </div>
-          <div className='flex-1  relative'>
-            <div className='w-[382px]  h-[205px]'><img src={Images.HomeImage1} alt="" className='mt-[178px] w-full h-full ml-[228px] ' /></div>
-            <div className='top-[77px] absolute  right-[53px] w-[382px] h-[205px]  '><img src={Images.HomeImage} alt="" className="w-full h-full" /></div>
+          <div className='2xl:flex-1  relative  2xl:overflow-hidden'>
+            <div className='2xl:w-[382px]  2xl:h-[205px] ml-[105px]'><img src={Images.HomeImage1} alt="" className='mt-[178px] w-full h-full object-cover ' /></div>
+            <div className='top-[77px] absolute 2xl:left-[53px] 2xl:w-[382px] 2xl:h-[205px]  '><img src={Images.HomeImage} alt="" className="w-full h-full object-cover" /></div>
           </div>
         </div>
-      </div> 
+      </div>
 
       <div className='lg:px-[104px] lg:h-[488px] lg:mb-[132px] 2xl:max-w-[1200px] 2xl:m-auto 2xl:mb-[132px]'>
         <h3 className='text-black  font-FontSan text-[24px] font-[700] leading-[28px] lg:mb-[32px] w-full justify-center items-center flex'>{t('HomePage.newsAndEvents')}</h3>
