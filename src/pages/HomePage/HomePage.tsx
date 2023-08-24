@@ -104,7 +104,6 @@ const HomePage = () => {
                 (newsData.data.map((item: NewsType, index: number) => {
                   return <ItemNews key={index} dataNew={item} isShow={false} />
                 }))
-
               }
             </Slick>
           }

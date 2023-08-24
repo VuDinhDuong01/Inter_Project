@@ -3,16 +3,16 @@ import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useRef } from 'react';
 
-import { Icons } from '~/contants/Icon'; 
-import { Images } from '~/utils/images/Images';  
-import { Path } from '~/contants/Path'; 
-import { TippyLanguage } from '../tippy/TippyLanguage'; 
+import { Icons } from '~/contants/Icon';
+import { Images } from '~/utils/images/Images';
+import { Path } from '~/contants/Path';
+import { TippyLanguage } from '../tippy/TippyLanguage';
 
 export const Header = () => {
-  
   const [toggle, setToggle] = useState<boolean>(false)
   const refUl = useRef<HTMLUListElement>(null)
   const location = useLocation();
+
   const { t } = useTranslation()
 
   const handleToggleClick = () => {
@@ -35,7 +35,7 @@ export const Header = () => {
         <ul className={`cursor-pointer  lg:text-[24px] lg:font-[400] lg:flex z-[9999]  ${toggle ? ' custom-class-ul-responsive' : 'hidden'}`} ref={refUl} >
           <Link to={Path.home}>
             <li
-             onClick={()=>setToggle(false)}
+              onClick={() => setToggle(false)}
               className={classNames(` font-FontSan lg:flex lg:mr-[33px] ${toggle ? 'custom-class-li-header-responsive' : ''}`, {
                 "text-green font-[700]": location.pathname === Path.home,
                 "text-black": location.pathname !== Path.home,
@@ -46,7 +46,7 @@ export const Header = () => {
           </Link>
           <Link to={Path.introduction}>
             <li
-             onClick={()=>setToggle(false)}
+              onClick={() => setToggle(false)}
               className={classNames(
                 `font-FontSan lg:mr-[33px] 
                 ${toggle ? 'custom-class-li-header-responsive'
@@ -64,7 +64,7 @@ export const Header = () => {
 
           <Link to={Path.news}>
             <li
-             onClick={()=>setToggle(false)}
+              onClick={() => setToggle(false)}
               className={classNames(
                 `font-FontSan lg:mr-[33px] 
                 ${toggle ? 'custom-class-li-header-responsive'
@@ -81,7 +81,7 @@ export const Header = () => {
 
           <Link to={Path.jobOpportunity}>
             <li
-             onClick={()=>setToggle(false)}
+              onClick={() => setToggle(false)}
               className={classNames(
                 `font-FontSan lg:mr-[33px] 
                 ${toggle ? 'custom-class-li-header-responsive'
@@ -97,7 +97,7 @@ export const Header = () => {
           </Link>
           <Link to={Path.contact}>
             <li
-            onClick={()=>setToggle(false)}
+              onClick={() => setToggle(false)}
               className={classNames(`font-FontSan 
               ${toggle ? 'custom-class-li-header-responsive'
                   : ''} `, {
@@ -106,7 +106,7 @@ export const Header = () => {
               })}
             >
               {t('Header.contact')}
-             
+
             </li>
           </Link>
 

@@ -6,6 +6,7 @@ import { Banner } from "~/components/Banner/Banner";
 import { WorkingPrinciple } from "~/components/WorkingPrinciple/WorkingPrinciple";
 import { Images } from "~/utils/images/Images";
 
+
 const IntroductionPage = () => {
   const { t } = useTranslation()
   return (
@@ -26,7 +27,7 @@ const IntroductionPage = () => {
         </div>
       </div>
 
-       <div className='xl:pr-[242px] 2xl:pr-0   2xl:mt-[120px] 2xl:max-w-[1071px]   2xl:max-h-[395px] 2xl:m-auto xl:bg-transparent 2xl:mb-[47px]  xl:h-[395px] 2xl:h-[395px] xl:pl-[127px] 2xl:pl-0 grid w-full xl:grid-cols-2 grid-cols-1 2xl:gap-[99px]'>
+      <div className='xl:pr-[242px] 2xl:pr-0   2xl:mt-[120px] 2xl:max-w-[1071px]   2xl:max-h-[395px] 2xl:m-auto xl:bg-transparent 2xl:mb-[47px]  xl:h-[395px] 2xl:h-[395px] xl:pl-[127px] 2xl:pl-0 grid w-full xl:grid-cols-2 grid-cols-1 2xl:gap-[99px]'>
         <div className='col-span-1 xl:px-0 px-[20px] 2xl:px-0'>
           <h2 className='text-black font-FontSan text-[24px] font-[700] leading-[24px] xl:pt-[82px]  pt-[60px] xl:text-right text-center xl:mb-0 mb-[30px]'>{t('IntroductionPage.VisionAndMission')}</h2>
           <div >
@@ -40,9 +41,9 @@ const IntroductionPage = () => {
         <div className="col-span-1 flex sm:items-center   sm:justify-center xl:justify-start xl:items-start 2xl:justify-start 2xl:items-start">
           <img src={Images.Anh2Image} alt="" className=" 2xl:h-[395px] object-cover  lg:w-[395px] 2xl:w-[395px] lg:my-0 my-[50px]" />
         </div>
-      </div> 
+      </div>
 
-      <div className="xl:px-[120px] 2xl:mt-[110px]  2xl:px-0 2xl:max-w-[1200px] 2xl:max-h-[389px] 2xl:m-auto 2xl:mb-[120px] lg:mb-[50px] w-full ">
+      <div className="xl:px-[120px]  2xl:mt-[110px]  2xl:px-0 2xl:max-w-[1200px] 2xl:max-h-[389px] 2xl:m-auto 2xl:mb-[120px] lg:mb-[50px] w-full ">
         <h2 className="text-black font-FontSan text-[24px] pt-[60px] 2xl:pt-0 font-[700] leading-[28px] flex items-center justify-center 2xl:mb-[36px] mb-[50px]">{t('IntroductionPage.CoreValues')}</h2>
         <div className="lg:grid-cols-2  grid-cols-1 w-full grid ">
           <div className="2xl:col-span-1 w-full ">
@@ -63,7 +64,7 @@ const IntroductionPage = () => {
               </div>
             </div>
           </div>
-          <div className='col-span-1 w-full'>
+          <div className='col-span-1 w-full lg:pr-[15px]'>
             <div className='w-[full] 2xl:h-[325px] xl:rounded-[20px] bg-[#E9F9D6] xl:p-[54px] p-[30px]'>
               <p className='text-[#444] font-FontSan text-[16px] font-[500] leading-[24px]'>{t('IntroductionPage.CoreValuesDescription1')}</p>
               <p className='text-[#444] mt-[15px] font-FontSan text-[16px] font-[500] leading-[24px]'>{t('IntroductionPage.CoreValuesDescription2')}</p>
