@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { DataDifferentAndPioneer } from "~/api/Data"; 
+import { DataDifferentAndPioneer } from "~/api/Data";
 
 export const DifferentAndPioneering = () => {
 
@@ -8,9 +8,9 @@ export const DifferentAndPioneering = () => {
 
   return (
     <div className="xl:px-[120px] lg:px-[30px] 2xl:px-0 xl:h-[350px]  2xl:max-w-[1200px]  2xl:m-auto items-center  2xl:mt-[116px] lg:mt-[116px] 2xl:mb-[120px] lg:mb-[50px] ">
-       <h2 className="text-[24px] font-[700] leading-[28px] font-FontSan text-black lg:mb-[76px] mb-[80px] lg:pt-0 pt-[80px] flex items-center justify-center">
+      <h2 className="text-[24px] font-[700] leading-[28px] font-FontSan text-black lg:mb-[76px] mb-[80px] lg:pt-0 pt-[80px] flex items-center justify-center">
         {t('HomePage.differentAndPioneering')}
-      </h2> 
+      </h2>
       <div className='w-full grid xl:grid-cols-4 gap-[15px]  grid-cols-1 lg:grid-cols-2 lg:gap-[40px] 2xl:gap-[32px]'>
         {
           DataDifferentAndPioneer.map((item, index) => {

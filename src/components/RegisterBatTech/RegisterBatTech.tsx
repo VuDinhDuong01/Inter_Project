@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useTranslation } from "react-i18next";
 
-import {  registerSchema,RegisterType } from '~/utils/schema'
+import { registerSchema, RegisterType } from '~/utils/schema'
 import { Button } from "../Button/Button";
 import { Input } from "../Input/Input";
 

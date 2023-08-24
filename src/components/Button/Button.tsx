@@ -1,7 +1,7 @@
 interface ButtonType {
   children: React.ReactNode,
   className: string,
-  onClick?:()=>void
+  onClick?: () => void
 }
 
 export const Button = ({ children, className, onClick }: ButtonType) => {

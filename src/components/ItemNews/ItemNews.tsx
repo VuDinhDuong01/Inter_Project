@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 
-import { Images } from '~/utils/images/Images' 
+import { Images } from '~/utils/images/Images'
 import { NewsType } from '~/types/News.type'
-import { getPathNewDetail } from '~/utils/utils' 
+import { getPathNewDetail } from '~/utils/utils'
 
 export const ItemNews = ({ dataNew, isShow }: { dataNew: NewsType, isShow: boolean }) => {
   return (

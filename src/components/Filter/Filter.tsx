@@ -5,12 +5,12 @@ import { useNavigate, createSearchParams } from "react-router-dom";
 
 import { fakeDataType, fakeDataGroup, fakeDataLocation } from '../../api/Data'
 import { InputCheckRadio } from '../InputCheckRadio/InputCheckRadio';
-import { Button } from '../Button/Button'; 
-import { useQuery } from '~/hook/useQuery'; 
-import { fetchJobs } from '~/stores/JobApi'; 
-import { Path } from '~/contants/Path';  
-import { DataType, QueryType } from  '~/types/query.type'
-import { useAppDispatch } from '~/stores/store'; 
+import { Button } from '../Button/Button';
+import { useQuery } from '~/hook/useQuery';
+import { fetchJobs } from '~/stores/JobApi';
+import { Path } from '~/contants/Path';
+import { DataType, QueryType } from '~/types/query.type'
+import { useAppDispatch } from '~/stores/store';
 
 interface FilterType {
     checkedRadioGroup: string
