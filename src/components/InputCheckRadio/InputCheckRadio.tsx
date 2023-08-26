@@ -1,12 +1,13 @@
+import { ComponentPropsWithRef } from "react"
 import { DataType } from "~/types/query.type"
 
-interface InputCheckRadioType {
-    item: DataType
-    checkedRadio: string,
-    onChange: () => void
+type InputProps = ComponentPropsWithRef<"input"> & {
+    item: DataType,
+    checkedRadio: string
 }
 
-export const InputCheckRadio = ({ item, onChange, checkedRadio }: InputCheckRadioType) => {
+
+export const InputCheckRadio = ({ item, onChange, checkedRadio }: InputProps) => {
     return (
         <div className='flex items-center gap-[8px]'>
             <input type="radio" className="w-[17px] h-[17px]  text-green cursor-pointer" checked={checkedRadio === item.id} onChange={onChange} />

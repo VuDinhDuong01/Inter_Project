@@ -6,11 +6,10 @@ import clsx from 'clsx';
 
 import { Icons ,Path } from '~/contants/index';
 import { Images } from '~/utils/images/Images';
-
 import { TippyLanguage } from '../tippy/TippyLanguage';
 
 export const Header = () => {
-  // const classes= clsx()
+ 
   const [toggle, setToggle] = useState<boolean>(false)
   const refUl = useRef<HTMLUListElement>(null)
   const location = useLocation();
@@ -36,16 +35,12 @@ export const Header = () => {
       <div className='lg:flex lg:items-center '>
         <ul className=
           {`
-        
-       
         ${clsx({
             ['custom-class-ul-responsive']: toggle,
             ['hidden']: !toggle,
             ['cursor-pointer  lg:text-[24px] lg:font-[400] lg:flex z-[9999]']: true
           })}
          `}
-
-
           ref={refUl} >
           <Link to={Path.home}>
             <li

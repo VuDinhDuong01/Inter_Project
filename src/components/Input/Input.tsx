@@ -1,18 +1,17 @@
-import { UseFormRegister } from "react-hook-form";
+import { ComponentPropsWithRef } from "react";
+ import { UseFormRegister } from "react-hook-form";
 
-interface InputType {
-  placeholder: string,
-  icon?: string,
-  label?: string,
-  name: string,
-  error?: string,
-  className: string
-  classNameDiv?: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  register: UseFormRegister<any>
+type InputProps = ComponentPropsWithRef<"input"> & {
+  icon:string ,
+  label:string,
+   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  register: UseFormRegister<any>,
+  error:string ,
+  classNameDiv:string,
+  name:string
 }
 
-export const Input = ({ placeholder, icon, label, name, register, error, className, classNameDiv }: InputType) => {
+export const Input = ({ placeholder, icon, label, name, register, error, className, classNameDiv }: InputProps) => {
   return (
     <div className={classNameDiv}>
       {
