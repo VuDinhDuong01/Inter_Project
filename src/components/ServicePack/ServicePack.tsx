@@ -8,7 +8,7 @@ import { Button } from "../Button/Button";
 export const ServicePack = () => {
     const { t, i18n } = useTranslation()
     return (
-        <div className="lg:mb-[164px] 2xl:mb-[120px] 2xl:max-w-[1232px] 2xl:m-auto  lg:px-[108px] 2xl:px-0 lg:bg-transparent bg-[#FFFCF0] lg:py-0 py-[50px] ">
+        <div className="lg:mb-[164px] xl:mb-[120px] xl:max-w-[1232px] xl:m-auto  lg:px-[108px] xl:px-0 lg:bg-transparent bg-[#FFFCF0] lg:py-0 py-[50px] ">
             <h2 className=' flex items-center justify-center text-black font-FontSan text-[24px] font-[700] leading-[28px] pb-[34px]'>{t('HomePage.servicePack')}</h2>
             <div className='w-full'>
                 <Slick slidesToShow={3}>{DataService.map((item, index) => {

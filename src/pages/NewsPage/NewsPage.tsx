@@ -4,17 +4,15 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, createSearchParams } from 'react-router-dom';
 
 import { Banner } from '~/components/Banner/Banner';
-import { RootState, useAppDispatch } from '~/stores/store';
-import { fetchNews } from '~/stores/NewApi';
+import { RootState, useAppDispatch,fetchNews } from '~/stores/index';
 import { Skeleton } from '~/components/Skeleton/Skeleton';
 import { ItemNews } from '~/components/ItemNews/ItemNews';
 import { News } from '~/components/News/News';
 import { Pagination } from '~/components/pagination/Pagination';
 import { useQuery } from '~/hook/useQuery';
 import { Path } from '~/contants/Path';
-import { QueryType } from '~/types/query.type';
+import { QueryType,NewsType } from '~/types/index';
 import { fakeDataFilterNew } from '~/api/Data';
-import { NewsType } from '~/types/News.type';
 import { Images } from '~/utils/images/Images';
 
 const NewsPage = () => {
@@ -58,17 +56,17 @@ const NewsPage = () => {
       />
       <News />
 
-      <div className='2xl:max-w-[1200px]  2xl:m-auto 2xl:pt-[96px] w-full xl:flex hidden  items-center justify-between xl:px-[120px] 2xl:px-0 lg:pb-[40px] 2xl:pb-[34px] pb-[20px]'>
-        <ul className='2xl:max-w-[1200px] flex items-center xl:gap-[32px] gap-[25px] flex-wrap xl:px-0  px-[15px] '>
+      <div className='xl:max-w-[1200px]  xl:m-auto  w-full xl:flex hidden  items-center justify-between  xl:px-0 lg:pb-[40px] xl:pb-[34px] pb-[20px]'>
+        <ul className='xl:max-w-[1200px] flex items-center xl:gap-[32px] gap-[25px] flex-wrap xl:px-0  px-[15px] '>
           {
             fakeDataFilterNew.map((item, index) => {
-              return <li key={index} className={`  font-FontSan 2xl:text-[24px] text-[20px]  font-[500] xl:font-[700] leading-[28px] cursor-pointer ${query.name === item ? 'text-green' : 'text-[#7A7A7A]'}`} onClick={() => handleFilterNew(item)}>{item}</li>
+              return <li key={index} className={`font-FontSan 2xl:text-[24px] text-[20px]  font-[500] xl:font-[700] leading-[28px] cursor-pointer ${query.name === item ? 'text-green' : 'text-[#7A7A7A]'}`} onClick={() => handleFilterNew(item)}>{item}</li>
             })
           }
         </ul>
       </div>
 
-      <div className='2xl:max-w-[1200px]  2xl:m-auto xl:px-[120px] 2xl:px-0 xl:mb-[132px] lg:px-[30px] '>
+      <div className='xl:max-w-[1200px]  xl:m-auto  xl:mb-[132px] lg:px-[30px] xl:px-0'>
         <div className='w-full grid xl:grid-cols-4  lg:gap-x-[32px] lg:grid-cols-3 md:grid-cols-2 md:gap-2 sm:grid-cols-1 lg:px-0 px-[15px]'>
           {
             isLoading ? <Skeleton /> : (newsData.data.map((item: NewsType, index: number) => {
@@ -77,8 +75,8 @@ const NewsPage = () => {
           }
         </div>
         {newsData?.data?.length > 0 ?
-          <div className=' 2xl:mb-[120px] 2xl:mt-[7px] mb-[50px] mt-[20px]'> <Pagination page_size={newsData.totalPages} query={query} path={Path.news} /></div>
-          : <div className='w-full h-[300px] rounded-md bg-green flex flex-col items-center justify-center'>
+          <div className=' xl:mb-[120px] xl:mt-[7px] mb-[50px] mt-[20px]'> <Pagination page_size={newsData.totalPages} query={query} path={Path.news} /></div>
+          : <div className='w-full h-[300px] rounded-md bg-green xl:mb-[120px] flex flex-col items-center justify-center'>
             <span className='text-[25px] font-FontSan text-white py-3'>{t('NewsPage.notNew')}</span>
             <button className='px-4 py-3 rounded-md text-white font-FontSan bg-[red] ' onClick={handleBack}>{t('jobOpportunity.comeback')}</button>
           </div>

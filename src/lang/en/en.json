@@ -14,7 +14,8 @@
         "aboutUs":"About Us",
         "jobOpportunity":"Job Opportunity",
         "contact":"Contact",
-        "news":"News"
+        "news":"News",
+        "lang":"change language"
     },
     "HomePage":{
         "contact":"CONTACT",
@@ -102,7 +103,11 @@
         "personnelPecruitment":"Personnel Pecruitment",
         "supportCenter":"Support Center",
         "onlineMarketingSolution":"Online Marketing Solution",
-        "con":"Contact"
+        "con":"Contact",
+        "companyName":"BATTECH TECHNOLOGY GROUP JOINT STOCK COMPANY",
+        "companyAddress":"Address: Building HH02, Eco Lakeview, 32 Dai Tu, Dai Kim ward, district Hoang Mai, Hanoi",
+        "companyPhone":"Phone: 024 85 896 999",
+        "companyEmail":"E-Mail: info@batgroup.vn"
 
     },
     "banner":{
@@ -166,13 +171,22 @@
         "username":"username",
         "telephone":"telephone",
         "enterContent":"Enter content",
-        "sendMessage":"Send message"
+        "sendMessage":"Send message",
+        "contactAddress":"2nd floor, Building HH02, Eco Lakeview, 32 Dai Tu, Dai Kim Ward, Hoang Mai District"
     },
     "jobDetail":{
         "JobDescription":{
             "description1":"5+ years of experience in developing mobile apps (React Native)"
             
         }
+    },
+    "NewPageDetail":{
+        "News/":"News/",
+        "Software Development":"Software Development",
+        "What is digital transformation in banking?":"What is digital transformation in banking?",
+        "The benefits of digitization in the banking industry":"The benefits of digitization in the banking industry",
+        "news":"News",
+        "Related Posts":"Related Posts"
     },
     "Input":{
         "name":"Enter your name",
@@ -188,6 +202,16 @@
         "throughFriends":"Through friends...",
         "similarJob":"Similar job"
 
+    },
+    "jobDescription":{
+        "job":"Job opportunities / ",
+        "Agree":"Agree",
+        "Jobdescription":"Job description",
+        "CandidateRequirements":"Candidate Requirements",
+        "Right":"Right",
+        "Worklocation":"Work location",
+        "address":"- Hanoi: 32 Dai Tu, Hoang Mai, Hanoi, Hoang Mai",
+        "ContactInfo":"Contact Info"
     }
 
 }

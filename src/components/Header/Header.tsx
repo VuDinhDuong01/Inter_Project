@@ -2,13 +2,15 @@ import classNames from 'classnames';
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useRef } from 'react';
+import clsx from 'clsx';
 
-import { Icons } from '~/contants/Icon';
+import { Icons ,Path } from '~/contants/index';
 import { Images } from '~/utils/images/Images';
-import { Path } from '~/contants/Path';
+
 import { TippyLanguage } from '../tippy/TippyLanguage';
 
 export const Header = () => {
+  // const classes= clsx()
   const [toggle, setToggle] = useState<boolean>(false)
   const refUl = useRef<HTMLUListElement>(null)
   const location = useLocation();
@@ -25,18 +27,36 @@ export const Header = () => {
         <Link to={Path.home}>
           <img
             src={Images.Logo}
-            alt="ảnh logo"
+            alt="logo"
             className="w-full h-full object-cover"
           />
         </Link>
       </div>
 
       <div className='lg:flex lg:items-center '>
-        <ul className={`cursor-pointer  lg:text-[24px] lg:font-[400] lg:flex z-[9999]  ${toggle ? ' custom-class-ul-responsive' : 'hidden'}`} ref={refUl} >
+        <ul className=
+          {`
+        
+       
+        ${clsx({
+            ['custom-class-ul-responsive']: toggle,
+            ['hidden']: !toggle,
+            ['cursor-pointer  lg:text-[24px] lg:font-[400] lg:flex z-[9999]']: true
+          })}
+         `}
+
+
+          ref={refUl} >
           <Link to={Path.home}>
             <li
               onClick={() => setToggle(false)}
-              className={classNames(` font-FontSan lg:flex lg:mr-[33px] ${toggle ? 'custom-class-li-header-responsive' : ''}`, {
+              className={classNames(` 
+              ${clsx({
+                ['custom-class-li-header-responsive']: toggle,
+                ['font-FontSan lg:flex lg:mr-[33px]']: true
+              })}
+              
+              `, {
                 "text-green font-[700]": location.pathname === Path.home,
                 "text-black": location.pathname !== Path.home,
               })}
@@ -48,9 +68,13 @@ export const Header = () => {
             <li
               onClick={() => setToggle(false)}
               className={classNames(
-                `font-FontSan lg:mr-[33px] 
-                ${toggle ? 'custom-class-li-header-responsive'
-                  : ''} `,
+                `
+               
+                  ${clsx({
+                  ['custom-class-li-header-responsive']: toggle,
+                  ['font-FontSan lg:mr-[33px] ']: true
+                })}
+                  `,
                 {
                   "text-green font-[700]": location.pathname === Path.introduction,
                   "text-black": location.pathname !== Path.introduction,
@@ -66,9 +90,12 @@ export const Header = () => {
             <li
               onClick={() => setToggle(false)}
               className={classNames(
-                `font-FontSan lg:mr-[33px] 
-                ${toggle ? 'custom-class-li-header-responsive'
-                  : ''} `,
+                `
+                ${clsx({
+                  ['custom-class-li-header-responsive']: toggle,
+                  ['font-FontSan lg:mr-[33px] ']: true
+                })}
+                `,
                 {
                   "text-green font-[700]": location.pathname === Path.news,
                   "text-black": location.pathname !== Path.news,
@@ -83,9 +110,11 @@ export const Header = () => {
             <li
               onClick={() => setToggle(false)}
               className={classNames(
-                `font-FontSan lg:mr-[33px] 
-                ${toggle ? 'custom-class-li-header-responsive'
-                  : ''} `,
+                ` 
+                ${clsx({
+                  ['custom-class-li-header-responsive']: toggle,
+                  ['font-FontSan lg:mr-[33px]']: true
+                })}`,
                 {
                   "text-green font-[700]": location.pathname === Path.jobOpportunity,
                   "text-black": location.pathname !== Path.jobOpportunity
@@ -98,9 +127,11 @@ export const Header = () => {
           <Link to={Path.contact}>
             <li
               onClick={() => setToggle(false)}
-              className={classNames(`font-FontSan 
-              ${toggle ? 'custom-class-li-header-responsive'
-                  : ''} `, {
+              className={classNames(`${clsx({
+                ['custom-class-li-header-responsive']: toggle,
+                ['font-FontSan']: true
+              })}
+              `, {
                 "text-green font-[700]": Path.contact === location.pathname,
                 "text-black": Path.contact !== location.pathname,
               })}

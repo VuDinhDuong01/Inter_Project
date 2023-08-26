@@ -8,14 +8,11 @@ import omit from 'lodash/omit'
 import { Banner } from '~/components/Banner/Banner';
 import { Filter } from '~/components/Filter/Filter';
 import { Job } from '~/components/Job/Job';
-import { useAppDispatch } from '~/stores/store';
-import { RootState } from '~/stores/store';
-import { fetchJobs } from '~/stores/JobApi';
+import { useAppDispatch ,fetchJobs,RootState} from '~/stores/index';
 import { Pagination } from '~/components/pagination/Pagination';
 import { useQuery } from '~/hook/useQuery';
 import { Path } from '~/contants/Path'
-import { QueryType } from '~/types/query.type';
-import { JobType } from '~/types/Job.type';
+import { QueryType,JobType } from '~/types/index';
 import { Images } from '~/utils/images/Images';
 
 const JobOpportunity = () => {
@@ -59,8 +56,8 @@ const JobOpportunity = () => {
   return (
     <div>
       <Banner Image1={Images.Image26} Image2={Images.Image24} width1={225} height1={173} height2={285} width2={285} marginTop1={95} marginTop2={34} content={t('banner.titleBannerJobOpportunity')} description={t('banner.descriptionBannerJobOpportunity')} />
-      <div className="xl:px-[120px] 2xl:px-0 2xl:max-w-[1200px] 2xl:m-auto lg:px-[100px]">
-        <div className="2xl:mt-[155px]">
+      <div className="  xl:max-w-[1200px]  xl:m-auto lg:px-[100px] xl:px-0">
+        <div className="xl:mt-[155px]">
           <h2 className="text-black mb-[40px]  flex items-center justify-center font-FontSan xl:text-[24px] text-[22px]  font-[700] leading-[28px]">{t('jobOpportunity.JobOpportunity')}</h2>
           <div className='relative mb-[53px]'>
             <form action=" " className='' onSubmit={handleSubmitSearch}>

@@ -28,8 +28,8 @@ const ContactPage = () => {
   return (
     <div>
       <Banner Image1={Images.Image27} Image2={Images.Image25} width1={256} height1={217} height2={296} width2={255} marginTop1={80} marginTop2={23} content={t('Header.contact')} description={t('banner.descriptionBannerContact')} />
-      <div className="lg:px-[120px] w-full px-[20px] 2xl:mt-[168px]">
-        <div className="w-full grid lg:grid-cols-2 2xl:max-w-[1191px] 2xl:max-h-[444px] 2xl:m-auto  grid-cols-1 lg:gap-[31px]">
+      <div className="lg:px-[120px] xl:px-0 w-full px-[20px] xl:mt-[168px]">
+        <div className="w-full grid lg:grid-cols-2 xl:max-w-[1191px] xl:max-h-[444px] xl:m-auto  grid-cols-1 lg:gap-[31px]">
           <div className="col-span-1 lg:flex hidden">
             <GoogleMapConfig />
           </div>
@@ -46,8 +46,9 @@ const ContactPage = () => {
                   <img src={Images.MapImage} alt="" className='w-[24px] h-[24px] object-cover' />
                 </div>
                 <div >
-                  <p className="text-[#7A7A7A] lg:text-[16px] font-[500] leading-[24px]">{t('contact.address')}</p>
-                  <p className='text-black font-FontSan lg:text-[16px] mr-[15px] text-[11px] sm:text-[14px] font-[500] lg:leading-[24px] leading-[20px]'>Tầng 2, Tòa HH02, Eco Lakeview, 32 Đại Từ, P. Đại Kim, Q. Hoàng Mai, TP. Hà Nội</p>
+                  <p className='text-[#7A7A7A] font-FontSan lg:text-[16px] mr-[15px] text-[11px] sm:text-[14px] font-[500] lg:leading-[24px] leading-[20px]'>{t('contact.address')}</p>
+                  <p className="text-[#0A0A0A] lg:text-[16px] font-[500] text-[14px] leading-[24px]">{t('contact.contactAddress')}</p>
+
                 </div>
               </div>
             </div>
@@ -81,7 +82,7 @@ const ContactPage = () => {
           </div>
 
         </div>
-        <div className="lg:mt-[84px] 2xl:max-w-[1200px] 2xl:m-auto 2xl:mt-[84px] mt-[50px] lg:bg-transparent bg-[#EAFFF5] rounded-[18px]">
+        <div className="lg:mt-[84px] xl:max-w-[1200px] xl:m-auto xl:mt-[84px] mt-[50px] lg:bg-transparent bg-[#EAFFF5] rounded-[18px]">
           <div className='flex flex-col w-full items-center justify-center '>
             <h2 className='text-black mb-[4px] text-center font-FontSan text-[24px] font-[700] leading-[28px] lg:mt-0 mt-[40px]'>{t('contact.realyToStarted')}</h2>
             <p className='text-black text-center font-FontSan text-[16px] font-[500] mb-[17px] leading-[24px] lg:mt-0 lg:px-0 px-[30px] mt-[15px]'>{t('contact.description2')}</p></div>

@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import Tippy from '@tippyjs/react/headless';
 import i18n from "i18next";
+import { useTranslation } from "react-i18next";
 
 import { Images } from '~/utils/images/Images';
 
 export const TippyLanguage = () => {
+    const { t } = useTranslation()
     const [isShow, setIsShow] = useState<boolean>(false)
 
     const [language, setLanguage] = useState<{ lang: string, img: string }>({
@@ -46,7 +48,7 @@ export const TippyLanguage = () => {
                 )}
             >
                 <li className="flex items-center" onClick={handleLanguage}>
-                    <img src={language.img} alt="ảnh đổi ngôn ngữ" className="w-[30px] h-[20px] object-cover" />
+                    <img src={language.img} alt={t('Header.lang')} className="w-[30px] h-[20px] object-cover" />
                     <span className="pl-[8px] text-[20px] font-FontSan leading-[28px]">{language.lang}</span>
                 </li>
             </Tippy>

@@ -7,14 +7,14 @@ import { Partner } from "~/components/Partner/Partner";
 import { RegisterBatTech } from "~/components/RegisterBatTech/RegisterBatTech";
 import { ItemNews } from "~/components/ItemNews/ItemNews";
 import { ServicePack } from "~/components/ServicePack/ServicePack";
-import { RootState, useAppDispatch } from '~/stores/store'
-import { fetchNews } from "~/stores/NewApi";
+import { RootState, useAppDispatch,fetchNews } from '~/stores/index'
+
 import { IntroductionBattech } from "~/components/IntroductionBattech/IntroductionBattech";
 import { DifferentAndPioneering } from "~/components/DifferentAndPioneering/DifferentAndPioneering";
 import { Slick } from "~/components/slick";
 import { useQuery } from "~/hook/useQuery";
-import { QueryType } from "~/types/query.type";
-import { NewsType } from "~/types/News.type";
+import { QueryType,NewsType } from "~/types/index";
+
 import { Images } from "~/utils/images/Images";
 
 const HomePage = () => {
@@ -80,22 +80,22 @@ const HomePage = () => {
       <IntroductionBattech />
       <DifferentAndPioneering />
 
-      <div className="2xl:flex hidden bg-[#E9F9D6] 2xl:mb-[120px]">
-        <div className='  2xl:max-w-[1200px] 2xl:m-auto h-[488px] mb-[120px] 2xl:px-0  px-[120px] w-full flex justify-between '>
-          <div className=' 2xl:w-[687px] '>
-            <p className='text-[#606060] font-FontSan text-[16px] font[500] leading-[24px] mt-[60px] mb-[12px]'>  {t('HomePage.NewsAboutBATTECH')}</p>
+      <div className="xl:flex hidden bg-[#E9F9D6] xl:mb-[120px] h-[430px] w-full ">
+        <div className='xl:max-w-[1200px]   xl:m-auto  w-full flex justify-between '>
+           <div className='xl:w-[687px] xl:mt-[30px]'>
+            <p className='text-[#606060] font-FontSan text-[16px] font-[500] leading-[24px] mb-[12px]'>{t('HomePage.NewsAboutBATTECH')}</p>
             <h4 className='text-black mb-[8px] font-FontSan text-[24px] font-[700] leading-[28px]'>{t('HomePage.NewsAboutBATTECHTitle')}</h4>
-            <p className='text-[#606060] mb-[80px] font-FontSan text-[16px] font-[500] leading-[24px]  w-[687px] h-[105px]'> {t('HomePage.NewsAboutBATTECHDescription')}</p>
+            <p className='text-[#606060] mb-[70px] font-FontSan text-[16px] font-[500] leading-[24px]  w-[687px] h-[105px]'> {t('HomePage.NewsAboutBATTECHDescription')}</p>
             <button className='flex w-[276px] bg-green h-[48px] px-[10px] py-[12px] justify-center items-center gap-[8px] rounded-[12px]  text-white text-[24px] font-[600] font-FontSan  whitespace-pre-line text-center    leading-[24px]  ring-1 ring-black ring-opacity-5'>{t('HomePage.NewsAboutBATTECHButton')}</button>
-          </div>
-          <div className='2xl:flex-1  relative  2xl:overflow-hidden'>
-            <div className='2xl:w-[382px]  2xl:h-[205px] ml-[105px]'><img src={Images.HomeImage1} alt="" className='mt-[178px] w-full h-full object-cover ' /></div>
-            <div className='top-[77px] absolute 2xl:left-[53px] 2xl:w-[382px] 2xl:h-[205px]  '><img src={Images.HomeImage} alt="" className="w-full h-full object-cover" /></div>
+          </div> 
+          <div className='xl:flex-1 relative  xl:overflow-hidden'>
+            <div className='xl:w-[382px]  xl:h-[205px] ml-[105px]'><img src={Images.HomeImage1} alt="" className='mt-[130px] w-full h-full object-cover ' /></div>
+            <div className='top-[50px] absolute xl:left-[53px] xl:w-[382px] xl:h-[205px]  '><img src={Images.HomeImage} alt="" className="w-full h-full object-cover" /></div> 
           </div>
         </div>
       </div>
 
-      <div className='lg:px-[104px] 2xl:px-0  lg:h-[488px] lg:mb-[132px]  2xl:max-w-[1232px] 2xl:m-auto 2xl:mb-[76px]'>
+      <div className='lg:px-[104px] xl:px-0  lg:h-[488px] lg:mb-[132px]  xl:max-w-[1232px] xl:m-auto xl:mb-[76px]'>
         <h3 className='text-black  font-FontSan text-[24px] font-[700] leading-[28px] lg:mb-[32px] w-full justify-center items-center flex'>{t('HomePage.newsAndEvents')}</h3>
         <div className="w-full  lg:py-[10px] py-[50px]  ">
           {

@@ -1,8 +1,7 @@
 
 import { Images } from '../utils/images/Images' 
-import { DataType } from '../types/query.type'
-import { JobType } from '../types/Job.type'
-import { NewsType } from '../types/News.type' 
+import { DataType,JobType,NewsType} from '../types/index'
+ 
 
 export const PartnerData: string[] = [Images.doitac1Image, Images.doitac2Image, Images.doitac3Image, Images.doitac4Image, Images.doitac4Image]
 export const DataService = [
