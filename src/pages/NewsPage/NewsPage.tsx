@@ -4,14 +4,14 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, createSearchParams } from 'react-router-dom';
 
 import { Banner } from '~/components/Banner/Banner';
-import { RootState, useAppDispatch,fetchNews } from '~/stores/index';
+import { RootState, useAppDispatch, fetchNews } from '~/stores/index';
 import { Skeleton } from '~/components/Skeleton/Skeleton';
 import { ItemNews } from '~/components/ItemNews/ItemNews';
 import { News } from '~/components/News/News';
 import { Pagination } from '~/components/pagination/Pagination';
 import { useQuery } from '~/hook/useQuery';
 import { Path } from '~/contants/Path';
-import { QueryType,NewsType } from '~/types/index';
+import { QueryType, NewsType } from '~/types/index';
 import { fakeDataFilterNew } from '~/api/Data';
 import { Images } from '~/utils/images/Images';
 

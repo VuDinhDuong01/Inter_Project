@@ -60,8 +60,8 @@ const IntroductionPage = () => {
                   ["2xl:w-[276px]  xl:w-[90%] items-center flex h-[42px] pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]"]: true
                 })}>{t('IntroductionPage.UnityMakesStrength')}</div>
               </div>
-              <div className="col-span-1 xl:px-0 px-[15px] xl:mb-0 mb-[30px] xl:mt-[30px] 2xl:mt-0">
-                <h2 className={clsx(styles.boxShadow, {
+              <div className="col-span-1 xl:px-0 px-[15px] xl:mb-0 mb-[30px] 2xl:mt-0">
+                <h2 className={clsx( {
                   ["text-[#F57A21] font-FontSan text-[20px] font-[700] learning-[28px]"]: true
                 })}>TECH</h2>
                 <div className={clsx(styles.boxShadow, {
