@@ -1,12 +1,14 @@
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useTranslation } from "react-i18next";
+import clsx  from "clsx";
 
 import { Banner } from "~/components/Banner/Banner";
 import { Input } from "~/components/Input/Input";
 import { RegisterType, registerSchema } from '~/utils/schema'
 import GoogleMapConfig from "~/components/GoogleMap/GoogleMap";
 import { Images } from "~/utils/images/Images";
+import styles from '~/customestyle.module.css'
 
 const ContactPage = () => {
   const { t } = useTranslation()
@@ -37,10 +39,10 @@ const ContactPage = () => {
             <h2 className="text-black font-FontSan lg:text-[24px] text-[22px] font-[700]  lg:flex-col flex  lg:mb-[8px] mb-[30px] leading-[28px]">{t('contact.contactUs')}</h2>
             <p className="text-black font-FontSan text-[16px] font-[500] leading-[24px] lg:mb-[15px] mb-[30px]">{t('contact.description1')}
             </p>
-            <div style={{
-              boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)'
-            }}
-              className='w-full mb-[32px] h-[80px] rounded-[12px]   flex gap-[8px] justify-center items-center '>
+            <div 
+              className={clsx(styles.boxShadow,{
+                ['w-full mb-[32px] h-[80px] rounded-[12px] flex gap-[8px] justify-center items-center ']:true
+              })}>
               <div className='w-full flex'>
                 <div className='ml-[12px] mr-[8px]'>
                   <img src={Images.MapImage} alt="" className='w-[24px] h-[24px] object-cover' />
@@ -52,9 +54,9 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
-            <div style={{
-              boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)'
-            }} className='w-full mb-[32px] h-[80px] rounded-[12px]  flex gap-[8px] justify-center  items-center '>
+            <div  className={clsx(styles.boxShadow,{
+              ['w-full mb-[32px] h-[80px] rounded-[12px]  flex gap-[8px] justify-center  items-center ']:true
+            })}>
               <div className='w-full flex '>
                 <div className='ml-[12px] mr-[8px]'>
                   <img src={Images.LetterImage} alt="" />
@@ -65,9 +67,9 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
-            <div style={{
-              boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)'
-            }} className='w-full h-[80px] rounded-[12px]   flex gap-[8px] justify-center  items-center '>
+            <div  className={clsx(styles.boxShadow,{
+              ['w-full h-[80px] rounded-[12px]   flex gap-[8px] justify-center  items-center ']:true
+            })}>
               <div className='w-full flex '>
                 <div className='ml-[12px] mr-[8px]'>
                   <img src={Images.PhoneImage} alt="" />

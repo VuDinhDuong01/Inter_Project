@@ -1,9 +1,11 @@
 import { useSelector } from 'react-redux'
 import { useTranslation } from "react-i18next";
+import clsx  from 'clsx';
 
 import { RootState } from '~/stores/store'
 import { NewsType } from '~/types/News.type'
 import { Images } from '~/utils/images/Images'
+import styles from '~/customestyle.module.css'
 
 export const RelatedJobs = ({ start, end }: { start: number, end: number }) => {
     const { t } = useTranslation()
@@ -13,7 +15,9 @@ export const RelatedJobs = ({ start, end }: { start: number, end: number }) => {
             <h3 className="text-black font-FontSan text-[20px] font-[700] leading-[28px] mb-[12px]">{t('NewPageDetail.news')}</h3>
             {
                 newsData.data.slice(start, end).map((item: NewsType, index: number) => {
-                    return <div key={index} style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="flex w-full items-center shadow-sm rounded-[12px] mb-[20px]">
+                    return <div key={index}  className={clsx(styles.boxShadow,{
+                        ["flex w-full items-center shadow-sm rounded-[12px] mb-[20px]"]:true
+                    })}>
                         <div className='w-[140px] 2xl:w-[110px] 2xl:h-[90px] rounded-l-[12px] max-w-none'>
                             <img src={item?.image} alt="" className="w-[140px] 2xl:w-[110px]  h-[90px] max-w-none object-cover rounded-l-[12px]" />
                         </div>

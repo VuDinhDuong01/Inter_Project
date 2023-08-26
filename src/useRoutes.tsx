@@ -25,7 +25,6 @@ export const Routes = () => {
         <Suspense fallback={<Loading />}>
           <MainLayout
             title={t('Title.home')}
-
           >
             <HomePage />
           </MainLayout>
@@ -39,7 +38,6 @@ export const Routes = () => {
         <Suspense fallback={<Loading />}>
           <MainLayout
             title={t('Title.contact')}
-
           >
             <ContactPage />
           </MainLayout>
@@ -52,7 +50,6 @@ export const Routes = () => {
         <Suspense fallback={<Loading />}>
           <MainLayout
             title={t('Title.new')}
-
           >
             <NewsPage />
           </MainLayout>
@@ -107,7 +104,6 @@ export const Routes = () => {
         <Suspense fallback={<Loading />}>
           <MainLayout title={t('Title.pageNotFound')}>
             <NotFound />
-
           </MainLayout>
         </Suspense>
       ),

@@ -1,9 +1,10 @@
 import range from 'lodash/range'
 import { Link, createSearchParams, useNavigate } from 'react-router-dom'
+import clsx from 'clsx'
 
-import { Images } from '~/utils/images/Images' 
-import { QueryType } from '~/types/query.type' 
-import { Button } from '../Button/Button' 
+import { Images } from '~/utils/images/Images'
+import { QueryType } from '~/types/query.type'
+import { Button } from '../Button/Button'
 
 interface PaginationType {
     page_size: number,
@@ -94,9 +95,17 @@ export const Pagination = ({ page_size, query, path }: PaginationType) => {
     return (
         <div className='w-full flex justify-center items-center'>
             <div className=' flex items-center  justify-center'>
-                <img src={Images.LeftImage} alt="left" className={`w-[24px] h-[24px] bg-white mr-[4px] flex items-center justify-center object-cover ${currentPage === 1 ? 'cursor-not-allowed' : 'cursor-pointer'}`} onClick={handleLeftPagination} />
+                <img src={Images.LeftImage} alt="left" className={`${clsx({
+                    ['cursor-not-allowed']: currentPage === 1,
+                    ['cursor-pointer']: currentPage !== 1,
+                    ['w-[24px] h-[24px] bg-white mr-[4px] flex items-center justify-center object-cover']: true
+                })}`} onClick={handleLeftPagination} />
                 <div className='w-full items-center justify-center flex'>{Pagination()}</div>
-                <img src={Images.RightImage} alt="right" className={`w-[24px] h-[24px] bg-white ml-[-8px]  flex items-center justify-center object-cover ${currentPage === page_size ? 'cursor-not-allowed ' : 'cursor-pointer'}`} onClick={handleRightPagination} />
+                <img src={Images.RightImage} alt="right" className={`${clsx({
+                    ['cursor-not-allowed']: currentPage === page_size,
+                    ['cursor-pointer']: currentPage !== page_size,
+                    ['w-[24px] h-[24px] bg-white mr-[4px] flex items-center justify-center object-cover']: true
+                })}`} onClick={handleRightPagination} />
             </div>
         </div>
     )

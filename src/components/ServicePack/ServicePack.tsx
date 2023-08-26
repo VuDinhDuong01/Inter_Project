@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
 
+
 import { Slick } from "../slick";
 import { Images } from "~/utils/images/Images";
 import { DataService } from "~/api/Data";
 import { Button } from "../Button/Button";
+
 
 export const ServicePack = () => {
     const { t, i18n } = useTranslation()

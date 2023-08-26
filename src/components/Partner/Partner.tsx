@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
+import clsx from "clsx";
 
 import { Slick } from "../slick";
 import { PartnerData } from "~/api/Data";
+import styles from '~/customestyle.module.css'
 
 export const Partner = () => {
 
@@ -16,7 +18,9 @@ export const Partner = () => {
                   {
                      PartnerData.map((item, index) => {
                         return <div key={index} className='mb-[44px]'>
-                           <div><div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className='bg-white  mx-[16px] h-[105px] rounded-[12px] flex items-center justify-center'>
+                           <div><div className={clsx(styles.boxShadow, {
+                              ['bg-white  mx-[16px] h-[105px] rounded-[12px] flex items-center justify-center']: true
+                           })}>
                               <img src={item} alt="" className=' w-[105px] h-full object-contain' />
                            </div></div>
                         </div>

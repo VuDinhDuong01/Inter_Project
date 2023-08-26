@@ -1,11 +1,12 @@
 import { useTranslation } from "react-i18next";
+import clsx from "clsx";
 
 import { RegisterBatTech } from "~/components/RegisterBatTech/RegisterBatTech";
 import { Partner } from "~/components/Partner/Partner";
 import { Banner } from "~/components/Banner/Banner";
 import { WorkingPrinciple } from "~/components/WorkingPrinciple/WorkingPrinciple";
 import { Images } from "~/utils/images/Images";
-
+import styles from '~/customestyle.module.css'
 
 const IntroductionPage = () => {
   const { t } = useTranslation()
@@ -27,7 +28,7 @@ const IntroductionPage = () => {
         </div>
       </div>
 
-       <div className='xl:mt-[120px] px-[15px] xl:px-0 xl:max-w-[1071px] xl:max-h-[395px] xl:m-auto xl:bg-transparent grid w-full xl:grid-cols-2 grid-cols-1 xl:gap-[99px]'>
+      <div className='xl:mt-[120px] px-[15px] xl:px-0 xl:max-w-[1071px] xl:max-h-[395px] xl:m-auto xl:bg-transparent grid w-full xl:grid-cols-2 grid-cols-1 xl:gap-[99px]'>
         <div className='col-span-1 xl:px-0 w-full'>
           <h2 className='text-black font-FontSan text-[24px] font-[700] leading-[24px] xl:pt-[82px]  pt-[60px] xl:text-right text-center xl:mb-0 mb-[30px]'>{t('IntroductionPage.VisionAndMission')}</h2>
           <div >
@@ -41,7 +42,7 @@ const IntroductionPage = () => {
         <div className="col-span-1 flex sm:items-center   sm:justify-center xl:justify-start xl:items-start 2xl:justify-start 2xl:items-start">
           <img src={Images.Anh2Image} alt="" className=" xl:h-[395px] object-cover  lg:w-[395px] xl:w-[395px] lg:my-0 my-[50px]" />
         </div>
-      </div> 
+      </div>
       <div className=" xl:mt-[120px]  xl:px-0 xl:max-w-[1200px] xl:max-h-[389px] xl:m-auto  xl:mb-[120px] lg:mb-[50px] w-full ">
         <h2 className="text-black font-FontSan text-[24px] pt-[60px] xl:pt-0 font-[700] leading-[28px] flex items-center justify-center xl:mb-[36px] mb-[50px]">{t('IntroductionPage.CoreValues')}</h2>
         <div className="lg:grid-cols-2  grid-cols-1 w-full grid ">
@@ -49,16 +50,32 @@ const IntroductionPage = () => {
             <div className="w-full grid xl:grid-cols-2 grid-cols-1">
               <div className="col-span-1 xl:px-0 px-[15px] w-full xl:mb-0 mb-[30px] 2xl:mr-[32px] 2xl:max-w-[276px]">
                 <h2 className="text-[#F57A21] font-FontSan text-[20px] font-[700] learning-[28px]">BAT</h2>
-                <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="2xl:w-[276px] xl:w-[90%] pr-[10px]  items-center flex h-[42px] pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px] font-[400] leading-[52px]">{t('IntroductionPage.AttentiveToCustomers')}</div>
-                <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="2xl:w-[276px] xl:w-[90%] items-center flex h-[42px] pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]">{t('IntroductionPage.DedicationToWork')}</div>
-                <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="2xl:w-[276px]  xl:w-[90%] items-center flex h-[42px] pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]">{t('IntroductionPage.UnityMakesStrength')}</div>
+                <div className={clsx(styles.boxShadow, {
+                  ["2xl:w-[276px] xl:w-[90%] pr-[10px]  items-center flex h-[42px] pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px] font-[400] leading-[52px]"]: true
+                })}>{t('IntroductionPage.AttentiveToCustomers')}</div>
+                <div className={clsx(styles.boxShadow, {
+                  ["2xl:w-[276px] xl:w-[90%] items-center flex h-[42px] pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]"]: true
+                })}>{t('IntroductionPage.DedicationToWork')}</div>
+                <div className={clsx(styles.boxShadow, {
+                  ["2xl:w-[276px]  xl:w-[90%] items-center flex h-[42px] pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]"]: true
+                })}>{t('IntroductionPage.UnityMakesStrength')}</div>
               </div>
               <div className="col-span-1 xl:px-0 px-[15px] xl:mb-0 mb-[30px] xl:mt-[30px] 2xl:mt-0">
-                <h2 className="text-[#F57A21] font-FontSan text-[20px] font-[700] learning-[28px]">TECH</h2>
-                <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="2xl:w-[276px] xl:w-[90%] h-[42px] flex items-center pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]">“T” - Technology: Công nghệ</div>
-                <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="2xl:w-[276px] xl:w-[90%] h-[42px] pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] flex items-center font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]">“E” - Ecosystem: Hệ sinh thái</div>
-                <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="2xl:w-[276px] xl:w-[90%] h-[42px] flex items-center pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]">“C” - Connect: Kết nối</div>
-                <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className="2xl:w-[276px] xl:w-[90%] h-[42px] flex items-center pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]">“H” - Happiness: Hạnh phúc</div>
+                <h2 className={clsx(styles.boxShadow, {
+                  ["text-[#F57A21] font-FontSan text-[20px] font-[700] learning-[28px]"]: true
+                })}>TECH</h2>
+                <div className={clsx(styles.boxShadow, {
+                  ["2xl:w-[276px] xl:w-[90%] h-[42px] flex items-center pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]"]: true
+                })}>“T” - Technology: Công nghệ</div>
+                <div className={clsx(styles.boxShadow, {
+                  ["2xl:w-[276px] xl:w-[90%] h-[42px] pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] flex items-center font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]"]: true
+                })}>“E” - Ecosystem: Hệ sinh thái</div>
+                <div className={clsx(styles.boxShadow, {
+                  ["2xl:w-[276px] xl:w-[90%] h-[42px] flex items-center pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]"]: true
+                })}>“C” - Connect: Kết nối</div>
+                <div className={clsx(styles.boxShadow, {
+                  ["2xl:w-[276px] xl:w-[90%] h-[42px] flex items-center pl-[16px] mt-[12px] rounded-[8px] bg-white  text-[#444] font-FontSan text-[16px] lg:text-[19px]  font-[400] leading-[52px]"]: true
+                })}>“H” - Happiness: Hạnh phúc</div>
               </div>
             </div>
           </div>
