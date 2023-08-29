@@ -1,0 +1,6 @@
+export * from './NewSkeleton'
+export * from './NewsSkeleton'
+export * from './NewLoading'
+export * from './NewDetailSkeleton'
+export * from './RelatedJobsSkeleton'
+export * from './JobSkeleton'

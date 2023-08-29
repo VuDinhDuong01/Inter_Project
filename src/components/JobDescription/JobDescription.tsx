@@ -15,11 +15,12 @@ export const JobDescription = () => {
     const { idJob } = useParams()
 
     const id = getId(idJob as string)
+    const { jobDetail } = useSelector((state: RootState) => state.jobs)
     useEffect(() => {
         dispatch(fetchJobDetail(id))
     }, [id, dispatch])
 
-    const { jobDetail } = useSelector((state: RootState) => state.jobs)
+   
 
     return (
         <div className='lg:w-[745px] xl:mt-[86px] xl:pt-[-35xp]  w-full lg:px-0 px-[15px]'>

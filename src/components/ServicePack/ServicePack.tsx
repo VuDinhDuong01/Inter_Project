@@ -14,7 +14,6 @@ export const ServicePack = () => {
             <h2 className=' flex items-center justify-center text-black font-FontSan text-[24px] font-[700] leading-[28px] pb-[34px]'>{t('HomePage.servicePack')}</h2>
             <div className='w-full'>
                 <Slick slidesToShow={3}>{DataService.map((item, index) => {
-
                     return <div key={index} className='mb-[44px]'>
                         <div style={{ boxShadow: '4px 2px 15px 0px rgba(0, 0, 0, 0.05)' }} className={` ${item.title === 'Chuyên nghiệp' || item.title === 'Tổ chức' ? 'bg-[#F1F1F1]' : 'bg-white'} mx-[16px]  rounded-[20px] h-[424px] sm:h-[440px]   px-[24px]`}>
                             <h4 className="text-black font-FontSan text-[24px] font-[700] leading-[28px] pt-[24px] pb-[4px]">{i18n.language === 'en' ? t(`HomePage.${item.title}`) : item.title}</h4>

@@ -2,10 +2,10 @@ import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { useTranslation } from "react-i18next";
 import { useNavigate, createSearchParams } from 'react-router-dom';
+import range from 'lodash/range'
 
 import { Banner } from '~/components/Banner/Banner';
 import { RootState, useAppDispatch, fetchNews } from '~/stores/index';
-import { Skeleton } from '~/components/Skeleton/Skeleton';
 import { ItemNews } from '~/components/ItemNews/ItemNews';
 import { News } from '~/components/News/News';
 import { Pagination } from '~/components/pagination/Pagination';
@@ -14,6 +14,8 @@ import { Path } from '~/contants/Path';
 import { QueryType, NewsType } from '~/types/index';
 import { fakeDataFilterNew } from '~/api/Data';
 import { Images } from '~/utils/images/Images';
+import { NewsSkeleton, NewLoading } from '~/components/Skeleton/index';
+
 
 const NewsPage = () => {
 
@@ -22,7 +24,6 @@ const NewsPage = () => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const { newsData, isLoading } = useSelector((state: RootState) => state.news)
-
   const handleFilterNew = (name: string) => {
     navigate({
       pathname: Path.news,
@@ -54,7 +55,7 @@ const NewsPage = () => {
         content={t('banner.titleBannerNews')}
         description={t('banner.descriptionBannerNews')}
       />
-      <News />
+      {isLoading ? <NewLoading /> : <News />}
 
       <div className='xl:max-w-[1200px]  xl:m-auto  w-full xl:flex hidden  items-center justify-between  xl:px-0 lg:pb-[40px] xl:pb-[34px] pb-[20px]'>
         <ul className='xl:max-w-[1200px] flex items-center xl:gap-[32px] gap-[25px] flex-wrap xl:px-0  px-[15px] '>
@@ -69,9 +70,12 @@ const NewsPage = () => {
       <div className='xl:max-w-[1200px]  xl:m-auto  xl:mb-[132px] lg:px-[30px] xl:px-0'>
         <div className='w-full grid xl:grid-cols-4  lg:gap-x-[32px] lg:grid-cols-3 md:grid-cols-2 md:gap-2 sm:grid-cols-1 lg:px-0 px-[15px]'>
           {
-            isLoading ? <Skeleton /> : (newsData.data.map((item: NewsType, index: number) => {
-              return <ItemNews key={index} dataNew={item} isShow={true} />
-            }))
+            isLoading ? range(8).map((_, index) => {
+              return <NewsSkeleton key={index} />
+            })
+              : (newsData.data.map((item: NewsType, index: number) => {
+                return <ItemNews key={index} dataNew={item} isShow={true} />
+              }))
           }
         </div>
         {newsData?.data?.length > 0 ?

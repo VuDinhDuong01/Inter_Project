@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 import { Banner } from "~/components/Banner/Banner";
 import { RegisterType, registerSchema } from '~/utils/schema'
@@ -9,6 +10,8 @@ import { JobDescription } from "~/components/JobDescription/JobDescription";
 import { Button } from "~/components/Button/Button";
 import { SimilarJob } from "~/components/SimilarJob/SimilarJob";
 import { Images } from "~/utils/images/Images";
+import { RootState } from "~/stores";
+import { JobDetailSkeleton } from "~/components/Skeleton/JobDetailSkeleton";
 
 const JobOpportunityItemPage = () => {
     const { t } = useTranslation()
@@ -26,13 +29,13 @@ const JobOpportunityItemPage = () => {
     const onSubmit = handleSubmit((data) => {
         console.log(data)
     })
-
+    const { isLoadingDetail } = useSelector((state: RootState) => state.jobs)
     return (
         <div>
             <Banner Image1={Images.Image26} Image2={Images.Image24} width1={225} height1={173} height2={285} width2={285} marginTop1={95} marginTop2={34} content={t('banner.titleBannerJobOpportunity')}
                 description={t('banner.descriptionBannerJobOpportunity')} />
             <div className='  xl:max-w-[1192px] xl:m-auto lg:px-[50px] xl:px-0 lg:gap-[68px] xl:gap-x-[68px] xl:flex'>
-                <JobDescription />
+                {isLoadingDetail ? <JobDetailSkeleton /> : <JobDescription />}
                 <div className='flex-1 xl:mt-[121px] xl:w-[379px] w-full xl:px-0 px-[15px]'>
                     <form action="" onSubmit={onSubmit}>
                         <div className=' xl:mt-[5px] px-[22px] rounded-[10px] border-2 bg-white border-green w-full  '>

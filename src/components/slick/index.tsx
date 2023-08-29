@@ -71,8 +71,8 @@ export const Slick = ({ children, className, slidesToShow }: SlickType) => {
                 ref={refSlide}
                 showDots={true}
                 responsive={responsive(slidesToShow)}
-                autoPlay={true}
-                autoPlaySpeed={2000}
+                // autoPlay={true}
+                // autoPlaySpeed={2000}
                 infinite={true}
                 arrows={true}
                 customDot={<CustomDot active onClick={handleDotsClick} />}

@@ -3,11 +3,13 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { axiosInstance } from '~/api/FakeApi'  
 import { JobType } from '~/types/Job.type' 
 import { GenerateType } from '~/types/General.type'  
-import { QueryType } from '~/types/query.type'  
+import { QueryType } from '~/types/query.type' 
+ 
 interface UsersState {
     jobsData: GenerateType<JobType[]>,
     jobDetail: JobType
-    isLoading: boolean
+    isLoading: boolean,
+    isLoadingDetail:boolean
 }
 
 export const fetchJobs = createAsyncThunk(
@@ -20,6 +22,7 @@ export const fetchJobs = createAsyncThunk(
             })
             return result.data
         }
+
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         catch (error: any) {
             if (error?.name === 'AxiosError') return thunkAPI.rejectWithValue(error.response?.data)
@@ -68,7 +71,8 @@ const initialState = {
             request6: '',
         }
     },
-    isLoading: false
+    isLoading: false,
+    isLoadingDetail:false
 } as UsersState
 
 const jobsSlice = createSlice({
@@ -91,8 +95,19 @@ const jobsSlice = createSlice({
             state.isLoading = false
         })
 
+        builder.addCase(fetchJobDetail.pending, (state) => {
+            state.isLoadingDetail = true
+        })
+
         builder.addCase(fetchJobDetail.fulfilled, (state, action) => {
-            if (action.payload) state.jobDetail = action.payload
+            if (action.payload) {
+                state.jobDetail = action.payload
+                state.isLoadingDetail = false
+            }
+        })
+
+        builder.addCase(fetchJobDetail.rejected, (state) => {
+            state.isLoadingDetail = false
         })
 
     },

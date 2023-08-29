@@ -5,6 +5,7 @@ import { lazy, Suspense } from "react";
 import { Path } from "./contants/Path";
 import { MainLayout } from "./layouts/MainLayout/MainLayout";
 import { Loading } from "./components/Loading/Loading";
+
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"))
 const ContactPage = lazy(() => import("./pages/ContactPage/ContactPage"))
 const NewsPage = lazy(() => import("./pages/NewsPage/NewsPage"))

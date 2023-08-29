@@ -8,18 +8,25 @@ const mock = new MockAdapter(axiosInstance);
 //fake data news
 
 mock.onGet("/api/v2/news").reply(config => {
-    const { limit, page,name } = config.params
+    const { limit, page, name } = config.params
     const startIndex = (page - 1) * limit
     const endIndex = startIndex + limit
     const filteredData = name ? fakeDataNews.filter(item => item.content.toLowerCase().includes(name.toLowerCase()))
-     : fakeDataNews
+        : fakeDataNews
     const paginatedData = filteredData.slice(startIndex, endIndex)
     const response = {
         data: paginatedData,
         totalPages: Math.ceil(filteredData.length / limit),
         totalItem: filteredData.length
     };
-    return [200, response];
+    // return [200, response];
+
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([200, response]);
+        }, 2000)
+    })
+
 });
 
 mock.onGet(/\/api\/v2\/news\/\d+/).reply(config => {
@@ -31,13 +38,13 @@ mock.onGet(/\/api\/v2\/news\/\d+/).reply(config => {
         return new Promise(resolve => {
             setTimeout(() => {
                 resolve([200, item]);
-            }, 0);
+            }, 2000);
         });
     } else {
         return new Promise((resolve,) => {
             setTimeout(() => {
                 resolve([404]);
-            }, 0);
+            }, 2000);
         });
     }
 });
@@ -67,26 +74,24 @@ mock.onGet("/api/v2/jobs").reply(config => {
         totalItem: paginatedData.length
     };
 
-    return [200, response];
+    // return [200, response];
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([200,response]);
+        }, 2000);
+    })
 });
 
 mock.onGet(/\/api\/v2\/jobs\/\d+/).reply(config => {
     const matchResult = config.url?.match(/\/api\/v2\/jobs\/(\d+)/);
     const idItem = matchResult?.[1]
     const item = fakeDataJob.find(item => item.id === idItem);
-    if (item) {
         return new Promise(resolve => {
             setTimeout(() => {
                 resolve([200, item]);
-            }, 0);
+            }, 2000);
         });
-    } else {
-        return new Promise((resolve,) => {
-            setTimeout(() => {
-                resolve([404]);
-            }, 0);
-        });
-    }
+    
 });
 
 

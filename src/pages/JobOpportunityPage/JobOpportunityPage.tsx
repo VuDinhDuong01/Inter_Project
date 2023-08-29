@@ -4,16 +4,18 @@ import { useSelector } from 'react-redux'
 import { createSearchParams, useNavigate } from 'react-router-dom'
 import { useTranslation } from "react-i18next";
 import omit from 'lodash/omit'
+import range from 'lodash/range'
 
 import { Banner } from '~/components/Banner/Banner';
 import { Filter } from '~/components/Filter/Filter';
 import { Job } from '~/components/Job/Job';
-import { useAppDispatch ,fetchJobs,RootState} from '~/stores/index';
+import { useAppDispatch, fetchJobs, RootState } from '~/stores/index';
 import { Pagination } from '~/components/pagination/Pagination';
 import { useQuery } from '~/hook/useQuery';
 import { Path } from '~/contants/Path'
-import { QueryType,JobType } from '~/types/index';
+import { QueryType, JobType } from '~/types/index';
 import { Images } from '~/utils/images/Images';
+import { JobSkeleton } from '~/components/Skeleton/';
 
 const JobOpportunity = () => {
   const [checkedRadioGroup, setCheckedRadioGroup] = useState<string>('6')
@@ -25,8 +27,8 @@ const JobOpportunity = () => {
   const navigate = useNavigate()
   const query: QueryType = useQuery()
   const dispatch = useAppDispatch()
-
-  const { jobsData } = useSelector((state: RootState) => state.jobs)
+  
+  const { jobsData, isLoading } = useSelector((state: RootState) => state.jobs)
 
   const handleSubmitSearch = (e: React.FormEvent<HTMLFormElement>) => {
 
@@ -84,16 +86,21 @@ const JobOpportunity = () => {
           </div>
           <div className='lg:flex-1 lg:mt-0 mt-[-60px] w-full'>
             {
-              jobsData?.data?.map((job: JobType, index: number) => {
+
+              isLoading ?range(8).map((_,index)=>{
+                return <JobSkeleton  key={index}/>
+              }) : jobsData?.data?.map((job: JobType, index: number) => {
                 return <Job key={index} job={job} />
               })
             }
-            {jobsData?.data?.length > 0 ?
-              <div className='lg:mt-[73px] lg:mb-[87px] my-[50px]'> <Pagination page_size={jobsData?.totalPages} query={query} path={Path.jobOpportunity} /></div>
-              : <div className=' lg:h-[300px]  h-[200px]  lg:mx-0 mx-[15px] mb-[50px] rounded-md bg-green flex flex-col items-center justify-center'>
-                <span className='lg:text-[25px] text-[23px] font-FontSan text-white py-3'>{t('jobOpportunity.notJob')}</span>
-                <button className='px-4 py-3 rounded-md text-white font-FontSan bg-[#7d7091] ' onClick={handleBack}>{t('jobOpportunity.comeback')}</button>
-              </div>
+            {
+
+              jobsData?.data?.length > 0 ?
+                <div className='lg:mt-[73px] lg:mb-[87px] my-[50px]'> <Pagination page_size={jobsData?.totalPages} query={query} path={Path.jobOpportunity} /></div>
+                : <div className=' lg:h-[300px]  h-[200px]  lg:mx-0 mx-[15px] mb-[50px] rounded-md bg-green flex flex-col items-center justify-center'>
+                  <span className='lg:text-[25px] text-[23px] font-FontSan text-white py-3'>{t('jobOpportunity.notJob')}</span>
+                  <button className='px-4 py-3 rounded-md text-white font-FontSan bg-[#7d7091] ' onClick={handleBack}>{t('jobOpportunity.comeback')}</button>
+                </div>
             }
           </div>
         </div>

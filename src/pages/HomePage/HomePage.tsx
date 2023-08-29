@@ -1,23 +1,24 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
-
+import range from 'lodash/range'
 
 import { Partner } from "~/components/Partner/Partner";
 import { RegisterBatTech } from "~/components/RegisterBatTech/RegisterBatTech";
 import { ItemNews } from "~/components/ItemNews/ItemNews";
 import { ServicePack } from "~/components/ServicePack/ServicePack";
-import { RootState, useAppDispatch,fetchNews } from '~/stores/index'
-
+import { RootState, useAppDispatch, fetchNews } from '~/stores/index'
 import { IntroductionBattech } from "~/components/IntroductionBattech/IntroductionBattech";
 import { DifferentAndPioneering } from "~/components/DifferentAndPioneering/DifferentAndPioneering";
 import { Slick } from "~/components/slick";
 import { useQuery } from "~/hook/useQuery";
-import { QueryType,NewsType } from "~/types/index";
-
+import { QueryType, NewsType } from "~/types/index";
 import { Images } from "~/utils/images/Images";
+import NewSkeleton from "~/components/Skeleton/NewSkeleton";
+
 
 const HomePage = () => {
+  
   const query: QueryType = useQuery()
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
@@ -26,6 +27,7 @@ const HomePage = () => {
   }, [query.page, dispatch])
 
   const { newsData } = useSelector((state: RootState) => state.news)
+  const { isLoading } = useSelector((state: RootState) => state.news)
 
   return (
     <div className="w-full overflow-hidden">
@@ -82,15 +84,15 @@ const HomePage = () => {
 
       <div className="xl:flex hidden bg-[#E9F9D6] xl:mb-[120px] h-[430px] w-full ">
         <div className='xl:max-w-[1200px]   xl:m-auto  w-full flex justify-between '>
-           <div className='xl:w-[687px] xl:mt-[30px]'>
+          <div className='xl:w-[687px] xl:mt-[30px]'>
             <p className='text-[#606060] font-FontSan text-[16px] font-[500] leading-[24px] mb-[12px]'>{t('HomePage.NewsAboutBATTECH')}</p>
             <h4 className='text-black mb-[8px] font-FontSan text-[24px] font-[700] leading-[28px]'>{t('HomePage.NewsAboutBATTECHTitle')}</h4>
             <p className='text-[#606060] mb-[70px] font-FontSan text-[16px] font-[500] leading-[24px]  w-[687px] h-[105px]'> {t('HomePage.NewsAboutBATTECHDescription')}</p>
             <button className='flex w-[276px] bg-green h-[48px] px-[10px] py-[12px] justify-center items-center gap-[8px] rounded-[12px]  text-white text-[24px] font-[600] font-FontSan  whitespace-pre-line text-center    leading-[24px]  ring-1 ring-black ring-opacity-5'>{t('HomePage.NewsAboutBATTECHButton')}</button>
-          </div> 
+          </div>
           <div className='xl:flex-1 relative  xl:overflow-hidden'>
             <div className='xl:w-[382px]  xl:h-[205px] ml-[105px]'><img src={Images.HomeImage1} alt="" className='mt-[130px] w-full h-full object-cover ' /></div>
-            <div className='top-[50px] absolute xl:left-[53px] xl:w-[382px] xl:h-[205px]  '><img src={Images.HomeImage} alt="" className="w-full h-full object-cover" /></div> 
+            <div className='top-[50px] absolute xl:left-[53px] xl:w-[382px] xl:h-[205px]  '><img src={Images.HomeImage} alt="" className="w-full h-full object-cover" /></div>
           </div>
         </div>
       </div>
@@ -101,15 +103,21 @@ const HomePage = () => {
           {
             <Slick slidesToShow={4}>
               {
-                (newsData.data.map((item: NewsType, index: number) => {
-                  return <ItemNews key={index} dataNew={item} isShow={false} />
-                }))
+                isLoading ? range(4).map((_, index) => {
+                  return <NewSkeleton key={index} />
+                }) :
+                  (newsData.data.map((item: NewsType, index: number) => {
+                    return <ItemNews key={index} dataNew={item} isShow={false} />
+                  }))
               }
             </Slick>
           }
         </div>
       </div>
+
       <ServicePack />
+
+
       <RegisterBatTech />
       <Partner />
     </div>

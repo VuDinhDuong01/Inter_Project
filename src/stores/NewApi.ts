@@ -45,7 +45,8 @@ export const fetchNewsDetail = createAsyncThunk(
 interface UsersState {
     newsData: GenerateType<NewsType[]>,
     newDataDetail: NewsType
-    isLoading: boolean
+    isLoading: boolean,
+    isLoadingDetail:boolean
 }
 
 const initialState: UsersState = {
@@ -65,7 +66,8 @@ const initialState: UsersState = {
             detailThree: "",
         }
     },
-    isLoading: false
+    isLoading: false,
+    isLoadingDetail:false
 }
 
 const newSlice = createSlice({
@@ -82,13 +84,22 @@ const newSlice = createSlice({
                 state.isLoading = false
             }
         })
+        
         builder.addCase(fetchNews.rejected, (state) => {
             state.isLoading = false
+        })
+
+        builder.addCase(fetchNewsDetail.pending, (state) => {
+            state.isLoadingDetail = true
         })
         builder.addCase(fetchNewsDetail.fulfilled, (state, action) => {
             if (action.payload) {
                 state.newDataDetail = action.payload
+                state.isLoadingDetail=false
             }
+        })
+        builder.addCase(fetchNewsDetail.rejected, (state) => {
+            state.isLoadingDetail = false
         })
     },
 })
