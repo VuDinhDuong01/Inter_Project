@@ -20,7 +20,6 @@ const ContactPage = () => {
       email: '',
       telephone: '',
     },
-
     resolver: yupResolver(schemaRegister)
   })
   const onSubmit = handleSubmit((data) => {
@@ -29,7 +28,7 @@ const ContactPage = () => {
 
   return (
     <div>
-      <Banner Image1={Images.Image27} Image2={Images.Image25} width1={256} height1={217} height2={296} width2={255} marginTop1={80} marginTop2={23} content={t('Header.contact')} description={t('banner.descriptionBannerContact')} />
+      <Banner ImageBannerRight={Images.Image27} ImageBannerLeft={Images.Image25} width1={256} height1={217} height2={296} width2={255} marginTop1={80} marginTop2={23} content={t('Header.contact')} description={t('banner.descriptionBannerContact')} />
       <div className="lg:px-[120px] xl:px-0 w-full px-[20px] xl:mt-[168px]">
         <div className="w-full grid lg:grid-cols-2 xl:max-w-[1191px] xl:max-h-[444px] xl:m-auto  grid-cols-1 lg:gap-[31px]">
           <div className="col-span-1 lg:flex hidden">

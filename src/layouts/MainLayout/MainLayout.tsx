@@ -4,7 +4,8 @@ import { useEffect } from 'react'
 import { Header } from '~/components/Header/Header'
 import { Footer } from '~/components/Footer/Footer'
 
-export const MainLayout = ({ children, title }: { children: React.ReactNode, title: string }) => {
+export const MainLayout = ({ children, title }:
+  { children: React.ReactNode, title: string }) => {
   useEffect(() => {
     document.title = title
   }, [title])
@@ -16,7 +17,7 @@ export const MainLayout = ({ children, title }: { children: React.ReactNode, tit
         </title>
         <meta name="description" content="Free Web tutorials" />
         <meta name="keywords" content="page blog" />
-        <meta name="author" content="John Doe" />
+        <meta name="author" content="its me" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
       <Header />

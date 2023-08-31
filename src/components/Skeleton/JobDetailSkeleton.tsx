@@ -3,8 +3,9 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import { useTranslation } from "react-i18next";
 export const JobDetailSkeleton = () => {
     const { t } = useTranslation()
+    
     return (
-        <div className='lg:w-[745px] xl:mt-[86px] xl:pt-[-35xp]  w-full lg:px-0 px-[15px]'>
+        <div className='lg:w-[745px] xl:mt-[86px] mt-[20px] xl:pt-[-35xp]  w-full lg:px-0 px-[15px]'>
             <Skeleton count={3} />
             <div className='flex items-center mb-[11px]'>
                 <div className='flex items-center mr-[18px]'>

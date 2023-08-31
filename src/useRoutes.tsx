@@ -22,7 +22,6 @@ export const Routes = () => {
     {
       path: Path.home,
       element: (
-
         <Suspense fallback={<Loading />}>
           <MainLayout
             title={t('Title.home')}

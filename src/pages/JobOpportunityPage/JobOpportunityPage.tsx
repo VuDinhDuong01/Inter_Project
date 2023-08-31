@@ -1,21 +1,20 @@
-
-import { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useState } from 'react'
 import { createSearchParams, useNavigate } from 'react-router-dom'
 import { useTranslation } from "react-i18next";
 import omit from 'lodash/omit'
 import range from 'lodash/range'
+import { useQuery, } from '@tanstack/react-query'
 
 import { Banner } from '~/components/Banner/Banner';
 import { Filter } from '~/components/Filter/Filter';
 import { Job } from '~/components/Job/Job';
-import { useAppDispatch, fetchJobs, RootState } from '~/stores/index';
 import { Pagination } from '~/components/pagination/Pagination';
-import { useQuery } from '~/hook/useQuery';
+import { useQuery as Query } from '~/hook/useQuery';
 import { Path } from '~/contants/Path'
 import { QueryType, JobType } from '~/types/index';
 import { Images } from '~/utils/images/Images';
 import { JobSkeleton } from '~/components/Skeleton/';
+import { getJobs } from '~/stores/JobApi';
 
 const JobOpportunity = () => {
   const [checkedRadioGroup, setCheckedRadioGroup] = useState<string>('6')
@@ -25,11 +24,7 @@ const JobOpportunity = () => {
 
   const { t } = useTranslation()
   const navigate = useNavigate()
-  const query: QueryType = useQuery()
-  const dispatch = useAppDispatch()
-  
-  const { jobsData, isLoading } = useSelector((state: RootState) => state.jobs)
-
+  const query: QueryType = Query()
   const handleSubmitSearch = (e: React.FormEvent<HTMLFormElement>) => {
 
     e.preventDefault()
@@ -46,18 +41,18 @@ const JobOpportunity = () => {
     setCheckedRadioType('1')
     setCheckedRadioLocation('1')
   }
-
   const handleBack = () => {
     navigate(Path.jobOpportunity)
   }
 
-  useEffect(() => {
-    dispatch(fetchJobs(query));
-  }, [query.page, query?.name])
+  const { isLoading, data: jobsData } = useQuery({
+    queryKey: ['jobs', query],
+    queryFn: () => getJobs(query),
+  })
 
   return (
     <div>
-      <Banner Image1={Images.Image26} Image2={Images.Image24} width1={225} height1={173} height2={285} width2={285} marginTop1={95} marginTop2={34} content={t('banner.titleBannerJobOpportunity')} description={t('banner.descriptionBannerJobOpportunity')} />
+      <Banner ImageBannerRight={Images.Image26} ImageBannerLeft={Images.Image24} width1={225} height1={173} height2={285} width2={285} marginTop1={95} marginTop2={34} content={t('banner.titleBannerJobOpportunity')} description={t('banner.descriptionBannerJobOpportunity')} />
       <div className="  xl:max-w-[1200px]  xl:m-auto lg:px-[100px] xl:px-0">
         <div className="xl:mt-[155px]">
           <h2 className="text-black mb-[40px]  flex items-center justify-center font-FontSan xl:text-[24px] text-[22px]  font-[700] leading-[28px]">{t('jobOpportunity.JobOpportunity')}</h2>
@@ -84,19 +79,19 @@ const JobOpportunity = () => {
               setCheckedRadioLocation={setCheckedRadioLocation}
             />
           </div>
+
           <div className='lg:flex-1 lg:mt-0 mt-[-60px] w-full'>
             {
-
-              isLoading ?range(8).map((_,index)=>{
-                return <JobSkeleton  key={index}/>
+              isLoading ? range(8).map((_, index) => {
+                return <JobSkeleton key={index} />
               }) : jobsData?.data?.map((job: JobType, index: number) => {
                 return <Job key={index} job={job} />
               })
             }
             {
-
-              jobsData?.data?.length > 0 ?
-                <div className='lg:mt-[73px] lg:mb-[87px] my-[50px]'> <Pagination page_size={jobsData?.totalPages} query={query} path={Path.jobOpportunity} /></div>
+              isLoading || (jobsData?.data as JobType[])?.length > 0 ?
+                <div className='lg:mt-[70px] pt-[-10px] my-[50px] lg:mb-[87px]'>
+                  <Pagination page_size={jobsData?.totalPages as number} query={query} path={Path.jobOpportunity} /></div>
                 : <div className=' lg:h-[300px]  h-[200px]  lg:mx-0 mx-[15px] mb-[50px] rounded-md bg-green flex flex-col items-center justify-center'>
                   <span className='lg:text-[25px] text-[23px] font-FontSan text-white py-3'>{t('jobOpportunity.notJob')}</span>
                   <button className='px-4 py-3 rounded-md text-white font-FontSan bg-[#7d7091] ' onClick={handleBack}>{t('jobOpportunity.comeback')}</button>

@@ -15,24 +15,12 @@ export const RelatedJobsSkeleton = () => {
                     return <div key={index} className={clsx(styles.boxShadow, {
                         ["flex w-full items-center shadow-sm rounded-[12px] mb-[20px]"]: true
                     })}>
-                        <div className='w-[140px] 2xl:w-[110px] 2xl:h-[90px] rounded-l-[12px] max-w-none'>
-                             <Skeleton width={'140px'} height={'80px'} /> 
+                        <div className='w-[140px] xl:w-[110px] xl:h-[90px] rounded-l-[12px] max-w-none'>
+                            <Skeleton width={'140px'} height={'80px'} />
 
                         </div>
-                        <div className="w-full xl:w-full md:justify-center">
-                            <div className="w-full items-center justify-center flex ml-[8px]"><Skeleton width={'215px'} height={'30px'} className="" /> </div>
-                            <div className="w-full flex items-center justify-between  px-[15px] pt-[6px] ">
-                                <div className='flex items-center ml-[20px]'>
-
-                                    <Skeleton width={'40px'} height={'16px'} />
-                                    <Skeleton />
-                                </div>
-                                <div className='flex items-center '>
-                                    <Skeleton width={'40px'} height={'16px'} />
-                                    <Skeleton />
-
-                                </div>
-                            </div>
+                        <div className="w-full flex flex-col justify-center xl:pl-[40px] xl:pr-[10px] px-[15px] xl:px-0" >
+                            <Skeleton className="w-full" count={2} />
                         </div>
                     </div>
                 })

@@ -7,7 +7,7 @@ import styles from '~/customestyle.module.css'
 const NewSkeleton = () => {
   return (
     <div className={clsx(styles.boxShadow,{
-      ["rounded-[16px] h-[360px] mx-[16px]  mb-[35px]"]:true,
+      ["rounded-[16px] h-[360px] mx-[16px] mb-[45px]"]:true,
     })} >
       <Skeleton className='w-full h-[165px] shrink-0 rounded-[16px]' />
       <div className='flex w-full justify-between' >

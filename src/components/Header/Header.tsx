@@ -4,12 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useRef } from 'react';
 import clsx from 'clsx';
 
-import { Icons ,Path } from '~/contants/index';
+import { Icons, Path } from '~/contants/index';
 import { Images } from '~/utils/images/Images';
 import { TippyLanguage } from '../tippy/TippyLanguage';
 
 export const Header = () => {
- 
+
   const [toggle, setToggle] = useState<boolean>(false)
   const refUl = useRef<HTMLUListElement>(null)
   const location = useLocation();
@@ -50,7 +50,6 @@ export const Header = () => {
                 ['custom-class-li-header-responsive']: toggle,
                 ['font-FontSan lg:flex lg:mr-[33px]']: true
               })}
-              
               `, {
                 "text-green font-[700]": location.pathname === Path.home,
                 "text-black": location.pathname !== Path.home,
@@ -64,10 +63,9 @@ export const Header = () => {
               onClick={() => setToggle(false)}
               className={classNames(
                 `
-               
                   ${clsx({
                   ['custom-class-li-header-responsive']: toggle,
-                  ['font-FontSan lg:mr-[33px] ']: true
+                  ['font-FontSan lg:mr-[33px]']: true
                 })}
                   `,
                 {
@@ -77,7 +75,6 @@ export const Header = () => {
               )}
             >
               {t('Header.aboutUs')}
-
             </li>
           </Link>
 

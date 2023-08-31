@@ -1,27 +1,14 @@
-
-import { useSelector } from "react-redux"
-import { useEffect } from "react"
-import { useParams } from "react-router-dom"
 import { useTranslation } from "react-i18next";
 
 import { Icons } from "~/contants/Icon"
-import { useAppDispatch,fetchJobDetail,RootState } from "~/stores/index"
+import { JobType } from "~/types";
 
-import { getId } from "~/utils/utils"
+interface JobDetailsType {
+    jobDetail: JobType
+}
 
-export const JobDescription = () => {
+export const JobDescription = ({ jobDetail }: JobDetailsType) => {
     const { t } = useTranslation()
-    const dispatch = useAppDispatch()
-    const { idJob } = useParams()
-
-    const id = getId(idJob as string)
-    const { jobDetail } = useSelector((state: RootState) => state.jobs)
-    useEffect(() => {
-        dispatch(fetchJobDetail(id))
-    }, [id, dispatch])
-
-   
-
     return (
         <div className='lg:w-[745px] xl:mt-[86px] xl:pt-[-35xp]  w-full lg:px-0 px-[15px]'>
             <p className='text-green font-FontSan text-[16px] font-[600] leading-[24px] mb-[13px]'> {t('jobDescription.job')}<span className='text-[#444444]'>{jobDetail.title}</span></p>

@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { Images } from "~/utils/images/Images";
 import { Button } from "../Button/Button";
 
-
 export const News = () => {
   const { t } = useTranslation()
   return (

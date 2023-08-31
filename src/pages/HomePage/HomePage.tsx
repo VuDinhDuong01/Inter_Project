@@ -1,33 +1,30 @@
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
 import range from 'lodash/range'
+import {useQuery,} from '@tanstack/react-query'
 
 import { Partner } from "~/components/Partner/Partner";
 import { RegisterBatTech } from "~/components/RegisterBatTech/RegisterBatTech";
 import { ItemNews } from "~/components/ItemNews/ItemNews";
 import { ServicePack } from "~/components/ServicePack/ServicePack";
-import { RootState, useAppDispatch, fetchNews } from '~/stores/index'
 import { IntroductionBattech } from "~/components/IntroductionBattech/IntroductionBattech";
 import { DifferentAndPioneering } from "~/components/DifferentAndPioneering/DifferentAndPioneering";
 import { Slick } from "~/components/slick";
-import { useQuery } from "~/hook/useQuery";
+import { useQuery as Query } from "~/hook/useQuery";
 import { QueryType, NewsType } from "~/types/index";
 import { Images } from "~/utils/images/Images";
 import NewSkeleton from "~/components/Skeleton/NewSkeleton";
+import { getNews } from "~/stores/NewApi";
 
 
 const HomePage = () => {
   
-  const query: QueryType = useQuery()
   const { t } = useTranslation()
-  const dispatch = useAppDispatch()
-  useEffect(() => {
-    dispatch(fetchNews(query))
-  }, [query.page, dispatch])
 
-  const { newsData } = useSelector((state: RootState) => state.news)
-  const { isLoading } = useSelector((state: RootState) => state.news)
+  const query: QueryType = Query()
+  const {isLoading,data:newsData} = useQuery({
+    queryKey: ['news',query ],
+    queryFn: () => getNews(query),
+  })
 
   return (
     <div className="w-full overflow-hidden">
@@ -38,7 +35,6 @@ const HomePage = () => {
           className="w-full h-full object-cover lg:flex hidden "
         />
         <img src='https://battech.vn/assets/images/services.png' className='w-full h-full object-cover lg:hidden flex' alt="banner" />
-
         <div className='w-full lg:hidden flex flex-col px-[15px] lg:mr-[134px] z-10 absolute xl:top-[50%] top-[50%]   translate-y-[-50%]'>
           <h2 className="text-[#F57A21] text-[40px] font-[700] font-FontSan mb-[10px]">
             BATTECH ERP
@@ -72,16 +68,13 @@ const HomePage = () => {
               {t('HomePage.buttonBanner')}
             </button>
           </div>
-
           <div className="xl:w-[596px] w-[500px]   max-w-none lg:flex hidden">
             <img src={Images.ImageBanner} alt="" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
-
       <IntroductionBattech />
       <DifferentAndPioneering />
-
       <div className="xl:flex hidden bg-[#E9F9D6] xl:mb-[120px] h-[430px] w-full ">
         <div className='xl:max-w-[1200px]   xl:m-auto  w-full flex justify-between '>
           <div className='xl:w-[687px] xl:mt-[30px]'>
@@ -96,7 +89,6 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-
       <div className='lg:px-[104px] xl:px-0  lg:h-[488px] lg:mb-[132px]  xl:max-w-[1232px] xl:m-auto xl:mb-[76px]'>
         <h3 className='text-black  font-FontSan text-[24px] font-[700] leading-[28px] lg:mb-[32px] w-full justify-center items-center flex'>{t('HomePage.newsAndEvents')}</h3>
         <div className="w-full  lg:py-[10px] py-[50px]  ">
@@ -106,7 +98,7 @@ const HomePage = () => {
                 isLoading ? range(4).map((_, index) => {
                   return <NewSkeleton key={index} />
                 }) :
-                  (newsData.data.map((item: NewsType, index: number) => {
+                  (newsData && newsData.data.map((item: NewsType, index: number) => {
                     return <ItemNews key={index} dataNew={item} isShow={false} />
                   }))
               }
@@ -114,10 +106,7 @@ const HomePage = () => {
           }
         </div>
       </div>
-
       <ServicePack />
-
-
       <RegisterBatTech />
       <Partner />
     </div>

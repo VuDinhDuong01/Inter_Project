@@ -1,20 +1,27 @@
-import { useSelector } from 'react-redux'
+
 import { useTranslation } from "react-i18next";
 import clsx  from 'clsx';
+import {useQuery,} from '@tanstack/react-query'
 
-import { RootState } from '~/stores/store'
+
 import { NewsType } from '~/types/News.type'
 import { Images } from '~/utils/images/Images'
 import styles from '~/customestyle.module.css'
-
+import { QueryType } from "~/types";
+import { getNews } from "~/stores/NewApi";
+import { useQuery as Query } from "~/hook/useQuery";
 export const RelatedJobs = ({ start, end }: { start: number, end: number }) => {
     const { t } = useTranslation()
-    const { newsData } = useSelector((state: RootState) => state.news)
+    const query: QueryType = Query()
+    const {data:newsData} = useQuery({
+      queryKey: ['relateJobs',query ],
+      queryFn: () => getNews(query),
+    })
     return (
         <div className='mb-[48px]'>
             <h3 className="text-black font-FontSan text-[20px] font-[700] leading-[28px] mb-[12px]">{t('NewPageDetail.news')}</h3>
             {
-                newsData.data.slice(start, end).map((item: NewsType, index: number) => {
+                newsData && newsData.data.slice(start, end).map((item: NewsType, index: number) => {
                     return <div key={index}  className={clsx(styles.boxShadow,{
                         ["flex w-full items-center shadow-sm rounded-[12px] mb-[20px]"]:true
                     })}>

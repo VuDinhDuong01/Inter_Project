@@ -6,7 +6,7 @@ import styles from '~/customestyle.module.css'
 export const NewsSkeleton = () => {
     return (
         <div className={clsx(styles.boxShadow,{
-          ["rounded-[16px] h-[360px] mb-[30px]"]:true,
+          ["rounded-[16px] h-[360px] xl:mb-[14px] mb-[20px]"]:true,
         })} >
           <Skeleton className='w-full h-[165px] shrink-0 rounded-[16px]' />
           <div className='flex w-full justify-between' >

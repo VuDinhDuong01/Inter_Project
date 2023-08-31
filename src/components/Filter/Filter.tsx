@@ -1,13 +1,13 @@
 import omit from 'lodash/omit'
 import { useTranslation } from "react-i18next";
-import { SetStateAction, useEffect, useMemo } from "react";
+import { SetStateAction, useMemo } from "react";
 import { useNavigate, createSearchParams } from "react-router-dom";
 
 import { fakeDataType, fakeDataGroup, fakeDataLocation } from '../../api/Data'
 import { InputCheckRadio } from '../InputCheckRadio/InputCheckRadio';
 import { Button } from '../Button/Button';
 import { useQuery } from '~/hook/useQuery';
-import { fetchJobs, useAppDispatch} from '~/stores/index';
+// import { fetchJobs, useAppDispatch} from '~/stores/index';
 import { Path } from '~/contants/Path';
 import { DataType, QueryType } from '~/types/query.type'
 
@@ -22,7 +22,7 @@ interface FilterType {
 }
 export const Filter = ({ checkedRadioGroup, setCheckedRadioGroup, checkedRadioType, setCheckedRadioType, checkedRadioLocation, setCheckedRadioLocation }: FilterType) => {
 
-    const dispatch = useAppDispatch();
+    // const dispatch = useAppDispatch();
     const query: QueryType = useQuery()
     const navigate = useNavigate()
     const { t } = useTranslation()
@@ -49,9 +49,9 @@ export const Filter = ({ checkedRadioGroup, setCheckedRadioGroup, checkedRadioTy
         })
     }
 
-    useEffect(() => {
-        dispatch(fetchJobs(query))
-    }, [query.group, query.location, query.type, query.page])
+    // useEffect(() => {
+    //     dispatch(fetchJobs(query))
+    // }, [query.group, query.location, query.type, query.page])
 
     return (
         <div>

@@ -18,8 +18,8 @@ export const NewLoading = () => {
                     <div className='w-full'>
                         <Skeleton width={'100%'} height={'256px'} />
                     </div>
-                </div>
-            </div>
+                </div> 
+            </div> 
         </div>
     )
 }

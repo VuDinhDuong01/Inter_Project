@@ -1,6 +1,6 @@
 interface BannerType {
-  Image1: string,
-  Image2: string,
+  ImageBannerRight: string,
+  ImageBannerLeft: string,
   width1: number,
   height1: number,
   width2: number,
@@ -13,8 +13,9 @@ interface BannerType {
 }
 
 export const Banner = (
-  { Image1,
-    Image2,
+  { 
+    ImageBannerRight,
+    ImageBannerLeft,
     width1,
     height1,
     width2,
@@ -28,11 +29,11 @@ export const Banner = (
   return (
     <div className="xl:pl-[112px] justify-between xl:pr-[132px] lg:px-[0px] w-full lg:h-[260px] lg:mb-[120px] xl:mb-0 mb-[50px] lg:flex lg:bg-[#E9F9D6] bg-[#CEFFE8] ">
       <div style={{ marginTop: `${marginTop1}px` }} className='lg:flex hidden lg:mt-[20px] '>
-        <img src={Image1} alt="" style={{ width: `${width1}px`, height: `${height1}px`, objectFit: 'cover' }} />
+        <img src={ImageBannerRight} alt="" style={{ width: `${width1}px`, height: `${height1}px`, objectFit: 'cover' }} />
       </div>
 
       <div className='lg:hidden flex pt-[20px]  w-full h-full items-center justify-center'>
-        <img src={Image1} alt="banner" />
+        <img src={ImageBannerLeft} alt="banner" />
       </div>
 
       <div className="flex flex-col items-center justify-center">
@@ -43,7 +44,7 @@ export const Banner = (
       </div>
       <div className='lg:hidden flex w-full h-[100px] bg-green'></div>
       <div style={{ marginTop: `${marginTop2}px` }} className='lg:flex hidden'>
-        <img src={Image2} alt="" style={{ width: `${width2}px`, height: `${height2}px`, objectFit: 'cover' }} />
+        <img src={ImageBannerLeft} alt="" style={{ width: `${width2}px`, height: `${height2}px`, objectFit: 'cover' }} />
       </div>
     </div>
   )

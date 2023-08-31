@@ -24,7 +24,7 @@ mock.onGet("/api/v2/news").reply(config => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([200, response]);
-        }, 2000)
+        }, 5000)
     })
 
 });
@@ -33,7 +33,6 @@ mock.onGet(/\/api\/v2\/news\/\d+/).reply(config => {
     const matchResult = config.url?.match(/\/api\/v2\/news\/(\d+)/);
     const idItem = matchResult && matchResult[1];
     const item = fakeDataNews.find(item => item.id === idItem);
-
     if (item) {
         return new Promise(resolve => {
             setTimeout(() => {
@@ -77,7 +76,7 @@ mock.onGet("/api/v2/jobs").reply(config => {
     // return [200, response];
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve([200,response]);
+            resolve([200, response]);
         }, 2000);
     })
 });
@@ -85,13 +84,13 @@ mock.onGet("/api/v2/jobs").reply(config => {
 mock.onGet(/\/api\/v2\/jobs\/\d+/).reply(config => {
     const matchResult = config.url?.match(/\/api\/v2\/jobs\/(\d+)/);
     const idItem = matchResult?.[1]
-    const item = fakeDataJob.find(item => item.id === idItem);
-        return new Promise(resolve => {
-            setTimeout(() => {
-                resolve([200, item]);
-            }, 2000);
-        });
-    
+    const item = fakeDataJob.find(item => item.id === idItem)
+
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve([200, item]);
+        }, 2000);
+    });
 });
 
 

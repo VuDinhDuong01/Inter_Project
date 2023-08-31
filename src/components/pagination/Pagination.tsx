@@ -93,20 +93,22 @@ export const Pagination = ({ page_size, query, path }: PaginationType) => {
     }
 
     return (
-        <div className='w-full flex justify-center items-center'>
-            <div className=' flex items-center  justify-center'>
-                <img src={Images.LeftImage} alt="left" className={`${clsx({
-                    ['cursor-not-allowed']: currentPage === 1,
-                    ['cursor-pointer']: currentPage !== 1,
-                    ['w-[24px] h-[24px] bg-white mr-[4px] flex items-center justify-center object-cover']: true
-                })}`} onClick={handleLeftPagination} />
-                <div className='w-full items-center justify-center flex'>{Pagination()}</div>
-                <img src={Images.RightImage} alt="right" className={`${clsx({
-                    ['cursor-not-allowed']: currentPage === page_size,
-                    ['cursor-pointer']: currentPage !== page_size,
-                    ['w-[24px] h-[24px] bg-white mr-[4px] flex items-center justify-center object-cover']: true
-                })}`} onClick={handleRightPagination} />
+       
+            <div className='w-full flex justify-center items-center '>
+                <div className=' flex items-center  justify-center'>
+                    <img src={Images.LeftImage} alt="left" className={`${clsx({
+                        ['cursor-not-allowed']: currentPage === 1,
+                        ['cursor-pointer']: currentPage !== 1,
+                        ['w-[24px] h-[24px] bg-white mr-[4px] flex items-center justify-center object-cover']: true
+                    })}`} onClick={handleLeftPagination} />
+                    <div className='w-full items-center justify-center flex'>{Pagination()}</div>
+                    <img src={Images.RightImage} alt="right" className={`${clsx({
+                        ['cursor-not-allowed']: currentPage === page_size,
+                        ['cursor-pointer']: currentPage !== page_size,
+                        ['w-[24px] h-[24px] bg-white mr-[4px] flex items-center justify-center object-cover']: true
+                    })}`} onClick={handleRightPagination} />
+                </div>
             </div>
-        </div>
+        
     )
 }

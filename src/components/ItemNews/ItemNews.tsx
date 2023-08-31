@@ -7,7 +7,7 @@ import { getPathNewDetail } from '~/utils/utils'
 export const ItemNews = ({ dataNew, isShow }: { dataNew: NewsType, isShow: boolean }) => {
   return (
     <Link to={`/${getPathNewDetail(dataNew.content, dataNew.id)}`}>
-      <div className={`col-span-1 flex-col flex shadow-xxl rounded-[16px] h-[360px] border relative ${isShow ? 'xl:mb-[32px] w-full mb-[20px]' : 'mb-[44px] my-auto mx-[16px]'}`}   >
+      <div className={`col-span-1 flex-col flex shadow-xxl rounded-[16px] h-[360px] border relative ${isShow ? 'xl:mb-[14px] mb-[20px] w-full' : 'mb-[44px] my-auto mx-[16px]'}`}   >
         <img src={dataNew.image} alt="" className='w-full h-[165px] shrink-0 object-cover rounded-[16px]' />
         <div className='flex-1 flex flex-col'>
           <div >
