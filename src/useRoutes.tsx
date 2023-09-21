@@ -1,9 +1,9 @@
 import { useRoutes } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+
 import { lazy, Suspense } from "react";
 
 import { Path } from "./contants/Path";
-import { MainLayout } from "./layouts/MainLayout/MainLayout";
+import MainLayout from "./layouts/MainLayout/MainLayout";
 import { Loading } from "./components/Loading/Loading";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"))
@@ -16,98 +16,42 @@ const NewDetailPage = lazy(() => import("./pages/NewDetailPage/NewDetailPage"))
 const JobOpportunityItemPage = lazy(() => import("./pages/JobOpportunityItemPage/JobOpportunityItemPage"))
 
 export const Routes = () => {
-
-  const { t } = useTranslation()
   const element = useRoutes([
     {
-      path: Path.home,
-      element: (
-        <Suspense fallback={<Loading />}>
-          <MainLayout
-            title={t('Title.home')}
-          >
-            <HomePage />
-          </MainLayout>
-        </Suspense>
+      path: '',
+      element: <Suspense fallback={<Loading />}><MainLayout /></Suspense>,
+      children: [
+        {
+          path: Path.home,
+          element: <HomePage />
+        },
+        {
+          path: Path.contact,
+          element: <ContactPage />
+        }, {
+          path: Path.news,
+          element: <NewsPage />
+        },
+        {
+          path: Path.introduction,
+          element: <IntroductionPage />
+        }, {
+          path: Path.jobOpportunity,
+          element: <JobOpportunityPage />
+        }, {
+          path: Path.newDetail,
+          element: <NewDetailPage />
+        }, {
+          path: Path.jobOpportunityDetail,
+          element: <JobOpportunityItemPage />
+        }, {
+          path: '*',
+          element: <NotFound />
+        }
+      ]
 
-      ),
-    },
-    {
-      path: Path.contact,
-      element: (
-        <Suspense fallback={<Loading />}>
-          <MainLayout
-            title={t('Title.contact')}
-          >
-            <ContactPage />
-          </MainLayout>
-        </Suspense>
-      ),
-    },
-    {
-      path: Path.news,
-      element: (
-        <Suspense fallback={<Loading />}>
-          <MainLayout
-            title={t('Title.new')}
-          >
-            <NewsPage />
-          </MainLayout>
-        </Suspense>
-      ),
-    },
+    }
 
-    {
-      path: Path.introduction,
-      element: (
-        <Suspense fallback={<Loading />}>
-          <MainLayout title={t('Title.introduction')}>
-            <IntroductionPage />
-          </MainLayout>
-        </Suspense>
-      ),
-    },
-    {
-      path: Path.jobOpportunity,
-      element: (
-        <Suspense fallback={<Loading />}>
-          <MainLayout title={t('Title.job')}>
-            <JobOpportunityPage />
-          </MainLayout>
-        </Suspense>
-      ),
-    },
-
-    {
-      path: Path.newDetail,
-      element: (
-        <Suspense fallback={<Loading />}>
-          <MainLayout title={t('Title.newDetail')}>
-            <NewDetailPage />
-          </MainLayout>
-        </Suspense>
-      ),
-    },
-    {
-      path: Path.jobOpportunityDetail,
-      element: (
-        <Suspense fallback={<Loading />}>
-          <MainLayout title={t('Title.jobDetail')}>
-            <JobOpportunityItemPage />
-          </MainLayout>
-        </Suspense>
-      ),
-    },
-    {
-      path: '*',
-      element: (
-        <Suspense fallback={<Loading />}>
-          <MainLayout title={t('Title.pageNotFound')}>
-            <NotFound />
-          </MainLayout>
-        </Suspense>
-      ),
-    },
   ]);
   return element;
 };

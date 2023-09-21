@@ -16,6 +16,7 @@ import { getId } from "~/utils/utils"
 import { JobDetailSkeleton } from "~/components/Skeleton/JobDetailSkeleton";
 import { getJobDetail } from "~/stores/JobApi";
 import { JobType } from "~/types";
+import { HelmetAsync } from "~/components/Helmet/Helmet";
 
 const JobOpportunityItemPage = () => {
     const { t } = useTranslation()
@@ -44,6 +45,7 @@ const JobOpportunityItemPage = () => {
 
     return (
         <div>
+             <HelmetAsync title={t('Title.jobDetail')} />
             <Banner ImageBannerRight={Images.Image26} ImageBannerLeft={Images.Image24} width1={225} height1={173} height2={285} width2={285} marginTop1={95} marginTop2={34} content={t('banner.titleBannerJobOpportunity')}
                 description={t('banner.descriptionBannerJobOpportunity')} />
             <div className='  xl:max-w-[1192px] xl:m-auto lg:px-[50px] xl:px-0 lg:gap-[68px] xl:gap-x-[68px] xl:flex'>

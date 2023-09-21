@@ -7,11 +7,13 @@ import { Banner } from "~/components/Banner/Banner";
 import { WorkingPrinciple } from "~/components/WorkingPrinciple/WorkingPrinciple";
 import { Images } from "~/utils/images/Images";
 import styles from '~/customestyle.module.css'
+import { HelmetAsync } from "~/components/Helmet/Helmet";
 
 const IntroductionPage = () => {
   const { t } = useTranslation()
   return (
     <div className="w-full overflow-hidden">
+      <HelmetAsync title={t('Title.introduction')} />
       <div className="xl:flex hidden"><Banner ImageBannerRight={Images.SystemImage} width1={272} height1={272} height2={321} width2={321} ImageBannerLeft={Images.OperatingImage} marginTop1={53} img={Images.Img} /></div>
       <div className=" xl:mb-[120px] xl:px-0 bg-green xl:mt-[185px] xl:max-w-[1200px] xl:m-auto xl:bg-transparent  w-full grid xl:grid-cols-2 grid-cols-1 xl:gap-x-[33px]">
         <div className="col-span-1 xl:flex hidden items-center justify-center">

@@ -14,6 +14,7 @@ import { fakeDataFilterNew } from '~/api/Data';
 import { Images } from '~/utils/images/Images';
 import { NewsSkeleton, NewLoading } from '~/components/Skeleton/index';
 import { getNews } from "~/stores/NewApi";
+import { HelmetAsync } from "~/components/Helmet/Helmet";
 
 const NewsPage = () => {
   const query: QueryType = Query()
@@ -38,9 +39,9 @@ const NewsPage = () => {
     queryFn: () => getNews(query),
   })
 
-  console.log(newsData)
   return (
     <div>
+       <HelmetAsync  title={t('Title.new')} />
       <Banner
         ImageBannerRight={Images.Image2}
         ImageBannerLeft={Images.Image21}

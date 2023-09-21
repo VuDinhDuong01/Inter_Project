@@ -15,6 +15,7 @@ import { QueryType, JobType } from '~/types/index';
 import { Images } from '~/utils/images/Images';
 import { JobSkeleton } from '~/components/Skeleton/';
 import { getJobs } from '~/stores/JobApi';
+import { HelmetAsync } from '~/components/Helmet/Helmet';
 
 const JobOpportunity = () => {
   const [checkedRadioGroup, setCheckedRadioGroup] = useState<string>('6')
@@ -52,6 +53,7 @@ const JobOpportunity = () => {
 
   return (
     <div>
+      <HelmetAsync title={t('Title.job')} />
       <Banner ImageBannerRight={Images.Image26} ImageBannerLeft={Images.Image24} width1={225} height1={173} height2={285} width2={285} marginTop1={95} marginTop2={34} content={t('banner.titleBannerJobOpportunity')} description={t('banner.descriptionBannerJobOpportunity')} />
       <div className="  xl:max-w-[1200px]  xl:m-auto lg:px-[100px] xl:px-0">
         <div className="xl:mt-[155px]">

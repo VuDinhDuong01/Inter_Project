@@ -7,6 +7,7 @@ import { getId } from '~/utils/utils'
 import { RelatedJobs } from '~/components/RelatedJobs/RelatedJobs'
 import { NewDetailSkeleton } from '~/components/Skeleton';
 import { getNewDetail } from '~/stores/NewApi';
+import { HelmetAsync } from '~/components/Helmet/Helmet';
 
 const NewDetailPage = () => {
     const { t } = useTranslation()
@@ -18,6 +19,7 @@ const NewDetailPage = () => {
       })
     return (
         <>
+         <HelmetAsync  title={t('Title.newDetail')} />
             {
                 isLoading ? <NewDetailSkeleton /> : (
                     <div className="xl:flex xl:gap-[32px] lg:px-[30px] xl:px-0  xl:max-w-[1200px] xl:m-auto">

@@ -14,6 +14,7 @@ import { QueryType, NewsType } from "~/types/index";
 import { Images } from "~/utils/images/Images";
 import NewSkeleton from "~/components/Skeleton/NewSkeleton";
 import { getNews } from "~/stores/NewApi";
+import { HelmetAsync } from "~/components/Helmet/Helmet";
 
 
 const HomePage = () => {
@@ -28,6 +29,7 @@ const HomePage = () => {
 
   return (
     <div className="w-full overflow-hidden">
+      <HelmetAsync  title={t('Title.home')} />
       <div className="w-full h-[638px]  relative lg:mb-[98px] ">
         <img
           src={Images.BannerHome}
