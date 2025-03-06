@@ -6,7 +6,7 @@ import { DataType,JobType,NewsType} from '../types/index'
 export const PartnerData: string[] = [Images.doitac1Image, Images.doitac2Image, Images.doitac3Image, Images.doitac4Image, Images.doitac4Image]
 export const DataService = [
     {
-        title: 'Chuyên nghiệp',
+        title: 'Chuyên nghiệp thật',
         description: 'Đối với người dùng nhiều hơn',
         content1: 'Dành cho nhóm nhỏ - 15 người dùng',
         content2: 'Hỗ trợ cá nhân',
